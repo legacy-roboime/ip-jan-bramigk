@@ -2,6 +2,10 @@
 
 Qual parmâmetro adequado de eficiência?
 
+Inicialmente, o parâmetro adotado para avaliar a eficiência é a norma da diferença entre os
+estados simulados e os estados efetuados. O estado de um jogo é definido como sendo a posição
+e orientação de cada robô.
+
 Quais modelagens são eficientes?
 
 Estudar:
