@@ -6,6 +6,8 @@ Inicialmente, o parâmetro adotado para avaliar a eficiência é a norma da dife
 estados simulados e os estados efetuados. O estado de um jogo é definido como sendo a posição
 e orientação de cada robô.
 
+O erro médio quadrático é bastante usado e pode substituir a média das normas.
+
 Quais modelagens são eficientes?
 
 Estudar:
