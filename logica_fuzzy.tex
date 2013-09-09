@@ -1,0 +1,45 @@
+\section{Logica Nebulosa} (Fuzzy)
+
+\subsection{Introdução}
+
+Sistemas nebulosos aproximam funções. Eles são aproximadores universais se usarem regras suficientes. 
+Neste sentido sistemas difusos podem modelar qualquer função ou sistema contínuos. Aqueles sistemas podem 
+vir tanto da física quanto da sociologia, bem como da teoria do controle ou do processamento de sinais.
+[ref KOSKO]
+
+A qualidade da aproximação difusa depende da qualidade das regras. Na prática especialistas sugerem regras
+difusas ou aprendem-nas através de esquemas neurais através de dados e ajustam as regras com novos dados.
+Os resultados sempre aproximam alguma função não-linear desconhecida que pode mudar com o tempo. Melhores 
+cérebros e melhores redes neurais resultam em melhores aproximações. [ref KOSKO]
+
+\subsection{Modelo Aditivo Padrão(SAM)}
+
+O sistema difuso $F:\Re^n \rigtharroy \Re^p$ é em si uma árvore de regras rasa e extensa. É um aproximador
+por antecipação. Existem $m$ regras da forma "Se $X$ é conjunto difuso $A$ então $Y$ é conjunto difuso $B$".
+A partir desse nível o sistema depende cada vez menos em palavras. 
+
+Cada entrada $x$ aciona parcialmente todas as regras em paralelo. Então o sistema age como um processador 
+associativo a medida que calcula a saída
+$F(x)$. 
+%Definir a_j(x) e b_j(y)
+Essas regras relacionam os conjuntos $A_j$ e $B_j$, gerando o caminho difuso $A_j x B_j$. Na prática,
+é utilizado o produto para definir $ a_j x b_j (x,y) = a_j(x).b_j(y)$. Esta é a parte "padrão" no SAM.
+A parte "aditiva" se refere ao fato de a entrada $x$ acionar a $j$-ésima regra em um grau $a_j(x)$ e o sistema 
+soma os acionamentos ou partes escaladas dos conjuntos escalados $a_j(x)B_j$:
+
+\beging{eqnarray}
+F(x) = \frac{\sum w_i.a_j(x).V_j.c_j}{\sum w_j.a_j(x).V_j}
+\end{eqnarray}
+
+Com o volume/área $V_j$ e o centróide $c_j$ são dados por:
+
+\beging{eqnarray}
+V_j = \int{b_j(y_1,...,y_p}_{\Re^{p}}.dy_1...dy_p > 0\\
+c_j = \frac{\int{y.b_j(y_1,...,y_p}_{\Re^{p}}.dy_1...dy_p}{V_j}
+\end{eqnarray}
+
+(colocar figura e exemplo)
+
+\subsection{Limitações}
+
+(KOSKO, BART; **Fuzzy Engineering**, New Jersey, USA 1997) pág. 17
