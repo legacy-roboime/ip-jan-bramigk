@@ -1,11 +1,11 @@
-# Algoritimo Genético
+# Algorítimo Genético
 
 Um _algorítimo genético_ é uma heurística de busca que procura imitar a seleção natural
 que ocorre no processo evolucionário dos organismos vivos.
 
 Nessa heurística, uma população de soluções (também chamadas de indivíduos ou fenótipos)
-para problemas de otimização é evoluida para conseguir soluções melhores.
-Cada solução possui um conjunto de propriedades (cromosomos ou genótipos) que podem ser
+para problemas de otimização é evoluída para conseguir soluções melhores.
+Cada solução possui um conjunto de propriedades (cromossomos ou genótipos) que podem ser
 mutados ou alterados.
 
 Os requerimentos são, típicamente:
@@ -32,7 +32,7 @@ As condições mais comuns para terminação do processo são as seguintes:
 - a melhor solução alcançou um patamar estável em que mais iterações não produzem soluções melhores
 - inspeção manual
 
-## Limitções
+## Limitações
 
 As limitações mais comuns no emprego de um algorítimo genético são:
 
@@ -43,7 +43,7 @@ As limitações mais comuns no emprego de um algorítimo genético são:
 - A melhor solução é relativa às outras soluções, por isso o critério de parada não é muito claro
   em alguns problemas.
 - Em muitos problemas os algorítimos genéticos tendem a convergir para um ótimo local ou as vezes pontos
-  árbitrários em vez do ótimo global.
+  arbitrários em vez do ótimo global.
 - É difícil aplicar algorítimos genéticos para conjunto de dados dinâmicos. Pois as soluções podem começar
   a convergir para um conjunto de dados que já não é mais válido.
 - Algorítimos genéticos não conseguem resolver eficientemente problemas em que a avaliação é binária (certo/errado),

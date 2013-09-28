@@ -1,0 +1,605 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.3.27)  15 MAY 2012 08:44
+entering extended mode
+ %&-line parsing enabled.
+**cover.tex
+(./cover.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, portuguese, loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{center}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--1
+[] 
+ []
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no ‰ in font cmbx10!
+
+Overfull \hbox (64.65242pt too wide) in paragraph at lines 2--2
+ \OT1/cmr/bx/n/10 MINISTRIO 
+ []
+
+
+Overfull \hbox (17.19435pt too wide) in paragraph at lines 2--2
+ \OT1/cmr/bx/n/10 DA 
+ []
+
+
+Overfull \hbox (20.20822pt too wide) in paragraph at lines 2--2
+ \OT1/cmr/bx/n/10 DE- 
+ []
+
+
+Overfull \hbox (29.87483pt too wide) in paragraph at lines 2--2
+ \OT1/cmr/bx/n/10 FESA 
+ []
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no ‰ in font cmbx10!
+
+Overfull \hbox (53.86081pt too wide) in paragraph at lines 3--3
+ []\OT1/cmr/bx/n/10 EXRCITO 
+ []
+
+
+Overfull \hbox (72.02737pt too wide) in paragraph at lines 3--3
+ \OT1/cmr/bx/n/10 BRASILEIRO 
+ []
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no Š in font cmbx10!
+
+Overfull \hbox (99.48557pt too wide) in paragraph at lines 4--4
+ []\OT1/cmr/bx/n/10 DEPARTAMENTO 
+ []
+
+
+Overfull \hbox (16.37491pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 DE 
+ []
+
+
+Overfull \hbox (25.49986pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 CIN- 
+ []
+
+
+Overfull \hbox (21.361pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 CIA 
+ []
+
+
+Overfull \hbox (7.55551pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 E 
+ []
+
+
+Overfull \hbox (27.69429pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 TEC- 
+ []
+
+
+Overfull \hbox (37.02757pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 NOLO- 
+ []
+
+
+Overfull \hbox (22.09709pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 GIA 
+ []
+
+
+Overfull \hbox (65.59685pt too wide) in paragraph at lines 5--5
+ []\OT1/cmr/bx/n/10 INSTITUTO 
+ []
+
+
+Overfull \hbox (26.02763pt too wide) in paragraph at lines 5--5
+ \OT1/cmr/bx/n/10 MIL- 
+ []
+
+
+Overfull \hbox (8.1944pt too wide) in paragraph at lines 5--5
+ \OT1/cmr/bx/n/10 I- 
+ []
+
+
+Overfull \hbox (24.36098pt too wide) in paragraph at lines 5--5
+ \OT1/cmr/bx/n/10 TAR 
+ []
+
+
+Overfull \hbox (16.37491pt too wide) in paragraph at lines 5--5
+ \OT1/cmr/bx/n/10 DE 
+ []
+
+
+Overfull \hbox (20.38878pt too wide) in paragraph at lines 5--5
+ \OT1/cmr/bx/n/10 EN- 
+ []
+
+
+Overfull \hbox (29.43039pt too wide) in paragraph at lines 5--5
+ \OT1/cmr/bx/n/10 GEN- 
+ []
+
+
+Overfull \hbox (39.37479pt too wide) in paragraph at lines 5--5
+ \OT1/cmr/bx/n/10 HARIA 
+ []
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no § in font cmbx10!
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no £ in font cmbx10!
+
+Overfull \hbox (17.40964pt too wide) in paragraph at lines 6--7
+ []\OT1/cmr/bx/n/10 Seo 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (17.77768pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 En- 
+ []
+
+
+Overfull \hbox (21.24295pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 gen- 
+ []
+
+
+Overfull \hbox (25.49983pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 haria 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (17.95267pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 Sis- 
+ []
+
+
+Overfull \hbox (29.45259pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 temas 
+ []
+
+
+Overfull \hbox (5.74997pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 / 
+ []
+
+
+Overfull \hbox (13.94437pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 SE 
+ []
+
+
+Overfull \hbox (5.74997pt too wide) in paragraph at lines 6--7
+ \OT1/cmr/bx/n/10 8 
+ []
+
+
+! LaTeX Error: Environment large undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \begin{large}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no § in font cmbx10!
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no £ in font cmbx10!
+
+Overfull \hbox (45.4039pt too wide) in paragraph at lines 12--12
+ []\OT1/cmr/bx/n/10 Proposta 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (27.48595pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 Tema 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (20.38321pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 Dis- 
+ []
+
+
+Overfull \hbox (18.3763pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 ser- 
+ []
+
+
+Overfull \hbox (15.8124pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 tao 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (47.66084pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/bx/n/10 Mestrado 
+ []
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no § in font cmbx10!
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no £ in font cmbx10!
+
+Overfull \hbox (32.91093pt too wide) in paragraph at lines 12--13
+ []\OT1/cmr/bx/n/10 Curso: 
+ []
+
+
+Overfull \hbox (47.66084pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/bx/n/10 Mestrado 
+ []
+
+
+Overfull \hbox (14.8541pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/bx/n/10 em 
+ []
+
+
+Overfull \hbox (17.95267pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/bx/n/10 Sis- 
+ []
+
+
+Overfull \hbox (29.45259pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/bx/n/10 temas 
+ []
+
+
+Overfull \hbox (5.27081pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/bx/n/10 e 
+ []
+
+
+Overfull \hbox (27.47208pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/bx/n/10 Com- 
+ []
+
+
+Overfull \hbox (28.5901pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/bx/n/10 putao 
+ []
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no § in font cmbx10!
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no £ in font cmbx10!
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no ³ in font cmbx10!
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no ³ in font cmbx10!
+
+Overfull \hbox (39.03587pt too wide) in paragraph at lines 16--17
+ []\OT1/cmr/bx/n/10 Sistema 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (16.49991pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 Lo- 
+ []
+
+
+Overfull \hbox (17.72905pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 cal- 
+ []
+
+
+Overfull \hbox (19.6457pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 izao 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (18.86101pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 Ob- 
+ []
+
+
+Overfull \hbox (12.618pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 je- 
+ []
+
+
+Overfull \hbox (14.75824pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 tos 
+ []
+
+
+Overfull \hbox (22.3054pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 para 
+ []
+
+
+Overfull \hbox (30.09706pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 Apoio 
+ []
+
+
+Overfull \hbox (5.59023pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 a 
+ []
+
+
+Overfull \hbox (15.97214pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 um 
+ []
+
+
+Overfull \hbox (17.06378pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 As- 
+ []
+
+
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 sis- 
+ []
+
+
+Overfull \hbox (25.55544pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 tente 
+ []
+
+
+Overfull \hbox (39.29146pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 Robtico 
+ []
+
+
+Overfull \hbox (25.13182pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 Mvel 
+ []
+
+
+Overfull \hbox (11.97908pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 na 
+ []
+
+
+Overfull \hbox (24.02203pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 Casa 
+ []
+
+
+Overfull \hbox (14.58325pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 In- 
+ []
+
+
+Overfull \hbox (42.96507pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/bx/n/10 teligente 
+ []
+
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no ­ in font cmbx10!
+
+Overfull \hbox (33.61093pt too wide) in paragraph at lines 20--21
+ []\OT1/cmr/bx/n/10 Aluno: 
+ []
+
+
+Overfull \hbox (22.111pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 Vin- 
+ []
+
+
+Overfull \hbox (19.23044pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 cius 
+ []
+
+
+Overfull \hbox (30.32622pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 Prado 
+ []
+
+
+Overfull \hbox (11.97908pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 da 
+ []
+
+
+Overfull \hbox (22.24988pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 Fon- 
+ []
+
+
+Overfull \hbox (20.5082pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 seca 
+ []
+
+
+Overfull \hbox (19.16656pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 (SC 
+ []
+
+
+Overfull \hbox (33.22205pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/bx/n/10 11122) 
+ []
+
+
+Overfull \hbox (58.04137pt too wide) in paragraph at lines 24--25
+ []\OT1/cmr/bx/n/10 Orientador: 
+ []
+
+
+Overfull \hbox (28.4651pt too wide) in paragraph at lines 24--25
+ \OT1/cmr/bx/n/10 Paulo 
+ []
+
+
+Overfull \hbox (10.4305pt too wide) in paragraph at lines 24--25
+ \OT1/cmr/bx/n/10 F. 
+ []
+
+
+Overfull \hbox (10.4305pt too wide) in paragraph at lines 24--25
+ \OT1/cmr/bx/n/10 F. 
+ []
+
+
+Overfull \hbox (27.69565pt too wide) in paragraph at lines 24--25
+ \OT1/cmr/bx/n/10 Rosa, 
+ []
+
+
+Overfull \hbox (26.26375pt too wide) in paragraph at lines 24--25
+ \OT1/cmr/bx/n/10 Ph.D 
+ []
+
+
+! LaTeX Error: \begin{center} on input line 1 ended by \end{large}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \end{large}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment small undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \begin{small}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no Ã in font nullfont!
+Missing character: There is no § in font nullfont!
+Missing character: There is no Ã in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no J in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+! Undefined control sequence.
+l.32 Rio de Janeiro, \today
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{center} on input line 1 ended by \end{small}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \end{small}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> cover.tex
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 12 strings out of 495041
+ 176 string characters out of 1181897
+ 48131 words of memory out of 3000000
+ 3294 multiletter control sequences out of 15000+50000
+ 3948 words of font info for 15 fonts, out of 3000000 for 9000
+ 30 hyphenation exceptions out of 8191
+ 13i,1n,10p,136b,118s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

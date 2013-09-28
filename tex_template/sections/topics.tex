@@ -1,0 +1,43 @@
+%\newpage
+\section{Tópicos Tutoriais}\label{topics}
+
+Nesta seção serão abordados os principais tópicos de estudo até o presente momento e que provavelmente guiarão a pesquisa neste estágio inicial. Este trabalho é organizado utilizando a taxonomia proposta em \cite{Seco2009}, sendo esta condizente com trabalho pretéritos e uma base para o melhor entendimento de tais sistemas.
+
+\subsection{Sistemas de Posicionamento Local}
+Em \cite{Seco2009} o autor apresenta que um sistema de posicionamento em seu trabalho é um conjunto de estações-base (EB), com posições conhecidas, e um conjunto de estações móveis (EM). Durante o funcionamento do sistema de localização, sinais são trocados entre as EBs e EM afim de identificar a posição deste último. Este princípio caracteriza um sistema centralizado de localização. Em um cenário diferente a EM pode definir sua posição, a partir da infraestrutura, de forma independente, ou descentralizada.
+
+Tendo em mente o primeiro cenário o sistema é composto de $n$ EBs em posições conhecidas: $x_i(i=1,\dots,n)$. Feitas um conjunto de medições $r=\lbrace r_i\rbrace$ a relação medição e posição $x$ tal que: $$r=h(x)+e$$ onde o $e$ apresenta uma $p_e(e)$ e $h(x)$ é uma função que contém implicitamente a posição das EBs. Assim $$\widehat{x}=arg\ max\lbrace p(r|x)\rbrace$$
+
+Alguns problemas como falta de linha de visão, atenuação, multipath devem ser mitigados.
+
+\subsection{Métodos Baseados em Geometria}
+São assim nomeados alguns métodos que utilizam características geométricas extraídas da relação entre EBs (sincronizadas), a EM e os sinais recebidos \cite{Gustafsson2005}. É computacionalmente eficiente e preciso quando consegue obter medições precisas.
+
+Caso a EM esteja sincronizada com as EBs, então a posição $x$ pode ser obtida pelo tempo de chegada do sinal (Time Of Arrival --- TOA). Dessa forma a relação entre a medição e a posição pode ser dada por: $$r_{i}^{TOA}(x)=\Vert x-x_{i}\Vert + e_{i}$$
+
+A figura \ref{fig:TOA-TDOA} (a) mostra um exemplo presente em \cite{Gustafsson2005} onde cada EB produz um raio de incerteza acerca da posição, a interseção dos círculos identifica a posição da EM.
+
+Em geral, sincronizar a EM gera custos, computacionais e de equipamentos, então uma abordagem que pode ser utilizada é a diferença entre a chegada de um sinal em mais de uma EB (Time Difference Of Arrival --- TDOA). Este método tem uma relação entre medida e posição dada por: $$r_{i,j}^{TDOA}(x)=\Vert x-x_{i}\Vert-\Vert x-x_{j}\Vert + e_{i}-e_{j}$$
+A figura \ref{fig:TOA-TDOA} (a) mostra um exemplo retirado de \cite{Gustafsson2005} onde elipses são geradas por cada duas EBs e de forma semelhante o ponto coincidente caracteriza a inferência da posição.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=.6]{img/TOA-TDOA.png}
+\caption{(a)TOA (b)TDOA\label{fig:TOA-TDOA} --- Retirado de \cite{Gustafsson2005}}
+\end{figure}
+
+Com o uso de antenas especiais, pode-se utilizar o ângulo de chegada do sinal (Angle Of Arrival --- AOA) e relações trigonométricas para estimar a posição de onde partiu o sinal, sistemas esses mais caros que o usual.
+
+\subsection{Métodos Baseados em Fingerprinting}
+É baseado no fato que cada posição de um determinado ambiente tem características intrínsecas em relação aos sinais recebidos pela EM \cite{Kaemarungsi2004}. Costuma ser baseado no uso do RSS e sendo robusto à falta de linha de visão (Non-Line-Of-Sight --- NLOS). Autores indicam uma quantidade baixa de Estações Base mantendo  boa precisão.
+É divido em duas fases:
+
+\begin{itemize}
+\item Calibração --- Nesta fase a EM é colocada em várias posições ${x_{j}}$ do ambiente então os sinais de $n$ Estações Base ${\rho_{i}(x_{j})}$, $i=1,\dots,n$ são aferidos e rotulados com o local de onde foram captados.
+
+\item Localização --- No processo online ocorre leitura de sinais $\lbrace r_{i}\rbrace$ que são comparados aos sinais captados na fase anterior. Alguns métodos podem ser usados nessa fase para minimizar os erros. Muito utilizada, a minimização da distância euclidiana dos vetores presentes na base de dados e o vetor captado na fase online:
+$$\widehat{x}=arg\ min\lbrace z_{j}^{2}\rbrace,\ com\ z_{j}^{2}=\sum_{i=1}^{n}(r_{i}-\rho_{i}(x_{j}))^2 $$
+já promove uma solução que estima a posição com base nas medições calibradas.
+\end{itemize}
+
+Em \cite{Seco2009} o autor descreve ainda dois outros métodos, por \textbf{minimização da função custo} e \textbf{Bayesianos} que não são foco atual do trabalho.
