@@ -1,6 +1,6 @@
 # Primeira reunião
 
-## Qual parmâmetro adequado de eficiência?
+## Qual parâmetro adequado de eficiência?
 
 Inicialmente, o parâmetro adotado para avaliar a eficiência é a norma da diferença entre os
 estados simulados e os estados efetuados. O estado de um jogo é definido como sendo a posição
@@ -27,6 +27,6 @@ Fazer um mini tutorial (0.5 ~ 1.0 páginas) sobre cada tópico.
 # Segunda Reunião
 
 A modelagem adotada será baseada em **Redes Neurais**. Provavelmente será utilizado algum dos métodos de otimização
-descritos anteriomente para completar o modelo, gerando assim um modelo híbrido.
+descritos anteriormente para completar o modelo, gerando assim um modelo híbrido.
 
 Devem ser estudadas as topologias das redes neurais para que seja escolhida a que melhor se encaixa no problema.
