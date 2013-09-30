@@ -1,0 +1,97 @@
+\chapter{Árvores}
+\section{Teoria dos Grafos}
+Um \textbf{grafo} é uma estrutura $G=G(V,E)$, em que $V$ é um conjunto finito e não vazio cujos elementos são chamados de \textbf{vértices}, enquanto $E$ representa um conjunto de subconjuntos de pares de elementos de $V$, subconjuntos estes denominados \textbf{arestas}, neste trabalho iremos considerar que grafos não possuem laços (arestas do tipo ($v,v$)), nem arestas repetidas.
+
+Se $v$ é um vértice do grafo $G$, o \textbf{grau} de $v$, denotado por $d(v)$, é o número de arestas que incidem em $v$, em que aresta incidente em $v$ é aquela que liga o vértice $v$ a outro vértice de $G$. Iremos denotar por $\Delta(G)$ o \textbf{grau máximo} em $G$, que é o grau do vértice de maior grau dentre os vértices de $G$, e por $\delta(G)$  o \textbf{grau mínimo} em $G$, que é o grau do vértice de menor grau dentre os vértices de $G$.
+
+Uma sequência de vértices $v_1,~v_2,~\ldots,~v_k$, onde ($v_i,v_{i+1}$) $\epsilon~E(G)$ para $1\leq i\leq k-1$,  $k>1$, é dita um \textbf{passeio}, com os vértices $v_1$ e $v_k$ sendo as extremidades do passeio e o valor $k-1$ o tamanho do passeio. Se as arestas ($v_i,v_{i+1}$), para $1\leq i\leq k-1$, forem todas distintas dizemos que o passeio é uma trilha. Se, além disso, os vértices  $v_1,~v_2,~\ldots,~v_k$ forem distintos, a trilha se chama \textbf{caminho}. Um \textbf{ciclo} é um passeio fechado $v_1, ... v_k$, onde $v_1 = v_k$, $k$ maior ou igual a $4$ e $v_1,...v_{k-1}$ é um caminho. Dizemos que um grafo $G$ é \textbf{conexo} se partindo de cada vértice de $G$ existe um caminho para qualquer outro vértice do grafo, caso contrário o grafo é dito \textbf{desconexo}. Para os conceitos a seguir sejam $v$ e $w$ dois vértice do grafo $G$, a \textbf{distância} entre dois $v$ e $w$, denotada por $d(v,w)$ é o menor caminho entre dois vértices.  A \textbf{excentricidade} do vértice $v$ é $e(v)=max_{w \epsilon V(G)}d_G(v,w)$. A maior dessas distâncias é chamada \textbf{diâmetro} do grafo. O \textbf{centro} do grafo $G$ é o subconjunto de $V(G)$ formado pelos vértices de excentricidade mínima.
+
+Seguiremos com o conceito de árvore. Uma \textbf{árvore} é um grafo conexo $G$ que não possui ciclos. Isso nos leva as seguintes propriedades: um grafo $G$, com $n$ vértices e $m$ arestas é uma árvore se, somente se, $m=n-1$ e $G$ é conexo, e um grafo $G$, com $n$ vértices e $m$ arestas é uma árvore se, somente se, $G$ não possui ciclos e $m=n-1$.
+
+\section{Teoria Espectral dos Grafos}
+A \textbf{teoria espectral dos grafos} é o ramo da teoria dos grafos que se preocupa em determinar propriedades dos grafos por meio de suas representações matriciais e de seus respectivos espectros. Iremos ter por foco a matriz laplaciana do grafo.
+
+Para definirmos a matriz laplaciana precisaremos definir a matriz de adjacência e a matriz diagonal dos graus primeiro.
+
+Seja $G = G(V,E)$ um grafo com vértices $v_1,~v_2,\ldots, ~v_n$. A \textbf{matriz de adjacência} do grafo $G$, ou simplesmente matriz de adjacência de $G$, é uma matriz quadrada cuja ordem é o número de vértices de $G$. Se $G = G(V,E)$ é um grafo com vértices $v_1,~v_2,\ldots, ~v_n$, a matriz de adjacência de $G$ é denotada por $A(G)$ e definida como a matriz quadrada de ordem $n$, $A(G)=(a_{ij})_{nxm}$, em que os $a_{ij}$ são dados por:
+
+\begin{displaymath}
+a_i_j = \left\{ \begin{array}{ll}
+1, & \textrm{se~$\{v_i,v_j\}~\epsilon ~ E$;}\\
+0, & \textrm{caso contr\'ario.}
+\end{array} \right.
+\end{displaymath}
+
+Para definir a matriz diagonal dos graus consideremos $G = G(V,E)$ um grafo com vértices $v_1,~v_2,\ldots, ~v_n$. A \textbf{matriz diagonal dos graus} dos vértices de
+$G$ é denotada por $D(G)$ e definida como a matriz quadrada $D(G)=(d_{ij})_{nXm}$, em que $d_{ij}$ é dado por:
+
+\begin{displaymath}
+d_i_j = \left\{ \begin{array}{ll}
+d(v_i), & \textrm{se~$i=j$;}\\
+0, & \textrm{caso contr\' ario.}
+\end{array} \right.
+\end{displaymath}
+
+Observemos que, por ser uma matriz diagonal, a matriz é simétrica.
+
+Conhecendo estes conceitos podemos prosseguir com a definição de matriz laplaciana. Seja $ = G(V,E)$ um grafo. A \textbf{matriz laplaciana} de $G$ é denotada por $L(G)$ e definida como a matriz quadrada $L(G)=A(G)-D(G)$. Observemos que como a matriz laplaciana é a diferença entre duas matrizes simétricas ela também é simétrica.
+
+Conhecendo a definição de matriz laplaciana podemos definir a conectividade algébrica, que é um autovalor da matriz laplaciana e está associado a quão conexo é o grafo, e o vetor de Fiedler.
+
+Sejam $G$ um grafo e $\mu_1 \ge \ldots \ge \mu_n$ os autovalores da matriz laplaciana $L(G)$. A \textbf{conectividade algébrica} do grafo $G$, denotada por $a(G)$, é $\mu_n_-_1$. Já o autovalor $\mu_1$ é chamado de \textbf{índice do laplaciano} de $G$. Definiremos ainda o \textbf{raio espectral} do grafo, denotado por $\rho(G)$, como sendo $\rho(G)=max|\lambda_i|$, $i=1,~2,\ldots,~n$. O autovetor associado a conectividade algébrica é chamado de \textbf{vetor de Fiedler}.
+
+O vetor de Fiedler será usado para classificar as árvores em árvores de tipo $I$ e de tipo $II$. Iremos discutir sobres estas árvores na próxima seção.
+
+\section{Árvores de Tipo $I$ e de Tipo $II$}
+
+Nesta seção explicaremos como classificar as árvores a partir do vetor de Fiedler em árvores de tipo $I$ e em árvores de tipo $II$. Iniciaremos definindo quando uma árvore é de tipo $I$.
+
+\begin{itemize}
+
+\item Uma árvore $T$ é dita ser de tipo $I$ se:
+
+\begin{enumerate}
+
+\item existe alguma entrada de $y$ igual a $0$, nesse caso o conjuntos de vértices do subgrafo induzido por este que correspondem aos zeros estão conectados.
+
+\item existe somente um vértice $k$ tal que $y_k=0$ e $k$ é adjacente a algum vértice $m$ (pode ser mais do que um vértice $m$, com $y_m \neq 0$. As entradas de $y$ podem ser crescentes, decrescentes ou iguais a $0$ ao longo de qualquer caminho de $T$ que comece em $k$.
+
+Seguiremos definindo quando uma árvore é de tipo $II$.
+
+\end{enumerate}
+
+\item Uma árvore $T$ é dita ser de tipo $II$ se:
+
+\begin{enumerate}
+
+\item nenhuma entrada de $y$ é $0$.
+
+\item existe somente um par de vértices adjacentes $i$ e $j$, tais que $y_i>0$ e $y_j<0$, além disso as entradas de $y$ são crescentes ao longo do caminho em $T$ que começa em $i$ e não contém $j$, enquanto as entradas de $y$ para o caminho que começa $j$ e não contém $i$ são decrescentes.
+
+\end{enumerate}
+
+\end{itemize}
+
+Isto é, as árvores de tipo $I$ são tais que se um vértice $k$ corresponde a $y_k=0$, então ele separa o grafo em dois subgrafos, um subgrafo corresponde às entradas nulas e outro às entradas não nulas. Já as árvores de tipo $II$ possuem conceito mais simples, basta que nenhuma das entradas do vetor de Fiedler seja $0$. Como exemplo, apresentamos uma árvore de tipo $I$ na Figura 2.1.
+
+\begin{figure}[H] %h,t,b,p,H%
+\centering
+\includegraphics[width=2cm]{arvore}
+\caption{Árvore de tipo $I$.}
+%width mexe no tamanho e angle na rotaÃ§Ã£o%
+\label{fig:genrang}
+\end{figure}
+
+A árvore da Figura 2.1 possui conectividade algébrica $a(T)=0,2678$ e  vetor de Fiedler igual a [$0,440;~ 0,440;~ 0,3251;~ 	0;~ 0;~ -0,3251;~ -0.440;~ -0,440$]. Observe que, de fato, somente um vértice correspondente a $0$, o vértice $4$, está ligado à vértices correspondentes a entradas não-nulas, e ainda, partindo do vértice $4$ podemos escolher um caminho de entradas crescentes, decrescentes ou identicamente nulas.
+
+Como exemplo de árvore de tipo $II$, apresentamos a árvore de $11$ vértices da Figura 2.2.
+
+\begin{figure}[H] %h,t,b,p,H%
+\centering
+\includegraphics[width=7.5cm]{arvoretipoII}
+\caption{Árvore de tipo $II$.}
+%width mexe no tamanho e angle na rotaÃ§Ã£o%
+\label{fig:genrang}
+\end{figure}
+
+A árvore da Figura 2.2, de conectividade algébrica $0.42972$ e vetor de Fiedler igual a [$0,4502;~ -0,1446;~ -0,1446;~ -0,1446;~ -0,1446;~ -0,1446;~ -0,1446;~ -0,1446;~ -0,1446;$ $0,7894;~ -0,08249$]. Observe que, de fato, não há vértices correspondetes a $0$, e ainda, só há uma aresta que une um vértice correspondente a um valor positivo a um vértice correspondente a um valor negativos, aresta $(v_1,v_{11})$.

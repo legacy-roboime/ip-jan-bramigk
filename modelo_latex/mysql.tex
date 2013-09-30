@@ -1,0 +1,161 @@
+\chapter{Ferramentas de Banco de Dados}
+
+\section{Banco de Dados Relacional}
+
+\subsection{Introdução ao modelo relacional}
+No modelo relacional a construção se baseia em relações, que são representadas por meio de tabelas. Uma relação consiste de um esquema e de uma instância. O esquema especifica o nome da relação e o nome e o domínio de cada coluna, também denominada atributo ou campo da relação. O domínio do atributo é referenciado no esquema por seu nome e serve para restringir os valores que este atributo pode assumir. O esquema de uma relação é inváriavel ao longo do tempo, sendo modificado apenas por comandos específicos. Um exemplo de esquema de relação é:
+
+Estudante (e$\_$id: integer, nome: string, login: string, nota: real).
+
+Neste caso está sendo definida a relação de nome Estudantes, com atributos e$\_$id, nome, login e nota, cujos domínios são respectivamente integer, string, string e real.
+
+A instância de uma relação é o conjunto de linhas, também denominadas tuplas ou registros, distintas entre si, que compõem a relação em um dado momento. Ela é variável, já que o número de tuplas e o conteúdo de seus atributos podem variar ao longo do tempo. A instância de uma relação deve seguir sempre o seu respectivo esquema, respeitando o número de atributos definidos, bem como os seus domínios. Esta restrição, denominada restrição de domínio, é muito importante. O modelo relacional somente considera relações que satisfaçam esta restrição. Um exemplo de uma instância para o esquema estudantes é ilustrado na Tabela 3.1.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+e\_$$id &	nome & login & nota\\
+\hline
+11403	& Camila & camila.atonaccio & 10\\ \hline
+11422	& João Prado & joao.prado & 9,7\\ \hline
+11442	& Thiago & thiago.vasconcelos & 9,8\\ \hline
+\end{tabular}
+\caption{Exemplo de instância para o esquema estudantes.}
+\end{table}
+
+O número de tuplas que uma dada instância possui denomina-se cardinalidade da relação e o número de atributos é o seu grau. A instância de relação da acima tem cardinalidade 3 e grau 5. Podemos notar que a cardinalidade é variável, mas o grau não. Um banco de dados relacional é um conjunto de uma ou mais relações com nomes distintos. O esquema do banco de dados relacional é a coleção dos esquemas de cada relação que compõe o banco de dados.
+
+\subsection{Ferramenta MySQL}
+O MySQL é um sistema de gerenciamento open souce de bancos de dados relacional (armazena dados em tabelas separadas em vez de colocar todos os dados um só local proporcionando velocidade e flexibilidade). O servidor de banco de dados MySQL é extremamente rápido, confiável, e fácil de usar.
+
+O Servidor MySQL foi desenvolvido originalmente para lidar com bancos de dados muito grandes de maneira muito mais rápida que as soluções existentes e tem sido usado em ambientes de produção de alta demanda por diversos anos de maneira bem sucedida.
+
+Essa ferramenta funciona nas mais diversas plataformas e pode ser escrito em C ou C++. Ele tem a capacidade de lidar com banco de dados enormes. Existe servidor com banco de dados MySQL que contém 50.000.000 (milhões) de registros e sabemos de usuários que usam o MySQL com 60.000 (mil) tabelas e aproximadamente 5.000.000.000 (bilhões) de linhas, além de possuir um sistema de alocação de memória muito rápido e baseado em processo (thread).
+
+\section{Banco de Dados Orientado a grafos}
+
+\subsection{Introdução ao modelo orientado a grafos}
+Diferentemente do que acontece no modelo relacional, que armazena suas informações em linhas, colunas ou pares chaves, um banco de dados orientado a grafos armazena os dados em uma rede de nós e arestas. Sendo as arestas responsáveis por representar o relacionamento e os nós por representarem objetos.
+
+Ao desenvolvermos uma aplicação, geralmente nos deparamos com a situação de trabalharmos com o banco de dados relacional, realizando diversas queries complexas. Tais queries podem possuir essa complexidade devido ao fato de estarmos modelando dados que não são naturais ao paradigma relacional, em um banco relacional.
+
+Um bom exemplo é uma aplicação que tem por objetivo manter informações relativas a locais onde a pessoas morou e a viajou, como saber quais pessoas já viveram em uma determinada cidade, ou saber quantas já viajaram para uma determinada cidade.
+
+Fazendo uso da modelagem por meio de um banco de dados relacional podemos chegar à estrutura de tabelas representadas em Tabela 3.2, Tabela 3.3, Tabela 3.4 e Tabela. 3.5.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+id\_$$pessoa &	nome\\
+\hline
+1	& João Prado\\ \hline
+2	& Camila\\ \hline
+3	& Thiago\\ \hline
+4	& Vinícius\\ \hline
+5	& Matheus\\ \hline
+\end{tabular}
+\caption{Pessoas.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+id\_$$cidade &	nome\\
+\hline
+1	& Aparecida\\ \hline
+2	& São José dos Campos\\ \hline
+3	& São Paulo\\ \hline
+4	& Rio de Janeiro\\ \hline
+5	& Fortaleza\\ \hline
+6	& Natal\\ \hline
+\end{tabular}
+\caption{Cidades.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+id\_$$pessoa &	id\_$$cidade\\
+\hline
+1	& 1\\ \hline
+1	& 2\\ \hline
+1	& 4\\ \hline
+2	& 4\\ \hline
+3	& 5\\ \hline
+3	& 4\\ \hline
+4	& 4\\ \hline
+5	& 6\\ \hline
+5	& 4\\ \hline
+\end{tabular}
+\caption{Residência.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+id\_$$pessoa &	id\_$$cidade\\
+\hline
+1	& 3\\ \hline
+1	& 5\\ \hline
+2	& 2\\ \hline
+2	& 3\\ \hline
+3	& 2\\ \hline
+4	& 1\\ \hline
+5	& 2\\ \hline
+5	& 3\\ \hline
+\end{tabular}
+\caption{Viagens.}
+\end{table}
+
+Nesse caso, encontramos dificuldades quando o requisito é saber por quais cidades passaram (seja morando ou viajando) as pessoas que passaram por São José dos Campos, por exemplo. Esta consulta não é trivial de ser desenvolvida,pois pode exigir diversos joins e subqueries que poderão tornar a consulta de extrema complexidade e muito pouco performática.
+
+Se modelássemos o mesmo problema só que agora por meio de banco de dados orientado a grafos teríamos um similar ao que é apresentado da Figura 3.1.
+
+\begin{figure}[H] %h,t,b,p,H%
+\centering
+\includegraphics[width=10cm]{fig2joao}
+\caption{Grafo morou x viajou.}
+\end{figure}
+
+Por meio desse modelo podemos resolver nosso problema de maneira mais simples: Colocamos com ponto de partida a cidade de São José dos Campos e percorremos os dois relacionamento (Morou e Viajou) e com isso teremos as pessoas. Isto é representado na Figura 3.2.
+
+\begin{figure}[H] %h,t,b,p,H%
+\centering
+\includegraphics[width=10cm]{fig1joao}
+\caption{Grafo esteve em.}
+\end{figure}
+
+\subsection{Conceito NoSQL}
+NoSQL são diferentes sistemas de armazenamento que vieram para suprir necessidades em demandas onde os bancos de dados tradicionais (relacionais) são ineficazes. Muitas dessas bases apresentam características muito interessantes como alta performance, escalabilidade, replicação, suporte à dados estruturados e sub colunas.
+
+O NoSQL surgiu da necessidade de uma performance superior e de uma alta escalabilidade. Os atuais bancos de dados relacionais são muito restritos a isso, sendo necessária a distribuição vertical de servidores, ou seja, quanto mais dados, mais memória e mais disco um servidor precisa. O NoSQL tem uma grande facilidade na distribuição horizontal, ou seja, mais dados, mais servidores, não necessariamente de alta performance. Um grande utilizador desse conceito é o Google, que usa computadores de pequeno e médio porte para a distribuição dos dados; essa forma de utilização é muito mais eficiente e econômica. Além disso, os bancos de dados NoSQL são muito tolerantes a erros. 
+
+No caso dos bancos NoSQL, toda a a informação necessária estará agrupada no mesmo registro, ou seja, em vez de você ter o relacionamento entre várias tabelas para formar uma informação, ela estará em sua totalidade no mesmo registro.
+
+\subsection{Ferramenta Neo4j}
+
+O Neo4j é um banco de dados Open Source baseado no conceito NoSQL (Banco de Dados que não utiliza os conceitos estruturados). As informações não são armazenadas em tabelas, mas sim na forma de Grafos e suas estruturas são representadas de forma que o conhecimento é representado pelos conceitos matemáticos da Teoria de Grafos.
+
+Em comparação com o modelo relacional o Neo4j apresenta melhor desempenho. Seguem alguns experimentos realizados.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+&número de pessoas &	query time\\
+\hline
+Banco de dados relacional & 1000 & 2000ms \\ \hline
+Neoj4 & 1000 & 2ms \\ \hline
+Neoj4 & 1000000 & 2ms \\ \hline
+\end{tabular}
+\caption{Número de pessoas representadas e seus respectivos query time.}
+\end{table}
+
+No experimento acima simulou-se uma rede social na qual existem 1000 pessoas e cada uma possui aproximadamente 50 amigos e partindo do nó A pretendendo-se chegar ao nó B com profundidade máxima 4. Na tabela Tabela. 3.6 mostrou-se ainda como seria o query time para o Neo4j caso houvessem 1000000 pessoas.
+
+Para armazenamento de imagens no Neo4j recomenda-se armazenar apenas uma refe-rência a imagem no banco de dados e a imagem em um outro lugar.
