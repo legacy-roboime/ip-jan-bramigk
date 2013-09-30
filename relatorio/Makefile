@@ -1,8 +1,9 @@
 # the parameters
 #
 
+OUTDIR   := ../gh-pages
 LATEX    := pdflatex
-TEXFLAGS := -output-directory=../gh-pages/
+TEXFLAGS := -output-directory=$(OUTDIR)
 
 # the magic
 #
@@ -10,6 +11,7 @@ TEXFLAGS := -output-directory=../gh-pages/
 sources  := $(wildcard *.tex)
 
 all: $(sources)
+	@[ -d $(OUTDIR) ] || mkdir -p $(OUTDIR)
 	@echo sources are: $(sources)
 	yes "" | $(LATEX) $(TEXFLAGS) $(sources)
 	#$(LATEX) $(TEXFLAGS) $(sources)
