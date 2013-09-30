@@ -10,8 +10,8 @@
 \usepackage{subfigure}
 %\usepackage{hyperref}
 
-\author{Fulano}
-\title{Título}
+\author{}
+\title{}
 
 \renewcommand*\thesection{\arabic{section}}
 %\linespread{1.5}
