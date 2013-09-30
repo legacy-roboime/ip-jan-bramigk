@@ -1,15 +1,14 @@
 \documentclass[12pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
-%\usepackage[brazil]{babel}
 \usepackage[brazilian]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
-\usepackage{breakcites}
-\usepackage{subfigure}
-%\usepackage{hyperref}
+%\usepackage{breakcites}
+%\usepackage{subfigure}
+\usepackage{hyperref}
 
 \author{
   Bramigk, Victor\\
@@ -24,10 +23,20 @@
 %\linespread{1.5}
 
 \begin{document}
+% capas obrigatorias
 \input{partes/capa}
 \input{partes/subcapa}
-%\input{partes/introducao}
+
+% modelagem é tipo uma introducao
+\input{partes/modelagem}
+
+% modelos
+\input{partes/algoritimo_genetico}
 \input{partes/logica_fuzzy}
+
+% bibliografia
 \input{partes/referencias}
+
+% pagina para assinaturas, deveria ser outro documento?
 \input{partes/assinaturas}
 \end{document}

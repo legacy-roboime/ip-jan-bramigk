@@ -20,10 +20,6 @@ Estudar:
 
 Fazer um mini tutorial (0.5 ~ 1.0 páginas) sobre cada tópico.
 
-## A parte (LARC)
-
-*Prazo do TDP: 13 de setembro*
-
 # Segunda Reunião
 
 A modelagem adotada será baseada em **Redes Neurais**. Provavelmente será utilizado algum dos métodos de otimização
