@@ -1,4 +1,4 @@
-\section{Método da Colônia de Formigas}
+\section{Otimização da Colônia de Formigas}
 
 Na busca por alimento, as formigas utilizam de feromônios para encontrar o melhor caminho.
 Isso acontece da seguinte maneira: cada formiga deposita feromônio ao se deslocar. A partir
@@ -11,8 +11,8 @@ caminhos que foram percorridos á pouco tempo tem mais chance de serem percorrid
 percorridos a muito tempo. A quantidade de feromônio depositado é mais intensa no trajeto de volta,
 quando a comida foi encontrada. Outro fator que é levado em consideração é a qualidade da comida
 encontrada, de maneira que mais feromônio é depositado quanto melhor for a fonte de alimento encontrada.
-A medida que as formigas exploram o local e encontram alimento, esse procedimento tende a otimizar o
-trajeto a medida cada vez mais.
+A medida que mais formigas exploram o local e encontram alimento, esse procedimento tende a otimizar o
+trajeto entre a fonte de alimento e a colônia.
 
 Apesar dessa heurística utilizada pelas formigas ser interessante para se resolver problemas combinatórios 
 do tipo NP(i.e., com complexidade não polinomial), são necessários algumas adaptações na construção
@@ -21,7 +21,7 @@ de um algoritmo computacional.
 A seguir é apresentado a meta-heurística do ACO(\textit{Ant Colony Optimization}) algoritmo, juntamente com observações relacionadas as diferenças
 entre a heurística do ACO e o comportamento natural das formigas descrito anteriormente.
 
-\subsection{Pseudo código do ACO}
+\subsection{Pseudo código da meta-heurística do ACO}
 %Algoritmo
 \begin{algorithm}[H]
  %Macros
@@ -29,7 +29,7 @@ entre a heurística do ACO e o comportamento natural das formigas descrito anter
  \SetKwBlock{Procedimento}{Procedimento}{fim} 
  
  \Procedimento{
- 	\Enqto{n $<$ N_{MAX\_IT}}{
+ 	\Enqto{n $<$ N_{MAX\_IT}}{ \tcp*[f]{N_{MAX\_IT} é o número máximo de iterações}
 		\AgendarAtividade{ 
   	  		ConstruirSolucoesFormigas\\
 			AtualizarFeromonios\\
@@ -70,5 +70,5 @@ pelas formigas individualmente. Um exemplo de ações desse tipo é a filtragem 
 regiões por meio de informações globais.
 
 O procedimento \textit{AgendarAtividade} não necessariamente é uma instrução sequencial. Pode-se, portanto,
-implementá-lo de maneira sequencial ou paralela, sincrona ou assincronamente. O tipo de abordagem que será
+implementá-lo de maneira sequencial ou paralela, síncrona ou assincronamente. O tipo de abordagem que será
 utilizada depende das características do problema que se deseja resolver.
