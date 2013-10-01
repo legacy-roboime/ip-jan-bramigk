@@ -18,24 +18,57 @@ Apesar dessa heurística utilizada pelas formigas ser interessante para se resol
 do tipo NP(i.e., com complexidade não polinomial), são necessários algumas adaptações na construção
 de um algoritmo computacional.
 
-A seguir é apresentado a meta-heurística do ACO(\textit{Ant Coloni Optmization}) algoritmo, juntamente com observações relacionadas as diferenças
+A seguir é apresentado a meta-heurística do ACO(\textit{Ant Colony Optimization}) algoritmo, juntamente com observações relacionadas as diferenças
 entre a heurística do ACO e o comportamento natural das formigas descrito anteriormente.
 
 \subsection{Pseudo código do ACO}
-
+%Algoritmo
 \begin{algorithm}[H]
-\SetAlgoLined
-\KwData{this text}
-\KwResult{how to write algorithm with \LaTeX2e }
-initialization\;
-\While{not at end of this document}{
-read current\;
-\eIf{understand}{
- go to next section\;
- current section becomes this one\;
- }{
- go back to the beginning of current section\;
+ %Macros
+ \SetKwBlock{AgendarAtividade}{AgendarAtividade}{fim} 
+ \SetKwBlock{Procedimento}{Procedimento}{fim} 
+ 
+ \Procedimento{
+ 	\Enqto{n $<$ N_{MAX\_IT}}{
+		\AgendarAtividade{ 
+  	  		ConstruirSolucoesFormigas\\
+			AtualizarFeromonios\\
+			AcoesGlobais \tcp*[f]{opcional}
+ 	 	}
+	}
+ }
 }
-}
-\caption{How to write algorithms}
+
+\caption{Pseudo código da meta-heurística do ACO}\label{meta-heuristica_aco}
 \end{algorithm}
+\\
+\\
+A meta-heurística do ACO pode ser subdividida em três partes, 
+conforme proposto por (Dorigo, Marco; 2004): \textit{ConstruirSolucoesFormigas}, 
+\textit{AtualizarFeromonios} e \textit{AcoesGlobais}.
+
+\textit{ConstruirSolucoesFormigas} gerencia a movimentação de uma colônia de formigas
+em torno dos nós vizinhos. A escolha do próximo nó é feita através de uma decisão 
+estocástica que é função da quantidade de feromônio no nós vizinhos e informação heurística.
+Quando uma formiga encontra uma solução, ou enquanto a solução é construída, esta avalia a
+qualidade da solução(completa ou parcial) que será utilizada pelo procedimento
+\textit{AtualizarFeromonios} para decidir a quantidade de feromônio que será depositada.
+Outro procedimento relevante na construção da solução é a eliminação de possíveis ciclos, utilizado
+por exemplo, no problema do caixeiro viajante.
+
+\textit{AtualizarFeromonios} é o processo que atualiza os traços de feromônios depositados pelas
+formigas no espaço de busca. Os traços de feromônios podem aumentar, caso uma formiga tenha visitado
+o nó/conexões em questão, ou diminuir, devido a evaporação do feromônio. Esse procedimento faz com 
+que nós/conexões que foram visitados por muitas formigas ou por uma formiga e que tenha levado em
+uma solução boa aumentem probabilidade de serem visitados por futuras formigas. Semelhantemente, reduz 
+a probabilidade de que nós que não foram visitados por novas formigas por muitas iterações sejam visitados
+novamente. Logo, este procedimento evita a convergência a caminhos sub ótimos, favorecendo também a exploração
+de novas regiões do espaço de busca.
+
+Por fim, o procedimento \textit{AcoesGlobais} é utilizado para centralizar ações que não podem ser executadas
+pelas formigas individualmente. Um exemplo de ações desse tipo é a filtragem de soluções ou o favorecimento de
+regiões por meio de informações globais.
+
+O procedimento \textit{AgendarAtividade} não necessariamente é uma instrução sequencial. Pode-se, portanto,
+implementá-lo de maneira sequencial ou paralela, sincrona ou assincronamente. O tipo de abordagem que será
+utilizada depende das características do problema que se deseja resolver.
