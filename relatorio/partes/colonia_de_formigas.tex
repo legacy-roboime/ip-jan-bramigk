@@ -29,7 +29,7 @@ entre a heurística do ACO e o comportamento natural das formigas descrito anter
  \SetKwBlock{Procedimento}{Procedimento}{fim} 
  
  \Procedimento{
- 	\Enqto{n $<$ N_{MAX\_IT}}{ \tcp*[f]{N_{MAX\_IT} é o número máximo de iterações}
+ 	\Enqto{$n < N_{MAX\_IT}$}{ \tcp*[f]{$N_{MAX\_IT}$ é o número máximo de iterações}
 		\AgendarAtividade{ 
   	  		ConstruirSolucoesFormigas\\
 			AtualizarFeromonios\\
@@ -56,11 +56,11 @@ qualidade da solução(completa ou parcial) que será utilizada pelo procediment
 Outro procedimento relevante na construção da solução é a eliminação de possíveis ciclos, utilizado
 por exemplo, no problema do caixeiro viajante.
 
-\textit{AtualizarFeromonios} é o processo que atualiza os traços de feromônios depositados pelas
-formigas no espaço de busca. Os traços de feromônios podem aumentar, caso uma formiga tenha visitado
-o nó/conexões em questão, ou diminuir, devido a evaporação do feromônio. Esse procedimento faz com 
+\textit{AtualizarFeromonios} é o processo que atualiza os traços de feromônio depositados pelas
+formigas no espaço de busca. Os traços de feromônio podem aumentar, caso uma formiga tenha visitado
+o nó/conexão em questão, ou diminuir, devido ao processo de evaporação do feromônio. Esse procedimento faz com 
 que nós/conexões que foram visitados por muitas formigas ou por uma formiga e que tenha levado em
-uma solução boa aumentem probabilidade de serem visitados por futuras formigas. Semelhantemente, reduz 
+uma solução boa aumentem a probabilidade de serem visitados por futuras formigas. Semelhantemente, reduz 
 a probabilidade de que nós que não foram visitados por novas formigas por muitas iterações sejam visitados
 novamente. Logo, este procedimento evita a convergência a caminhos sub ótimos, favorecendo também a exploração
 de novas regiões do espaço de busca.
