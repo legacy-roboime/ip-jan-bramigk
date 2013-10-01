@@ -105,6 +105,7 @@
 \titulo{Heurística Estática para Times\\Cooperativos de Robôs}
 \autor{
   Jan Segre\\
+  % \and
   Victor Bramigk\\
 }
 \local{Rio de Janeiro}
@@ -136,18 +137,18 @@ Engenharia.}
 % informações do PDF
 \makeatletter
 \hypersetup{
-     	%pagebackref=true,
-		pdftitle={\@title}, 
-		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      		% color of file links
-		urlcolor=blue,
-		bookmarksdepth=4
+	%pagebackref=true,
+	pdftitle={\@title},
+	pdfauthor={\@author},
+	pdfsubject={\imprimirpreambulo},
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={ime}{robocup}{analise}{logs}{rede neural},
+	colorlinks=true,		% false: boxed links; true: colored links
+	linkcolor=blue,			% color of internal links
+	citecolor=blue,			% color of links to bibliography
+	filecolor=magenta,		% color of file links
+	urlcolor=blue,
+	bookmarksdepth=4
 }
 \makeatother
 % ---
@@ -157,10 +158,10 @@ Engenharia.}
 % ---
 
 % O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.3cm}
+%\setlength{\parindent}{1.3cm}
 
 % Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+%\setlength{\parskip}{0.2cm}  % tente também \onelineskip
 
 % ---
 % compila o indice
@@ -174,7 +175,7 @@ Engenharia.}
 \begin{document}
 
 % Retira espaço extra obsoleto entre as frases.
-\frenchspacing
+%\frenchspacing
 
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
@@ -210,92 +211,13 @@ Engenharia.}
 % \begin{fichacatalografica}
 %     \includepdf{fig_ficha_catalografica.pdf}
 % \end{fichacatalografica}
-%\input{pre_textuais/ficha_catalografica}
-%\input{pre_textuais/nota_de_direitos_autorais} % deve ser o verso da folha de rosto de algum jeito
-\begin{fichacatalografica}
-	%\vspace*{\fill}					% Posição vertical
-	%\hrule							% Linha horizontal
-	%\begin{center}					% Minipage Centralizado
-	%\begin{minipage}[c]{12.5cm}		% Largura
-	%
-	%\imprimirautor
-	%
-	%\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-	%\imprimirlocal, \imprimirdata-
-	%
-	%\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
-	%
-	%\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-	%
-	%\hspace{0.5cm}
-	%\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-	%\imprimirdata.}\\
-	%
-	%\hspace{0.5cm}
-	%	1. Palavra-chave1.
-	%	2. Palavra-chave2.
-	%	I. Orientador.
-	%	II. Universidade xxx.
-	%	III. Faculdade de xxx.
-	%	IV. Título\\
-	%
-	%\hspace{8.75cm} CDU 02:141:005.7\\
-	%
-	%\end{minipage}
-	%\end{center}
-	%\hrule
-	\let\footnotesize\small
-	\let\footnoterule\relax
-	\let \footnote \thanks
-	\noindent
-	c2013
-
-	\vspace{10mm}
-
-	\noindent
-	INSTITUTO MILITAR DE ENGENHARIA\\
-	Praça General Tibúrcio, 80-Praia Vermelha \\
-	Rio de Janeiro-RJ CEP 22290-270
-
-	\vspace{10mm}
-	\noindent
-	Este exemplar é de propriedade do Instituto Militar de Engenharia, que poderá incluí-lo em base de dados, armazenar em
-	computador, microfilmar ou adotar qualquer forma de arquivamento.
-
-	\vspace{10mm}
-	\indent
-	\par{É permitida a menção, reprodução parcial ou integral e a transmissão entre bibliotecas deste trabalho, sem modificação
-		de seu texto, em qualquer meio que esteja ou venha a ser fixado, para pesquisa acadêmica, comentários e citações, desde
-			que sem finalidade comercial e que seja feita a referência bibliográfica completa.}
-			\vspace{10mm}
-
-			\par{Os conceitos expressos neste trabalho são de responsabilidade do(s) autor(es) e do(s) orientador(es).}
-
-			\vspace{10mm}
-			\noindent
-			\hspace{3cm}
-			\framebox[12.5cm]{\footnotesize
-				\begin{minipage}{13cm}
-				\vspace*{1mm}
-				\parbox[t]{1.5cm}{\hspace{2mm} Z34r}%
-				\parbox[t]{11cm}{\noindent Segre, J., Bramigk, V.}\\
-				\parbox[t]{1.5cm}{\ }%
-				\parbox[t]{11cm}{\noindent \hspace{4mm} Heurística Estática para Times Cooperativos de Robôs \hspace{1mm}/ \hspace{6mm} Jan Lucas de Lima Segre e Victor Bramigk - Rio de Janeiro : Instituto Militar de Engenharia, 2012.}\\
-				\parbox[t]{1.5cm}{\ }%
-				\parbox[t]{11cm}{\noindent \hspace{4mm}} \\
-				[\baselineskip]
-				\parbox[t]{1.5cm}{\ }%
-				\parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP)- Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, 2013. } \\
-				[\baselineskip]
-				\parbox[t]{1.5cm}{\ }%
-				\parbox[t]{11cm}{\noindent \hspace{4mm} 1. Engenharia da computação. 2. Redes Neurais. 
-				3. Lógica Nebulosa. 4. Otimização da Colônia de Formigas. Instituto Militar de Enh=genharia.}\\
-				[\baselineskip]
-				\parbox[t]{10cm}{\ }%
-				\parbox[t]{4.0 cm}{}
-				\end{minipage}%
-			}
-\end{fichacatalografica}
+\imprimirfichacatalografica
+{Z34r}
+{Segre, J., Bramigk, V.}
+{1. Engenharia da computação.
+ 2. Redes Neurais.
+ 3. Lógica Nebulosa.
+ 4. Otimização da Colônia de Formigas. Instituto Militar de Engenharia.}
 % ---
 
 % ---
@@ -330,7 +252,7 @@ Engenharia.}
 % ---
 % Inserir folha de aprovação
 % ---
-
+%
 % Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
 % 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
 % do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
@@ -338,40 +260,9 @@ Engenharia.}
 %
 % \includepdf{folhadeaprovacao_final.pdf}
 %
-%\input{pre_textuais/folha_de_aprovacao}
-\begin{folhadeaprovacao}
-
-  \begin{center}
-    {\ABNTEXchapterfont\large Instituto Militar de Engenharia}
-
-    \vspace*{\fill}
-    {\ABNTEXchapterfont\large\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
-    \vspace*{\fill}
-  \end{center}
-
-  \par \imprimirpreambulo
-  \par {\imprimirorientadorRotulo~\imprimirorientador\par}
-
-  Aprovado em 9 de outubro de 2013 pela seguinte Banca Examinadora:
-
-  \assinatura{\textbf{\imprimirorientador} \\ Orientador}
-  \assinatura{\textbf{Maj Julio Cesar Duarte - D.Sc. do IME}}
-  \assinatura{\textbf{Ricardo Choren Noya - Ph.D do IME}}
-  %\assinatura{\textbf{Professor} \\ Convidado 3}
-  %\assinatura{\textbf{Professor} \\ Convidado 4}
-
-  \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-
-\end{folhadeaprovacao}
+\convidadoum{Maj Julio Cesar Duarte - D.Sc. do IME}{}
+\convidadodois{Ricardo Choren Noya - Ph.D do IME}{}
+\imprimirfolhadeaprovacao{9 de outubro de 2013}
 % ---
 
 % ---
@@ -455,8 +346,7 @@ que o resultado seja refinado.
 
 % resumo em inglês
 \begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-   %This is the english abstract.
+\begin{otherlanguage*}{english}
 
 The main objective of this work is predicting how a robot soccer team whill behave, based
 on a set of positions and orientations of a discrete sample. For that, some heuristics were
@@ -466,11 +356,11 @@ as candidate solutions: one based on the Neural Network heuristics, and the othe
 Fuzzy logic. After a deeper study on of these methods it's desirable to implement an algori-
 thm which will refinethe result.
 
-   %\vspace{\onelineskip}
+%\vspace{\onelineskip}
 
-   %\noindent
-   %\textbf{Key-words}: latex. abntex. text editoration.
- \end{otherlanguage*}
+%\noindent
+%\textbf{Key-words}: latex. abntex. text editoration.
+\end{otherlanguage*}
 \end{resumo}
 
 % resumo em francês 

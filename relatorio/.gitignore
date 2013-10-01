@@ -13,6 +13,6 @@
 *.ist
 *.log
 *.out
-*.pdf
 *.toc
 *.nlo
+*.cookie

@@ -28,7 +28,9 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-% alterando a capa
+% capa
+% ====
+
 \renewcommand{\imprimircapa}{%
   \begin{capa}%
     \center
@@ -49,7 +51,7 @@
 
     \vfill
 
-    \ABNTEXchapterfont\LARGE\imprimirtitulo
+    {\ABNTEXchapterfont\LARGE\bfseries\imprimirtitulo}
 
     \vfill
 
@@ -62,6 +64,7 @@
 
 
 % folha de rosto
+% ==============
 
 \makeatletter
 
@@ -109,3 +112,127 @@
 }
 
 \makeatother
+
+% ficha catalográfica
+% ===================
+
+\newcommand{\imprimirfichacatalografica}[3]{%
+\begin{fichacatalografica}
+	\let\footnotesize\small
+	\let\footnoterule\relax
+	\let\footnote\thanks
+	\noindent
+	%XXX: what's the best way to parametrize this year?
+	c2013
+
+	\vspace{10mm}
+
+	\noindent
+	INSTITUTO MILITAR DE ENGENHARIA\\
+	Praça General Tibúrcio, 80-Praia Vermelha \\
+	Rio de Janeiro-RJ CEP 22290-270
+
+	\vspace{10mm}
+	\noindent
+	Este exemplar é de propriedade do Instituto Militar de Engenharia, que poderá incluí-lo em base de dados, armazenar em
+	computador, microfilmar ou adotar qualquer forma de arquivamento.
+
+	\vspace{10mm}
+	\indent
+	\par
+	É permitida a menção, reprodução parcial ou integral e a transmissão entre bibliotecas deste trabalho, sem modificação
+	de seu texto, em qualquer meio que esteja ou venha a ser fixado, para pesquisa acadêmica, comentários e citações, desde
+	que sem finalidade comercial e que seja feita a referência bibliográfica completa.
+
+	\vspace{10mm}
+	\par
+	Os conceitos expressos neste trabalho são de responsabilidade do(s) autor(es) e do(s) orientador(es).
+
+	\vspace{10mm}
+	\noindent
+	\hspace{3cm}
+	\framebox[12.5cm]{\footnotesize
+		\begin{minipage}{13cm}
+		\vspace*{1mm}
+		\parbox[t]{1.5cm}{\hspace{2mm} #1}% código estranho
+		\parbox[t]{11cm}{\noindent #2}\\% autores com abreviações estranhas
+		\parbox[t]{1.5cm}{\ }%
+		\parbox[t]{11cm}{\noindent \hspace{4mm} \imprimirtitulo \hspace{1mm}/ \hspace{6mm} {\let\\=, \imprimirautor} : Instituto Militar de Engenharia, 2013.}\\
+		\parbox[t]{1.5cm}{\ }%
+		\parbox[t]{11cm}{\noindent \hspace{4mm}}\\
+		[\baselineskip]
+		\parbox[t]{1.5cm}{\ }%
+		\parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP) - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, 2013. } \\
+		[\baselineskip]
+		\parbox[t]{1.5cm}{\ }%
+		\parbox[t]{11cm}{\noindent \hspace{4mm} #3}\\% tags estranhas
+		[\baselineskip]
+		\parbox[t]{10cm}{\ }%
+		\parbox[t]{4.0 cm}{}
+		\end{minipage}%
+	}
+\end{fichacatalografica}
+}
+
+
+% folha de aprovação
+% ==================
+
+% orientador + no máximo 3 convidados
+% para adicionar um convidado à lista de assinaturas:
+%
+% \convidadoum{Fulano da Silva - Ph.D}{Convidado Especial}
+%
+
+\newcommand{\convidadoumNome}{}
+\newcommand{\convidadoumTitulo}{}
+\newcommand{\convidadoum}[2]{\renewcommand{\convidadoumNome}{#1}\renewcommand{\convidadoumTitulo}{#2}}
+
+\newcommand{\convidadodoisNome}{}
+\newcommand{\convidadodoisTitulo}{}
+\newcommand{\convidadodois}[2]{\renewcommand{\convidadodoisNome}{#1}\renewcommand{\convidadodoisTitulo}{#2}}
+
+\newcommand{\convidadotresNome}{}
+\newcommand{\convidadotresTitulo}{}
+\newcommand{\convidadotres}[2]{\renewcommand{\convidadotresNome}{#1}\renewcommand{\convidadotresTitulo}{#2}}
+
+\newcommand{\imprimirfolhadeaprovacao}[1]{%
+  \begin{folhadeaprovacao}
+
+    \begin{center}
+      {\ABNTEXchapterfont\large Instituto Militar de Engenharia}\\
+      %\vspace*{\fill}
+      \vspace*{2cm}
+      {\ABNTEXchapterfont\large\imprimirautor}
+      %\vspace*{\fill}\vspace*{\fill}
+      \vspace*{2cm}
+      {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+      %\vspace*{\fill}
+      \vspace*{2cm}
+    \end{center}
+
+    \par \imprimirpreambulo
+    \par {\imprimirorientadorRotulo~\imprimirorientador\par}
+
+    %Aprovado em 9 de outubro de 2013 pela seguinte Banca Examinadora:
+    Aprovado em #1 pela seguinte Banca Examinadora:
+
+    \assinatura{\textbf{\imprimirorientador} \\ Orientador}
+    \assinatura{\textbf{\convidadoumNome} \\ \convidadoumTitulo}
+    \assinatura{\textbf{\convidadodoisNome} \\ \convidadodoisTitulo}
+    %TODO: find out why does abntex@ifnotempty doesn't work so we can have some dynamic list
+    %\abntex@ifnotempty{\convidadoumNome}{\assinatura{\textbf{\convidadoumNome} \\ \convidadoumTitulo}}
+    %\abntex@ifnotempty{\convidadodoisNome}{\assinatura{\textbf{\convidadodoisNome} \\ \convidadodoisTitulo}}
+    %\abntex@ifnotempty{\convidadotresNome}{\assinatura{\textbf{\convidadotresNome} \\ \convidadotresTitulo}}
+
+    \vspace*{\fill}
+    \begin{center}
+      \vspace*{0.5cm}
+      {\large\imprimirlocal}
+      \par
+      {\large\imprimirdata}
+      \vspace*{1cm}
+    \end{center}
+
+  \end{folhadeaprovacao}
+}
