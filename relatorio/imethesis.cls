@@ -781,9 +781,9 @@
         \begin{minipage}{13cm}
         \vspace*{1mm}
         \parbox[t]{1.5cm}{\hspace{2mm} \@cipcode}%
-        \parbox[t]{11cm}{\noindent Wanous, C., Prado, J., Vasconcelos, T.}\\
+        \parbox[t]{11cm}{\noindent Segre, J., Bramigk, V.}\\
         \parbox[t]{1.5cm}{\ }%
-        \parbox[t]{11cm}{\noindent \hspace{4mm} \@title \hspace{1mm}/ \hspace{6mm} Camila Antonaccio Wanous, João Luiz do Prado Neto e Thiago de Paula Vasconelos - Rio de Janeiro : \@university, \@year.}\\
+        \parbox[t]{11cm}{\noindent \hspace{4mm} \@title \hspace{1mm}/ \hspace{6mm} Jan Lucas de Lima Segre e Victor Bramigk - Rio de Janeiro : \@university, \@year.}\\
         \parbox[t]{1.5cm}{\ }% 
         \parbox[t]{11cm}{\noindent \hspace{4mm}} \\ 
 [\baselineskip]
@@ -791,8 +791,8 @@
         \parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP)- \@university \vspace{1mm} - Rio de Janeiro, \@year. } \\
 [\baselineskip]
         \parbox[t]{1.5cm}{\ }%
-        \parbox[t]{11cm}{\noindent \hspace{4mm} 1. Engenharia da computação. 2. Teoria espectral de grafo. 
-3. Vetor de Fiedler. 4. Árvores de Tipo I e de Tipo II.\@university.}\\
+        \parbox[t]{11cm}{\noindent \hspace{4mm} 1. Engenharia da computação. 2. Redes Neurais. 
+3. Lógica Nebulosa. 4. Otimização da Colônia de Formigas.\@university.}\\
 [\baselineskip]
         \parbox[t]{10cm}{\ }%
         \parbox[t]{4.0 cm}{}
@@ -834,11 +834,9 @@
           %\null\vfill
           \MakeUppercase{\textbf{\@university}}
           \vfill
-          \MakeUppercase{\textbf{\space Camila Antonaccio Wanous}}
+          \MakeUppercase{\textbf{\space Jan Lucas de Lima Segre}}
           \vfill
-          \MakeUppercase{\textbf{\space João Luiz do Prado Neto}}
-          \vfill
-          \MakeUppercase{\textbf{\space Thiago de Paula Vasconcelos}}
+          \MakeUppercase{\textbf{\space Victor Bramigk}}
           \vfill
           \MakeUppercase{\textbf{\@title}}
           \vfill
@@ -848,10 +846,10 @@
        \par Orientador: {\@chair} %\\[\baselineskip]
        %\par Co-orientador: {\@vicechair}\\[\baselineskip]
        %\noindent
-       \par Aprovada em 08 de outubro de 2013 pela seguinte Banca Examinadora:
+       \par Aprovada em 09 de outubro de 2013 pela seguinte Banca Examinadora:
        \begin{center}
           \vspace{\@approvalspace}
-          $\:\overline{\makebox[15cm][c]{{\@chair} {\@chairfrom} - Presidente}}\:$ \\
+          $\:\overline{\makebox[15cm][c]{{\@chair} {\@chairfrom}}}\:$ \\
           \vspace{\@approvalspace}
         % $\:\overline{\makebox[15cm][c]{{\@vicechair} {\@vicechairfrom}}}\:$ \\
         % \vspace{\@approvalspace}
