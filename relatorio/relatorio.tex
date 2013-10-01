@@ -1,18 +1,31 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[a4paper,12pt]{imethesis}
+\usepackage[authoryear,round]{natbib}
+\usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
-\usepackage[brazilian]{babel}
+%\usepackage[T1]{fontenc}                            % Fontes acentuados
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage[table]{xcolor}
+%\usepackage[table]{xcolor}
 %\usepackage{breakcites}
 %\usepackage{subfigure}
 \usepackage{hyperref}
-%pacote para escrever algoritmos
-%http://www.cs.toronto.edu/~frank/Useful/algorithm2e.pdf
+% pacote para escrever algoritmos
+% http://www.cs.toronto.edu/~frank/Useful/algorithm2e.pdf
 \usepackage[lined, boxed, portuguese, commentsnumbered]{algorithm2e}
 \usepackage{cite}
+\usepackage{nomencl} % Lista de Abreviaturas
+\usepackage[usenames]{color}
+\usepackage{float}
+\usepackage{arydshln} %para fazer linhas pontilhadas na matriz
+
+\setlength{\hoffset}{-1cm}
+\setlength{\voffset}{-2cm}
+\setlength{\textheight}{23cm}
+\hyphenation{}
+
+% Meta informações
+% ================
 
 \author{
   Bramigk, Victor\\
@@ -21,38 +34,101 @@
   Segre, Jan\\
   \texttt{jan@segre.in}
 }
-\title{Análise de logs de jogos da SSL (Robocup)}
+\title{Heurística Estática para Times Cooperativos de Robôs}
+\date{2 de Outubro 2013}
+\cityear{Rio de Janeiro}{2013}
 
-\renewcommand*\thesection{\arabic{section}}
+%\abrevauthor{Wanous, c.}
+\university{Instituto Militar de Engenharia}
+\thesisapp{Iniciação à Pesquisa apresentada ao Curso de Graduação
+em Engenharia de Computação do Instituto Militar de
+Engenharia.}
+%\patente{}
+\cipcode{Z34r}
+
+\chair{Paulo F. F. Rosa - Ph.D}{do IME}
+\memberone{Maj Julio Cesar Duarte - D.Sc.}{do IME}
+\membertwo{Ricardo Choren Noya - Ph.D}{do IME}
+\numberofmembers{3}
+
+%\renewcommand*\thesection{\arabic{section}}
 %\linespread{1.5}
 
 \begin{document}
-% capas obrigatorias
-\input{partes/capa}
-\input{partes/subcapa}
 
-% resumo
-\input{partes/resumo}
+% Elementos pré-textuais
+% ======================
+%
+% (aka: de pouca utilidade prática)
 
-% introdução
+\input{pre_textuais/capa}
+\input{pre_textuais/folha_de_rosto}
+\input{pre_textuais/ficha_catalografica}
+\input{pre_textuais/nota_de_direitos_autorais} % deve ser o verso da folha de rosto de algum jeito
+\input{pre_textuais/folha_de_aprovacao}
 
-% modelos
+% begin opcionais
+\input{pre_textuais/dedicatoria}
+\input{pre_textuais/agradecimentos}
+\input{pre_textuais/epigrafe}
+% end opcionais
+
+\input{pre_textuais/resumo}
+\input{pre_textuais/abstract}
+
+\input{pre_textuais/sumario}
+
+% begin opcionais
+\input{pre_textuais/listas}
+% end opcionais
+
+%\input{pre_textuais/resumo}
+%\input{pre_textuais/abstract}
+
+% Corpo do trabalho
+% =================
+
+% Introducao
+% ----------
+
+\input{partes/introducao}
+
+% Desenvolvimento
+% ---------------
+
+\input{partes/analise_abordagens}
 \input{partes/logica_fuzzy}
 \input{partes/colonia_de_formigas}
 \input{partes/simulated_anealing}
 \input{partes/algoritimo_genetico}
 \input{partes/rede_neural}
 
-% discussão da modelagem
-\input{partes/analise_abordagens}
+% modelagem é tipo uma introducao
+%\input{partes/modelagem}
 
-% próximas etapas
-\input{partes/prox_etapas}
+\input{partes/cronograma}
 
-% bibliografia
-\input{partes/referencias}
+% Conclusão
+% ---------
 
-% pagina para assinaturas, deveria ser outro documento?
-\input{partes/assinaturas}
+\input{partes/proximas_etapas}
+\input{partes/conclusao}
+
+% Elementos pós-textuais
+% ======================
+
+\input{pos_textuais/referencias}
+
+% begin opcionais
+\input{pos_textuais/apendices}
+\input{pos_textuais/anexos}
+\input{pos_textuais/indice}
+\input{pos_textuais/glossario}
+% end opcionais
+
+\input{pos_textuais/contracapa}
+
 \bibliography{bibliografia}
+% FIM!!!!
+% =======
 \end{document}

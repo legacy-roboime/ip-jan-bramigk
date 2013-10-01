@@ -1,12 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Pre‚mbulo
+% Pre√¢mbulo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper,12pt]{imethesis}
+\usepackage[authoryear,round]{natbib}
 \usepackage{indentfirst}
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[portuges]{babel}
 \usepackage[T1]{fontenc}                            % Fontes acentuados
-%\usepackage[brazil]{babel}                          % LÌngua Portuguesa
+%\usepackage[brazil]{babel}                          % L√≠ngua Portuguesa
 %\usepackage{wrapfig}
 %\usepackage{subfig}
 \usepackage{nomencl} % Lista de Abreviaturas
@@ -41,17 +43,16 @@
 \usepackage{epsfig}
 %\usepackage{supertabular}
 %\usepackage{epsf} %adicionado
-\usepackage[authoryear,round]{natbib}
 %\usepackage{latexsym}
 %\usepackage[center]{caption}% usa um pacote para centralizar os captions das figuras e tabelas.
 \usepackage{arydshln} %para fazer linhas pontilhadas na matriz
 \sloppy
 
-\usepackage{multirow}
+%\usepackage{multirow}
 % Define ambiente para Lema (definir outros sfc)
 \newtheorem{teorema}{Teorema}[chapter]
 \newtheorem{lema}{Lema}[chapter]
-\newtheorem{definicao}{DefiniÁ„o}[chapter]
+\newtheorem{definicao}{Defini√ß√£o}[chapter]
 
 %\makeatletter
 %\renewcommand{\@tocrmarg}{5em}
@@ -61,16 +62,16 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Fim do pre‚mbulo
+% Fim do pre√¢mbulo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SeparaÁ„o de sÌlabas
+% Separa√ß√£o de s√≠labas
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hyphenation{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIM DA SEPARA«√O DE SÕLABAS EXTRAS
+% FIM DA SEPARA√á√ÉO DE S√çLABAS EXTRAS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -86,17 +87,17 @@
 \begin{titlepage}
 
 \begin{center}
-\large{MINIST…RIO DA DEFESA} \\
-\large{EX…RCITO BRASILEIRO} \\
-\large{DEPARTAMENTO DE CI äNCIA E TECNOLOGIA}\\
+\large{MINIST√âRIO DA DEFESA} \\
+\large{EX√âRCITO BRASILEIRO} \\
+\large{DEPARTAMENTO DE CI√äNCIA E TECNOLOGIA}\\
 \large{IME - INSTITUTO MILITAR DE ENGENHARIA} \\
-\large{CURSO DE GRADUA«√O EM ENGENHARIA DA COMPUTA«√O} \\
+\large{CURSO DE GRADUA√á√ÉO EM ENGENHARIA DA COMPUTA√á√ÉO} \\
 \vspace{5 cm}
 \large{CAMILA ANTONACCIO WANOUS} \\
-\large{JO√O LUIZ DO PRADO NETO} \\
+\large{JO√ÉO LUIZ DO PRADO NETO} \\
 \large{THIAGO DE PAULA VASCONCELOS} \\
 \vspace{5 cm}
-\large{CONECTIVIDADE ALG…BRICA E SEUS AUTOVETORES NA CLASSE DAS ¡RVORES}\\
+\large{CONECTIVIDADE ALG√âBRICA E SEUS AUTOVETORES NA CLASSE DAS √ÅRVORES}\\
 \vspace{5 cm}
 Rio de Janeiro\\
 2013
@@ -104,21 +105,21 @@ Rio de Janeiro\\
 
 \end{titlepage}
 
-\input{inicio.tex}
+\input{files/inicio.tex}
 
-\input{resumo.tex} 
+\input{files/resumo.tex}
 
-\input{introducao.tex} 
+\input{files/introducao.tex}
 
-\input{arvore.tex}
+%\input{files/arvore.tex}
 
-\input{mysql.tex}
+\input{files/mysql.tex}
 
-\input{cronograma.tex}
+\input{files/cronograma.tex}
 
-\input{conclusao.tex}
+\input{files/conclusao.tex}
 
-\input{bibliografia.tex}
+\input{files/bibliografia.tex}
 
 \newpage
 $~$
@@ -128,7 +129,7 @@ $~$
 
 
 
-% ApÍndices
+% Ap√™ndices
 %\input{Apendice.tex}
 
 \end{document}

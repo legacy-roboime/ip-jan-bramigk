@@ -91,10 +91,38 @@ As limitações mais comuns no emprego de um algorítimo genético são:
   encontram a solução mais rapidamente.
 \end{itemize}
 
+\subsection{Pseudo código de um Algorítimo Genético}
+
+%\begin{lstlisting}
+%Algorithm: GA(n, \ki, \mu)
+%// Initialise generation 0:
+%k := 0;
+%Pk := a population of n randomly-generated individuals;
+%// EvaluatePk:
+%Compute ﬁtness(i) for each i ∈ Pk;
+%do
+%{ // Create generation k + 1:
+%// 1. Copy:
+%Select (1−χ)×n members ofPk and insert into Pk+1;
+%// 2. Crossover:
+%Select χ×n members of Pk; pair them up; produce offspring; insert the offspring into Pk+1;
+%// 3. Mutate:
+%Select µ×n members of Pk+1; invert a randomly-selected bit in each;
+%// Evaluate Pk+1:
+%Compute ﬁtness(i) for each i ∈ Pk;
+%// Increment:
+%k := k + 1;
+%}
+%while ﬁtness of ﬁttest individual in Pk is not high enough;
+%return the ﬁttest individual from Pk;ut your code here.
+%\end{lstlisting}
+
 \subsection{Referências}
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
   \href{http://en.wikipedia.org/wiki/Genetic\_algorithm}{Genetic algorithm}
+\item
+  \href{http://www.cs.ucc.ie/~dgb/courses/tai/notes/handout12.pdf}{Genetic Algorithms - Derek Bridge}
 \end{itemize}

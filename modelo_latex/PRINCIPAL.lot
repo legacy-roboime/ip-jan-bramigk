@@ -1,15 +1,14 @@
-\select@language {english}
 \select@language {portuges}
-\select@language {english}
+\select@language {portuges}
+\select@language {portuges}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Exemplo de inst\^ancia para o esquema estudantes.}}{16}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Pessoas.}}{18}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Cidades.}}{18}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Resid\^encia.}}{18}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Viagens.}}{19}
-\contentsline {table}{\numberline {3.6}{\ignorespaces N\'umero de pessoas representadas e seus respectivos query time.}}{21}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Exemplo de inst\IeC {\^a}ncia para o esquema estudantes.}}{12}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Pessoas.}}{14}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Cidades.}}{14}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Resid\IeC {\^e}ncia.}}{14}
+\contentsline {table}{\numberline {2.5}{\ignorespaces Viagens.}}{15}
+\contentsline {table}{\numberline {2.6}{\ignorespaces N\IeC {\'u}mero de pessoas representadas e seus respectivos query time.}}{16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
