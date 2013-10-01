@@ -22,27 +22,31 @@ A seguir é apresentado a meta-heurística do ACO(\textit{Ant Colony Optimizatio
 entre a heurística do ACO e o comportamento natural das formigas descrito anteriormente.
 
 \subsection{Pseudo código da meta-heurística do ACO}
-%Algoritmo
-%\begin{algorithm}[H]
-% %Macros
-% \SetKwBlock{AgendarAtividade}{AgendarAtividade}{fim} 
-% \SetKwBlock{Procedimento}{Procedimento}{fim} 
-% 
-% \Procedimento{
-% 	\Enqto{$n < N_{MAX\_IT}$}{ \tcp*[f]{$N_{MAX\_IT}$ é o número máximo de iterações}
-%		\AgendarAtividade{ 
-%  	  		ConstruirSolucoesFormigas\\
-%			AtualizarFeromonios\\
-%			AcoesGlobais \tcp*[f]{opcional}
-% 	 	}
-%	}
-% }
+Algoritmo
+\begin{algorithm}[H]
+%Macros
+\SetKwBlock{AgendarAtividade}{AgendarAtividade}{fim}
+\SetKwBlock{Procedimento}{Procedimento}{fim}
+
+\Procedimento{
+  \Enqto{$n < N_{MAX\_IT}$}{
+    %\tcp*[f]{$N_{MAX\_IT}$ é o número máximo de iterações\\}
+    \AgendarAtividade{
+      ConstruirSolucoesFormigas\\
+      AtualizarFeromonios\\
+      %\tcp*[f]{opcional}\\
+      \tcp{opcional:}
+      AcoesGlobais
+    }
+  }
+}
 %}
-%
-%\caption{Pseudo código da meta-heurística do ACO}\label{meta-heuristica_aco}
-%\end{algorithm}
+
+\caption{Pseudo código da meta-heurística do ACO}\label{meta-heuristica_aco}
+\end{algorithm}
 %\\
 %\\
+
 A meta-heurística do ACO pode ser subdividida em três partes, 
 conforme proposto por (Dorigo, Marco; 2004): \textit{ConstruirSolucoesFormigas}, 
 \textit{AtualizarFeromonios} e \textit{AcoesGlobais}.
