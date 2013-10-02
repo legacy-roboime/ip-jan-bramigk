@@ -24,6 +24,8 @@ entre a heurística do ACO e o comportamento natural das formigas descrito anter
 \subsection{Pseudo código da meta-heurística do ACO}
 %Algoritmo
 \begin{algorithm}[H]
+\label{meta-heuristica_aco}
+
 %Macros
 \SetKwBlock{AgendarAtividade}{AgendarAtividade}{fim}
 \SetKwBlock{Procedimento}{Procedimento}{fim}
@@ -40,19 +42,16 @@ entre a heurística do ACO e o comportamento natural das formigas descrito anter
     }
   }
 }
-%}
 
-\caption{Pseudo código da meta-heurística do ACO}\label{meta-heuristica_aco}
+\caption{Pseudo código da meta-heurística do ACO}
 \end{algorithm}
-%\\
-%\\
 
-A meta-heurística do ACO pode ser subdividida em três partes, 
-conforme proposto por (Dorigo, Marco; 2004): \textit{ConstruirSolucoesFormigas}, 
+A meta-heurística do ACO pode ser subdividida em três partes,
+conforme proposto por (Dorigo, Marco; 2004): \textit{ConstruirSolucoesFormigas},
 \textit{AtualizarFeromonios} e \textit{AcoesGlobais}.
 
 \textit{ConstruirSolucoesFormigas} gerencia a movimentação de uma colônia de formigas
-em torno dos nós vizinhos. A escolha do próximo nó é feita através de uma decisão 
+em torno dos nós vizinhos. A escolha do próximo nó é feita através de uma decisão
 estocástica que é função da quantidade de feromônio no nós vizinhos e informação heurística.
 Quando uma formiga encontra uma solução, ou enquanto a solução é construída, esta avalia a
 qualidade da solução(completa ou parcial) que será utilizada pelo procedimento
