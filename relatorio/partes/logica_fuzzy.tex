@@ -5,12 +5,12 @@
 Sistemas nebulosos aproximam funções. Eles são aproximadores universais se usarem regras suficientes. 
 Neste sentido sistemas difusos podem modelar qualquer função ou sistema contínuos. Aqueles sistemas 
 podem vir tanto da física quanto da sociologia, bem como da teoria do controle ou do 
-processamento de sinais.\cite{kosko1997fuzzy}.
+processamento de sinais.
 
 A qualidade da aproximação difusa depende da qualidade das regras. Na prática especialistas sugerem regras
 difusas ou aprendem-nas através de esquemas neurais através de dados e ajustam as regras com novos dados.
 Os resultados sempre aproximam alguma função não linear desconhecida que pode mudar com o tempo. Melhores 
-cérebros e melhores redes neurais resultam em melhores aproximações. [ref KOSKO]
+cérebros e melhores redes neurais resultam em melhores aproximações \cite{kosko1997fuzzy}.
 
 \subsection{Modelo Aditivo Padrão(SAM)}
 
@@ -22,10 +22,11 @@ Cada entrada $x$ aciona parcialmente todas as regras em paralelo. Então o siste
 associativo a medida que calcula a saída
 $F(x)$. 
 %Definir a_j(x) e b_j(y)
+
 Essas regras relacionam os conjuntos $A_j$ e $B_j$, gerando o caminho difuso $A_j x B_j$. Na prática,
 é utilizado o produto para definir $ a_j x b_j (x,y) = a_j(x).b_j(y)$. Esta é a parte "padrão" no SAM.
 A parte "aditiva" se refere ao fato de a entrada $x$ acionar a $j$-ésima regra em um grau $a_j(x)$ e o sistema 
-soma os acionamentos ou partes escaladas dos conjuntos escalados $a_j(x)B_j$:
+soma os acionamentos ou partes escaladas dos conjuntos escalados $a_j(x)B_j$, conforme \cite{kosko1997fuzzy}:
 
 \begin{eqnarray}
 F(x) = \frac{\sum w_i.a_i(x).V_i.c_i}{\sum w_j.a_j(x).V_j}
@@ -37,5 +38,3 @@ Com o volume/área $V_j$ e o centroide $c_j$ são dados por:
 V_j = \int{b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p > 0\\
 c_j = \frac{\int{y.b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p}{V_j}
 \end{eqnarray}
-
-(KOSKO, BART; \textbf{Fuzzy Engineering}, New Jersey, USA 1997) pág. 17

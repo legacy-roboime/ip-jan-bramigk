@@ -3,20 +3,43 @@
 \section{Contextualização}
 
 \par O Laboratório de robótica da seção de computação do IME possui um time que
-participa de uma competição de futebol de robôs oficializada pela Robocup.
-
-\par Essa competição consiste em partidas de futebol autônomas entre robôs com formato
+participa de uma competição de futebol de robôs oficializada pela \textit{RoboCup}.
+Essa competição consiste em partidas de futebol autônomas entre robôs com formato
 de cilindro de 18cm de diâmetro e 15cm de altura em um campo de 6m por 4m. Além disso
 o sistema de visão computacional é padronizado e centralizado. O importante é notar
 que a competição é autônoma e por isso há vários desafios envolvidos.
-
-\par Um dos desafios é modelar o inimigo, de maneira geral modelar um time desconhecido
+Um dos desafios é modelar o inimigo, de maneira geral modelar um time desconhecido
 mas com o intuito de conseguir prever com certa confiança suas decisões para tomar
 decisões melhores durante o jogo e conseguir um desempenho melhor.
-
-\par As partidas são registradas e por isso podem ser feitas análises pré-jogo além
+As partidas são registradas e por isso podem ser feitas análises pré jogo além
 de em tempo real. A principal vantagem é a liberdade sobre quão eficiente é o método
 de análise.
 
-\par O objeto a ser estudado é a análise dos registros dessas partidas com foco principal
-em modelar um time desconhecido.
+\par O objeto a ser estudado é, portanto, a análise dos registros dessas partidas 
+com foco principal em modelar um time desconhecido, denominados \textit{log}. O modelo 
+gerado será utilizado para prever os movimentos do time adversário. Isso deve tornar 
+as jogadas planejadas mais  eficazes, uma vez que já levarão em conta os movimentos 
+futuros do time adversário.
+
+\section{Problema}
+
+O problema descrito anteriormente pode ser enunciado da seguinte maneira:
+
+Dado um conjunto $E_p$ de possíveis estados do jogo, $A_{t_ad}$ um conjunto de ações dos robôs
+do time adversário, um sistema $f: {E_p} \leftarrow {A_{t_ad}}$. Encontrar o sistema 
+$F: {E_p} \leftarrow {A_{t_ad}}$ que minimiza:
+
+\begin{equation}
+\sum_i E[f(x_i),F(x_i)]
+\end{equation}
+
+Onde $E: A_{t_ad} \leftarrow \Re$ é uma função erro que é proporcional a diferença entre as ações.
+
+\section{Estrutura do Trabalho}
+
+\par Assim, inicialmente é apresentado a revisão bibliográfica do TDP(\textit{Team Description Paper}) do time Skuba
+campeão das \textit{RoboCups} de 2011 e 2012. 
+\par Em seguida são apresentados os métodos de modelagem de sistemas para modelar os
+a time adversário com base nos \textit{logs} de jogos anteriores. Em seguida, são apresentados
+métodos de otimização mais comum
+
