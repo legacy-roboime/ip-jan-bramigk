@@ -7,22 +7,58 @@ será usado no lugar da versão mais explícita ``rede neural artificial''.
 
 Uma rede neural é um sistema inspirado no sistema nervoso central (em
 especial o cérebro) encontrado em muitos animais. A ideia básica é ter
-um grafo acíclico direcionado, DAG (do inglês \emph{Directed Acyclic
-Graph}), em que cada nó abstrai um neurônio e é representado como uma
+um grafo em que cada nó abstrai um neurônio e é representado como uma
 função, alguns desses nós são responsáveis pela observação e outros pela
 saída e os nós de entrada alimentam os próximos nós até chegar nos nós
-de saída.
+de saída. \cite{haykin2001redes}
 
-\ldots{}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{figuras/rede_neural_grafo}
+  \caption{Rede neural com três camadas.}\label{fig:rede_neural_grafo}
+\end{figure}
 
-fontes:
+A figura \ref{fig:rede_neural_grafo} exemplifica uma rede neural \emph{feedforward},
+que é baseada num grafo direcionado acíclico, em que podem ser vistas 3 camadas
+a primeira é chamada de camada de entrada, a última, de saída e as intermediárias,
+de escondidas. \cite{shiffman2012nature}
+
+Um dos diferencias da rede neural é a capacidade de aprender, essa heurística
+forma um sistem adaptativo. Existem três tipos de aprendizados:
 
 \begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
 \item
-  http://en.wikipedia.org/wiki/Neural\_network
+  Aprendizado supervisionado: alimentar a rede com um problema cuja a solução é conhecida
+  e depois fornecer a resposta certa para que a rede possa se ajustar.
 \item
-  http://en.wikipedia.org/wiki/Artificial\_neural\_network
+  Aprendizado não supervisionado: consiste em buscar padrões não conhecidos, não se conhece
+  a resposta certa ou se uma resposta é certa ou não.
 \item
-  HAYKIN, S. Redes neurais princípios e prática.
+  Aprendizado por reforço: alimentar a rede com um problema cuja a solução pode ser avaliada
+  em boa ou má. Esse tipo de aprendizado é comum em robótica onde o robô caminha por um ambiente
+  e tem o reforço negativo ou positivo de colodir ou encontrar o objetivo.
 \end{itemize}
+
+\subsection{O Neurônio}
+
+O bloco de construção básico de uma rede neural são os neurônios.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{figuras/rede_neural_perceptron}
+  \caption{Perceptron de duas entradas e uma saída.}\label{fig:rede_neural_perceptron}
+\end{figure}
+
+A figura~\ref{fig:rede_neural_perceptron} mostra um perceptron.
+
+%\ldots{}
+
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  http://en.wikipedia.org/wiki/Neural\_network
+%\item
+%  http://en.wikipedia.org/wiki/Artificial\_neural\_network
+%\item
+%  HAYKIN, S. Redes neurais princípios e prática.
+%\end{itemize}

@@ -203,11 +203,11 @@
       {\ABNTEXchapterfont\large Instituto Militar de Engenharia}\\
       \vspace*{\fill}
       %\vspace*{2cm}
-      {\ABNTEXchapterfont\large\imprimirautor}
+      {\ABNTEXchapterfont\large\imprimirautor}\\
       \vspace*{\fill}
       %\vspace*{\fill}
       %\vspace*{2cm}
-      {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+      {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}\\
       \vspace*{\fill}
       %\vspace*{2cm}
     \end{center}

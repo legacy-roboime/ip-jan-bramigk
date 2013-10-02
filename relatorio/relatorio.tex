@@ -31,7 +31,7 @@
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	%openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	%twoside,			% para impressão em verso e anverso. Oposto a oneside
 	oneside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
@@ -53,13 +53,13 @@
 % ---
 % Pacotes fundamentais 
 % ---
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{cmap}			% Mapear caracteres especiais no PDF
 %\usepackage{lmodern}			% Usa a fonte Latin Modern
-\usepackage{amsmath}
-\usepackage{amsfonts}
+\usepackage{amsmath}			% Para usar fontes ams
+\usepackage{amsfonts}			% Para usar fontes ams
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
-\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
-\usepackage{lastpage}			% Usado pela Ficha catalográfica
+%\usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}			% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
@@ -72,7 +72,7 @@
 % ---
 
 % ---
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% Pacotes adicionais, usados apenas no âmbito do documento em questão
 % ---
 %\usepackage{lipsum}			% para geração de dummy text
 % ---
@@ -111,8 +111,7 @@
 \titulo{Heurística Estática para Times\\Cooperativos de Robôs}
 \autor{
   Jan Segre\\
-  % \and
-  Victor Bramigk\\
+  Victor Bramigk
 }
 \local{Rio de Janeiro}
 \data{Outubro de 2013}
