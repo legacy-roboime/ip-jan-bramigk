@@ -26,3 +26,9 @@ A modelagem adotada será baseada em **Redes Neurais**. Provavelmente será util
 descritos anteriormente para completar o modelo, gerando assim um modelo híbrido.
 
 Devem ser estudadas as topologias das redes neurais para que seja escolhida a que melhor se encaixa no problema.
+
+# VE
+
+incluir TDP da equipe
+
+
