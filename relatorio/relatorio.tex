@@ -64,6 +64,9 @@
 \usepackage{color}			% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{algorithm2e}		% Para escrever algorítimos
+% o seguinte é necessário para corrigir um bug no algorithm2e
+% http://tex.stackexchange.com/questions/113325/problem-with-algorithm2e-and-portuguese-option
+\SetKwFor{Para}{para}{fa\c{c}a}{fim para}
 % ---
 
 % ---
@@ -163,6 +166,7 @@ Engenharia.}
 
 % Controle do espaçamento entre um parágrafo e outro:
 %\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+\setlength{\parskip}{\onelineskip}
 
 % ---
 % compila o indice

@@ -47,42 +47,41 @@ para a resolução de um problema combinatório são:
 Com base na definições acima, tem-se o seguinte pseudo código para a meta-heurística do SA:
 
 %Algoritmo
-%\begin{algorithm}[H]
-% %Macros
-% \SetKwBlock{Procedimento}{Procedimento}{fim} 
-% \SetKwBlock{EscolherVisinho}{EscolherVisinho}{fim} 
-% \SetKwBlock{CalcTransicao}{CalcTransicao}{fim} 
-% 
-% \Procedimento{
-%	 SetarValoresInicias\;
-% 	\Para{$n = 1$ até $N_{MAX\_IT}$ ou $J(x^*) \le TOL$ }{
-%		\Para{$k = 1$ até $N_{MAX\_IT}$ ou a solução convergir}{
-%			\EscolherVisinho{
-%				selecionar algum $j \in S(i)$\;
-%			}
-%			
-%			\CalcTransicao{
-%				$\Delta J \leftarrow J(j)-J(i)$\;\\
-%				\Se{$Delta J \le 0$}{
-%					$x(t+1) \leftarrow j$\;\\
-%					$x^* \leftarrow j$\;\\
-%				}
-%
-%				\Senao{
-%					$q_{ij} \leftarrow exp^{\left\{-\frac{\Delta J}{T(t)} \rigth\}}$\;\\
-%					\lSe{$random() < q_{ij}$}{$x(t+1) \leftarrow j$}\;\\
-%					\lSenao{$x(t+1) \leftarrow i$}\;
-%				}
-%			} 
-%		}
-%
-%		AtualizarTemperetura\;
-%	}
-% }
-%}
-%
-%\caption{Pseudo código da meta-heurística do SA}\label{meta-heuristica_sa}
-%\end{algorithm}
+\begin{algorithm}[H]
+%Macros
+\SetKwBlock{Procedimento}{Procedimento}{fim}
+\SetKwBlock{EscolherVizinho}{EscolherVizinho}{fim}
+\SetKwBlock{CalcTransicao}{CalcTransicao}{fim}
+
+\Procedimento{
+  SetarValoresInicias\;
+  \Para{$n = 1$ até $N_{MAX\_IT}$ ou $J(x^*) \le TOL$ }{
+    \Para{$k = 1$ até $N_{MAX\_IT}$ ou a solução convergir}{
+      \EscolherVizinho{
+        selecionar algum $j \in S(i)$\;
+      }
+
+      \CalcTransicao{
+        $\Delta J \leftarrow J(j)-J(i)$\;
+        \Se{$Delta J \le 0$}{
+          $x(t+1) \leftarrow j$\;
+          $x^* \leftarrow j$\;
+        }
+        \Senao{
+          %$q_{ij} \leftarrow exp^{\left\{-\frac{\Delta J}{T(t)} \rigth\}}$\;\\
+          $q_{ij} \leftarrow exp^{ -\frac{\Delta J}{T(t)} } $\;
+          \lSe{$random() < q_{ij}$}{$x(t+1) \leftarrow j$}
+          \lSenao{$x(t+1) \leftarrow i$}
+        }
+      }
+    }
+
+    AtualizarTemperetura\;
+  }
+}
+
+\caption{Pseudo código da meta-heurística do SA}\label{meta-heuristica_sa}
+\end{algorithm}
 
 No algorítimo (\ref{meta-heuristica_sa}), o procedimento \textit{AtualizarTemperetura} executa a 
 rotina de resfriamento através da função $T(t)$ definida anteriormente. Já o procedimento 

@@ -201,14 +201,15 @@
 
     \begin{center}
       {\ABNTEXchapterfont\large Instituto Militar de Engenharia}\\
-      %\vspace*{\fill}
-      \vspace*{2cm}
+      \vspace*{\fill}
+      %\vspace*{2cm}
       {\ABNTEXchapterfont\large\imprimirautor}
-      %\vspace*{\fill}\vspace*{\fill}
-      \vspace*{2cm}
-      {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+      \vspace*{\fill}
       %\vspace*{\fill}
-      \vspace*{2cm}
+      %\vspace*{2cm}
+      {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+      \vspace*{\fill}
+      %\vspace*{2cm}
     \end{center}
 
     \par \imprimirpreambulo
