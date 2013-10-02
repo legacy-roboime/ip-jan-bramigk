@@ -54,6 +54,8 @@ Engenharia.}
 %\renewcommand*\thesection{\arabic{section}}
 %\linespread{1.5}
 
+\bibliographystyle{unsrt}
+
 \begin{document}
 
 % Elementos pré-textuais
@@ -103,9 +105,6 @@ Engenharia.}
 \input{partes/algoritimo_genetico}
 \input{partes/rede_neural}
 
-% modelagem é tipo uma introducao
-%\input{partes/modelagem}
-
 \input{partes/cronograma}
 
 % Conclusão
@@ -117,7 +116,7 @@ Engenharia.}
 % Elementos pós-textuais
 % ======================
 
-\input{pos_textuais/referencias}
+\bibliography{pos_textuais/bibliografia.bib}
 
 % begin opcionais
 \input{pos_textuais/apendices}
@@ -128,7 +127,6 @@ Engenharia.}
 
 \input{pos_textuais/contracapa}
 
-\bibliography{bibliografia}
 % FIM!!!!
 % =======
 \end{document}
