@@ -3,13 +3,13 @@
 \subsection{Introdução}
 
 Sistemas nebulosos aproximam funções. Eles são aproximadores universais se usarem regras suficientes. 
-Neste sentido sistemas difusos podem modelar qualquer função ou sistema contínuos. Aqueles sistemas podem 
-vir tanto da física quanto da sociologia, bem como da teoria do controle ou do processamento de sinais.
-[ref KOSKO]
+Neste sentido sistemas difusos podem modelar qualquer função ou sistema contínuos. Aqueles sistemas 
+podem vir tanto da física quanto da sociologia, bem como da teoria do controle ou do 
+processamento de sinais.\cite{kosko1997fuzzy}.
 
 A qualidade da aproximação difusa depende da qualidade das regras. Na prática especialistas sugerem regras
 difusas ou aprendem-nas através de esquemas neurais através de dados e ajustam as regras com novos dados.
-Os resultados sempre aproximam alguma função não-linear desconhecida que pode mudar com o tempo. Melhores 
+Os resultados sempre aproximam alguma função não linear desconhecida que pode mudar com o tempo. Melhores 
 cérebros e melhores redes neurais resultam em melhores aproximações. [ref KOSKO]
 
 \subsection{Modelo Aditivo Padrão(SAM)}
@@ -31,13 +31,11 @@ soma os acionamentos ou partes escaladas dos conjuntos escalados $a_j(x)B_j$:
 F(x) = \frac{\sum w_i.a_i(x).V_i.c_i}{\sum w_j.a_j(x).V_j}
 \end{eqnarray}
 
-Com o volume/área $V_j$ e o centróide $c_j$ são dados por:
+Com o volume/área $V_j$ e o centroide $c_j$ são dados por:
 
 \begin{eqnarray}
 V_j = \int{b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p > 0\\
 c_j = \frac{\int{y.b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p}{V_j}
 \end{eqnarray}
-
-
 
 (KOSKO, BART; \textbf{Fuzzy Engineering}, New Jersey, USA 1997) pág. 17
