@@ -15,7 +15,7 @@ Estudar:
 - Rede Neural
 - Lógica Fuzzy
 - Algoritmo Genético
-- Simuleted Annealing
+- Simulated Annealing
 - Método da Colônia de Formigas
 
 Fazer um mini tutorial (0.5 ~ 1.0 páginas) sobre cada tópico.
@@ -30,5 +30,6 @@ Devem ser estudadas as topologias das redes neurais para que seja escolhida a qu
 # VE
 
 incluir TDP da equipe
+Revisão bibliografica
 
 

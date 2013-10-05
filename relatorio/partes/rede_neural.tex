@@ -1,7 +1,7 @@
 \section{Rede Neural}
 
-O termo mais apropriado é rede neural aritificial, já que apenas rede
-neural pode se referir ao sistema biológico de nervos, no entando dado o
+O termo mais apropriado é rede neural artificial, já que apenas rede
+neural pode se referir ao sistema biológico de nervos, no antando dado o
 contexto desse texto e o uso consagrado do termo ``rede neural'', esse
 será usado no lugar da versão mais explícita ``rede neural artificial''.
 
@@ -26,7 +26,7 @@ a primeira é chamada de camada de entrada, a última, de saída e as intermedi�
 de escondidas. \cite{shiffman2012nature}
 
 Um dos diferencias da rede neural é a capacidade de aprender, essa heurística
-forma um sistem adaptativo. Existem três tipos de aprendizados:
+forma um sistema adaptativo. Existem três tipos de aprendizados:
 
 \begin{itemize}
 \item
@@ -38,29 +38,29 @@ forma um sistem adaptativo. Existem três tipos de aprendizados:
 \item
   Aprendizado por reforço: alimentar a rede com um problema cuja a solução pode ser avaliada
   em boa ou má. Esse tipo de aprendizado é comum em robótica onde o robô caminha por um ambiente
-  e tem o reforço negativo ou positivo de colodir ou encontrar o objetivo.
+  e tem o reforço negativo ou positivo de colidir ou encontrar o objetivo.
 \end{itemize}
 
-\subsection{O Perceptron}
+\subsection{O \textit{Perceptron}}
 
-O bloco de construção básico de uma rede neural são os neurônios. Um perceptron é a rede
+O bloco de construção básico de uma rede neural são os neurônios. Um \textit{perceptron} é a rede
 neural mais simples possível: é formada por apenas um neurônio.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm]{figuras/rede_neural_perceptron}
-\caption{Perceptron de duas entradas e uma saída.}\label{fig:rede_neural_perceptron}
+\caption{\textit{Perceptron} de duas entradas e uma saída.}\label{fig:rede_neural_perceptron}
 \end{figure}
 
 %A figura~\ref{fig:rede_neural_perceptron} mostra um perceptron com neurônio.
 
-O funcionamento de um perceptron pode ser descrito nos seguintes passos:
+O funcionamento de um \textit{perceptron} pode ser descrito nos seguintes passos:
 
 \begin{itemize}
 \item
   Receber e armazenar as entradas;
 \item
-  Pesar as valores armazenados: consistem em multiplicar cada um pelo peso correspodente àquela entrada;
+  Pesar as valores armazenados: consistem em multiplicar cada um pelo peso correspondente àquela entrada;
 \item
   Enviar o saída calculara anteriormente.
 \end{itemize}
@@ -68,29 +68,29 @@ O funcionamento de um perceptron pode ser descrito nos seguintes passos:
 \subsubsection{Exemplo de aplicação}
 
 Considere uma reta em $\Re^2$, que separa o plano em duas regiões $A$ e $B$. O problema a
-ser resolvido pelo perceptron é dizer se um ponto $(x,y)$ está em $A$ ou $B$. As entradas do
+ser resolvido pelo \textit{perceptron} é dizer se um ponto $(x,y)$ está em $A$ ou $B$. As entradas do
 problema são as coordenadas $x$ e $y$, e a saída é um escalar cujo o valor é um escalar positivo
 para sinalizar o conjunto $A$ e negativo para sinalizar o $B$.
 
-O perceptron poderia ser modelado com duas entradas, porém note que desse modo o
-ponto $(0,0)$ sempre irá resultar numa saída iual a $0$. Para evitar isso são usadas três entradas
-no perceptron sendo que uma delas é sempre igual a $1$ e é chamada de \emph{bias}, que serve
-basicamente para adicionar um peso aditivo e não só multiplicativo. O funcionamento desse perceptron
+O \textit{perceptron} poderia ser modelado com duas entradas, porém note que desse modo o
+ponto $(0,0)$ sempre irá resultar numa saída igual a $0$. Para evitar isso são usadas três entradas
+no \textit{perceptron} sendo que uma delas é sempre igual a $1$ e é chamada de \emph{bias}, que serve
+basicamente para adicionar um peso aditivo e não só multiplicativo. O funcionamento desse \textit{perceptron}
 ser observado na figura~\ref{fig:rede_neural_simple_problem}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm]{figuras/rede_neural_simple_problem}
-\caption{Perceptron para decidir região de um ponto no plano.}\label{fig:rede_neural_simple_problem}
+\caption{\textit{Perceptron} para decidir região de um ponto no plano.}\label{fig:rede_neural_simple_problem}
 \end{figure}
 
 Esse exemplo usará o método supervisionado de aprendizado, que funciona da seguinte maneira:
 
 \begin{itemize}
 \item
-  Alimentar o perceptron com uma entrada para o qual se conhece a resposta;
+  Alimentar o \textit{perceptron} com uma entrada para o qual se conhece a resposta;
 \item
-  Pedir a saída ao perceptron;
+  Pedir a saída ao \textit{perceptron};
 \item
   Computar o erro;
 \item
@@ -102,7 +102,7 @@ Esse exemplo usará o método supervisionado de aprendizado, que funciona da seg
 O ajuste dos pesos pode ser feito calculando o erro e incrementando o peso um fator de
 aprendizado vezes o erro vezes a entrada daquele peso.
 
-Assim o perceptron é capaz de ser treinado e sua saída ser cada vez mais próxima da desejada.
+Assim o \textit{perceptron} é capaz de ser treinado e sua saída ser cada vez mais próxima da desejada.
 
 %\ldots{}
 

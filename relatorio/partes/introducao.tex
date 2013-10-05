@@ -7,16 +7,16 @@ participa de uma competição de futebol de robôs oficializada pela \textit{Rob
 Essa competição consiste em partidas de futebol autônomas entre robôs com formato
 de cilindro de 18cm de diâmetro e 15cm de altura em um campo de 6m por 4m. Além disso
 o sistema de visão computacional é padronizado e centralizado. O importante é notar
-que a competição é autônoma e por isso há vários desafios envolvidos.
-Um dos desafios é modelar o inimigo, de maneira geral modelar um time desconhecido
+que os times são autônomos e por isso há vários desafios envolvidos.
+Um dos desafios é modelar o time adversário, de maneira geral modelar um time desconhecido
 mas com o intuito de conseguir prever com certa confiança suas decisões para tomar
 decisões melhores durante o jogo e conseguir um desempenho melhor.
 As partidas são registradas e por isso podem ser feitas análises pré jogo além
 de em tempo real. A principal vantagem é a liberdade sobre quão eficiente é o método
 de análise.
 
-\par O objeto a ser estudado é, portanto, a análise dos registros dessas partidas 
-com foco principal em modelar um time desconhecido, denominados \textit{log}. O modelo 
+\par O objeto a ser estudado é, portanto, a análise dos registros dessas partidas,
+denominados \textit{logs}, com foco principal em modelar um time desconhecido. O modelo 
 gerado será utilizado para prever os movimentos do time adversário. Isso deve tornar 
 as jogadas planejadas mais  eficazes, uma vez que já levarão em conta os movimentos 
 futuros do time adversário.
@@ -30,20 +30,22 @@ do time adversário, um sistema $f: {E_p} \leftarrow {A_{t\_ad}}$. Encontrar o s
 $F: {E_p} \leftarrow {A_{t\_ad}}$ que minimiza:
 
 \begin{equation}
-e_{total} = \sum_i E[f(x_i),F(x_i)]
+e_{total}(F) = \sum_i E[f(x_i),F(x_i)]
 \end{equation}
 
-Onde $E: A_{t_ad} \leftarrow \Re^+$ é uma função erro que é proporcional a diferença entre as ações.
+Onde $E: A_{t_ad} \leftarrow \Re^+$ é uma função erro que é proporcional a diferença entre as ações e
+${x_i} \in E_p$ é um conjunto limitado de \textit{logs}.
 
 Como o sistema $F$ pode ser escrito de várias maneiras, é necessário assumir uma forma menos genérica
 para $F$ de modo a possibilitar a análise e reduzir o espaço de busca. Uma vez que o conjunto das possíveis estruturas de $F$
-escolhido afeta o valor mínimo $F_{min}$, tem-se que o mínimo encontrado pode minimizar menos o erro
+escolhido afeta o valor mínimo $F_{min}$, tem-se que o erro $e_{total}(F_{min})$ esta atrelado a estrutura da função
+$F$ escolhida. Logo, pretende-se aplicar um método de otimização que tem como parâmetros elementos que definem a estrutura
+escolhida. Por exemplo, o número de camadas arquitetura da rede neural ou as regras utilizadas no sistema difuso.
 
 \section{Estrutura do Trabalho}
 
-\par Assim, inicialmente é apresentado a revisão bibliográfica do TDP(\textit{Team Description Paper}) do time Skuba
-campeão das \textit{RoboCups} de 2011 e 2012. 
-\par Em seguida são apresentados os métodos de modelagem de sistemas para modelar os
-a time adversário com base nos \textit{logs} de jogos anteriores. Em seguida, são apresentados
-métodos de otimização mais comum
-
+\par Assim, inicialmente são apresentados os métodos candidatos a serem utilizados em um algorítimo de predição
+automática do comportamento de um time de futebol de robôs, isto é, determinar a função $F$ especificada no problema anterior.
+juntamente com heurísticas de otimização combinatorial para otimizar a estrutura desta função. Em seguida são propostas 
+abordagens envolvendo o tipo de estrutura da função $F$ e o método utilizado para procurar a estrutura pseudo ótima. Por fim é 
+apresentado as próximas etapas previstas para dar continuidade ao trabalho.
