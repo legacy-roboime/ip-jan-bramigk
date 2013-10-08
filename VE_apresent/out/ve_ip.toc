@@ -1,3 +1,6 @@
 \beamer@endinputifotherversion {3.10pt}
 \select@language {portuges}
 \beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
+\beamer@sectionintoc {2}{M\IeC {\'e}todos}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Pseudo c\IeC {\'o}digo da meta-heur\IeC {\'\i }stica do ACO}{7}{0}{2}
+\beamer@sectionintoc {3}{Refer\IeC {\^e}ncias}{11}{0}{3}
