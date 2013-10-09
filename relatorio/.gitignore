@@ -19,4 +19,7 @@
 *.brf
 *.temp
 *.lof
+*.nav
+*.snm
 relatorio.pdf
+apresentacao.pdf
