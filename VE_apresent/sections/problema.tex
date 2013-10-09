@@ -1,0 +1,15 @@
+\frame{
+	\frametitle{Formalização do Problema}
+	\begin{block}{}
+		Dado um conjunto $E_p$ de possíveis estados do jogo, $A_{t\_ad}$ um conjunto de ações dos robôs
+		do time adversário, um sistema $f: {E_p} \rightarrow {A_{t\_ad}}$. Encontrar o sistema 
+		$F: {E_p} \rightarrow {A_{t\_ad}}$ que minimiza:
+
+		\begin{equation}
+		e_{total}(F) = \sum_i E[f(x_i),F(x_i)]
+		\end{equation}
+
+		Onde $E: A_{t_ad} \rightarrow \Re^+$ é uma função erro que é proporcional a diferença entre as ações e
+		${x_i} \in E_p$ é um conjunto limitado de \textit{logs}.
+	\end{block}
+}

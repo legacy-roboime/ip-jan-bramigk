@@ -1,0 +1,112 @@
+\section{Métodos}
+\frame{
+	\frametitle{Métodos}
+	\begin{block}{}
+		Falar aqui o porque de estudar as eurísticas
+		e algorítimos que estudamos
+	\end{block}
+}
+
+\frame{
+	\frametitle{Lógica Nebulosa}
+	\begin{block}{}
+		Regras relacionam os conjuntos $A_j$ e $B_j$, gerando o caminho difuso $A_j x B_j$. Na prática,
+		é utilizado o produto para definir $ a_j x b_j (x,y) = a_j(x).b_j(y)$. Esta é a parte "padrão" no SAM.
+		A parte "aditiva" se refere ao fato de a entrada $x$ acionar a $j$-ésima regra em um grau $a_j(x)$ e o sistema 
+		soma os acionamentos ou partes escaladas dos conjuntos escalados $a_j(x)B_j$, \cite{kosko1997fuzzy}:
+		
+		\begin{eqnarray}
+		F(x) = \frac{\sum w_i.a_i(x).V_i.c_i}{\sum w_j.a_j(x).V_j}
+		\end{eqnarray}
+		
+		Com o volume/área $V_j$ e o centroide $c_j$ são dados por:
+		
+		\begin{eqnarray}
+		V_j = \int{b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p > 0\\
+		c_j = \frac{\int{y.b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p}{V_j}
+		\end{eqnarray}
+	\end{block}
+}
+
+\frame{
+	\frametitle{Otimização da Colonia de Formigas}
+	\begin{block}{}
+		\subsection{Pseudo código da meta-heurística do ACO}
+		%Algoritmo
+		\begin{algorithm}[H]
+		
+		%Macros
+		\SetKwBlock{AgendarAtividade}{AgendarAtividade}{fim}
+		\SetKwBlock{Procedimento}{Procedimento}{fim}
+		
+		\Procedimento{
+  			\Enqto{$n < N_{MAX\_IT}$}{
+    				%\tcp*[f]{$N_{MAX\_IT}$ é o número máximo de iterações\\}
+    				\AgendarAtividade{
+      					ConstruirSolucoesFormigas\\
+      					AtualizarFeromonios\\
+      					%\tcp*[f]{opcional}\\
+      					\tcp{opcional:}
+      					AcoesGlobais
+    				}
+  			}
+		}
+
+		\caption{Pseudo código da meta-heurística do ACO\label{lst:meta-heuristica_aco}}
+		\end{algorithm}
+	\end{block}
+}
+
+\frame{
+	\frametitle{Recozimento Simulado}
+	\begin{block}{}
+%Algoritmo
+\begin{algorithm}[H]
+%Macros
+\SetKwBlock{Procedimento}{Procedimento}{fim}
+\SetKwBlock{EscolherVizinho}{EscolherVizinho}{fim}
+\SetKwBlock{CalcTransicao}{CalcTransicao}{fim}
+
+\Procedimento{
+  SetarValoresInicias\;
+  \Para{$n = 1$ até $N_{MAX\_IT}$ ou $J(x^*) \le TOL$ }{
+    \Para{$k = 1$ até $N_{MAX\_IT}$ ou a solução convergir}{
+      \EscolherVizinho{
+        selecionar algum $j \in S(i)$\;
+      }
+
+      \CalcTransicao{
+        $\Delta J \leftarrow J(j)-J(i)$\;
+        \Se{$Delta J \le 0$}{
+          $x(t+1) \leftarrow j$\;
+          $x^* \leftarrow j$\;
+        }
+        \Senao{
+          %$q_{ij} \leftarrow exp^{\left\{-\frac{\Delta J}{T(t)} \rigth\}}$\;\\
+          $q_{ij} \leftarrow exp^{ -\frac{\Delta J}{T(t)} } $\;
+          \lSe{$random() < q_{ij}$}{$x(t+1) \leftarrow j$}
+          \lSenao{$x(t+1) \leftarrow i$}
+        }
+      }
+    }
+    AtualizarTemperetura\;
+  }
+}
+
+\caption{Pseudo código da meta-heurística do SA\label{lst:meta-heuristica_sa}}
+\end{algorithm}
+	\end{block}
+}
+
+\frame{
+	\frametitle{Algoritmo Genético}
+	\begin{block}{}
+	\end{block}
+}
+
+\frame{
+	\frametitle{Redes Neurais}
+	\begin{block}{}
+	\end{block}
+}
+
