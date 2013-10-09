@@ -1,37 +1,20 @@
-\documentclass{beamer}
-\usepackage{beamerfoils}
+\documentclass{ime-beamer}
 \usepackage[portuges]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{algorithm2e}		% Para escrever algorítimos
+\usepackage[portuguese]{algorithm2e}% Para escrever algorítimos
 
-\usetheme{Copenhagen}
-
-\title{Heurística Estática para\\ Times Cooperativos de Robôs}
-\institute{Instituto Militar de Engenharia}
-\author{Victor Bramigk e
-		Jan Segre}
-
-\newcommand*\oldmacro{}%
-\let\oldmacro\insertshorttitle%
-\renewcommand*\insertshorttitle{%
-  \oldmacro\hfill%
-  \insertframenumber\,/\,\inserttotalframenumber}
-
-\pgfdeclareimage[height=1.4cm]{logo}{logo_IME}
-\logo{\pgfuseimage{logo}}
+\title{Heurística Estática para\\
+       Times Cooperativos de Robôs}
+\author{Victor Bramigk e Jan Segre}
 
 \begin{document}
 \frame{
 \author{Victor Bramigk\\
-		Jan Segre\\
-		Paulo F. F. Rosa (Orientador)}
-
+        Jan Segre\\
+        Paulo F. F. Rosa (Orientador)}
 \maketitle
 }
-
-\author{Victor Bramigk e
-		Jan Segre}
 
 \input{sections/roteiro.tex}
 \input{sections/introducao.tex}

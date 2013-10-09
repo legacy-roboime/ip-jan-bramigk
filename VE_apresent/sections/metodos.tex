@@ -51,7 +51,7 @@
   			}
 		}
 
-		\caption{Pseudo código da meta-heurística do ACO\label{lst:meta-heuristica_aco}}
+		\caption{Pseudo código da meta-heurística do ACO}
 		\end{algorithm}
 	\end{block}
 }
@@ -72,7 +72,7 @@
     			Atualizar Temperatura\;
 			}
 		
-			\caption{Pseudo código da meta-heurística do SA\label{lst:meta-heuristica_sa}}
+			\caption{Pseudo código da meta-heurística do SA}
 		\end{algorithm}
 	\end{block}
 }
@@ -89,13 +89,14 @@
 %Algorithm: GA(n, \ki, \mu)
 \Procedimento{
   %// Initialise generation 0:
-  $k \leftarrow 0$, $P_k \leftarrow $ população aleatoriamente\;
+  $k \leftarrow 0$, $P_k \leftarrow n$ indivíduos aleatórios\;
   %// EvaluatePk:
   %\Para{cada $i$ em $P_k$}
   %Compute ﬁtness(i) for each i ∈ Pk;
   %Computar a $avaliacao(i)$ para cada $i$ em $P_k$\;
   %while ﬁtness of ﬁttest individual in Pk is not high enough;
-  \Enqto{a $avaliacao(i)$ de cada $i$ em $P_k$ não for boa o suficiente}{
+  %\Enqto{a $avaliacao(i)$ de cada $i$ em $P_k$ não for boa o suficiente}{
+  \Enqto{$avaliacao(i) < desejado$ de cada $i$ em $P_k$}{
     %// Create generation k + 1:
     %// 1. Copy:
     %Select (1−χ)×n members ofPk and insert into Pk+1;
@@ -116,8 +117,9 @@
 %return the ﬁttest individual from Pk;ut your code here.
   \Retorna{membro $i$ em $P_k$ com maior $avaliacao(i)$}
 }
+\caption{Pseudo código de um Algoritmo Genético}
 \end{algorithm}
-	\end{block}
+\end{block}
 }
 
 \frame{
