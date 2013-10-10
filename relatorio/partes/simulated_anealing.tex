@@ -1,14 +1,14 @@
 \section{Recozimento Simulado}
 
 No processo de recozimento de um metal, a quantidade de energia interna livre esta intrinsecamente
-relacionada ao processo de resfriamento em que o metal é submetido. Quanto mais rápido se 
+relacionada ao processo de resfriamento em que o metal é submetido. Quanto mais rápido se
 resfriam um metal mais energia é armazenada internamente. Isso pode ser explicado considerando que
 o tempo que a estrutura leva para atingir o estado de menor energia é maior que o disponível devido
 a redução da mobilidade dos átomos com o decaimento da temperatura. Com efeito, quanto maior a taxa de
 resfriamento maior o número de defeitos na estrutura do sólido e menor o tamanho médio dos grãos.
 Quando se reduz a taxa de resfriamento, há uma maior chance de se atingir configurações mais estáveis.
 Como resultado, a energia interna é reduzida. De acordo com \cite{bertsimas1993simulated},
-pode-se modelar a probabilidade $p_{ij}$ de uma configuração atômica $\{r_i\}$ com energia $E\{r_i\}$ 
+pode-se modelar a probabilidade $p_{ij}$ de uma configuração atômica $\{r_i\}$ com energia $E\{r_i\}$
 passar para a configuração $\{r_j\}$ com energia $E\{r_j\}$ na temperatura $T$ como:
 
 \begin{equation}
@@ -25,12 +25,12 @@ rotina de resfriamento seja escolhida de acordo com o tipo de material a ser res
 Conforme proposto por Kirikpartrick, Gellett e Vechin (1983) e Cerny (1985), pode-se desenvolver
 uma heurística probabilística para se encontrar o mínimo global de uma função custo que possua
 vários mínimos locais fazendo-se uma analogia com o fenômeno físico descrito acima. A meta-heurística
-induzida por este processo é chamada de meta-heurística \textit{Simulated Annealing}(Recozimento 
+induzida por este processo é chamada de meta-heurística \textit{Simulated Annealing}(Recozimento
 Simulado), ou SA, apresentado a seguir.
 
 \subsection{Meta-heurística do SA}
 
-De acordo com \cite{bertsimas1993simulated}, os elementos básicos da meta-heurística do SA 
+De acordo com \cite{bertsimas1993simulated}, os elementos básicos da meta-heurística do SA
 para a resolução de um problema combinatório são:
 
 \begin{enumerate}

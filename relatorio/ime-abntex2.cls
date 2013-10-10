@@ -17,8 +17,8 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ime-abntex2}[2013/04/01 v1.0 Modelo da Universidade Brasil baseado em abnTeX2]
-\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\ProvidesClass{ime-abntex2}[2013/10/10 v0.1 Modelo do Instituto Militar de Engenharia baseado em abnTeX2]
+\usepackage[utf8]{inputenc} % Codificacao do documento (conversão automática dos acentos)
 
 %
 % Repassa todos os parametros a classe abntex2,
@@ -28,7 +28,12 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-% capa
+% Mudar fonte dos títulos para usar fontes com serif
+% olhar seção 6.1 de http://mirror.math.ku.edu/tex-archive/macros/latex/contrib/abntex2/doc/abntex2.pdf
+%\renewcommand{\ABNTEXchapterfont}{\fontfamily{ptm}\selectfont}
+\renewcommand{\ABNTEXchapterfont}{\fontfamily{ptm}\fontseries{b}\selectfont}
+
+% Capa
 % ====
 
 \renewcommand{\imprimircapa}{%
@@ -63,7 +68,7 @@
 }
 
 
-% folha de rosto
+% Folha de rosto
 % ==============
 
 \makeatletter
@@ -113,7 +118,7 @@
 
 \makeatother
 
-% ficha catalográfica
+% Ficha catalográfica
 % ===================
 
 \newcommand{\imprimirfichacatalografica}[3]{%
@@ -175,7 +180,7 @@
 }
 
 
-% folha de aprovação
+% Folha de aprovação
 % ==================
 
 % orientador + no máximo 3 convidados
