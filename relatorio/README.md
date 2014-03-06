@@ -32,4 +32,6 @@ Devem ser estudadas as topologias das redes neurais para que seja escolhida a qu
 incluir TDP da equipe
 Revisão bibliografica
 
+# Refs
 
+[Feature Selection for Activity Recognition in Multi-Robot Domains](http://www.cs.cmu.edu/~mmv/papers/08aaai-doug.pdf)
