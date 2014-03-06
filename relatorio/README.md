@@ -34,4 +34,5 @@ Revisão bibliografica
 
 # Refs
 
-[Feature Selection for Activity Recognition in Multi-Robot Domains](http://www.cs.cmu.edu/~mmv/papers/08aaai-doug.pdf)
+- [Feature Selection for Activity Recognition in Multi-Robot Domains](http://www.cs.cmu.edu/~mmv/papers/08aaai-doug.pdf)
+- [Motion Prediction in a high-speed, dynamic environment](http://www.cs.cmu.edu/~shengyu/download/motion_prediction.pdf)
