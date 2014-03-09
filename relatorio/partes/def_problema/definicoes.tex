@@ -1,12 +1,5 @@
 \section{Definições}
 
-Primeiramente definimos o problema geral de planejamento. Seja $X$
-espaço de estado, $x_{init} \in X$, seja $X_{goal}\int X$ o conjunto
-de estados, e seja $A$ o conjunto das ações possíveis. Seja $e$ a
-função de transição de estado que pode aplicar uma ação $a\in A$ em
-um estado particular $x \in X$ e compute o estado seguinte $x^{'}
-\in X$, i.e.: $e: \langle x,a \rangle \longrightarrow x^{'}$.
-
 \begin{defi}[Corpo Rígido]
   Um corpo rígido $r$ é definido por dois subconjuntos disjuntos
   de parâmetros $r= \langle \hat{r}, \bar{r} \rangle$ onde:
@@ -67,6 +60,8 @@ um estado particular $x \in X$ e compute o estado seguinte $x^{'}
           o centro de massa global do $rob$
   \end{itemize}  
   
+  Através desses sistemas $rob$ pode executar um conjunto de ações $A_{rob}$.
+  
   Apesar de o modelo descrito acima abranger a mairia dos
   robôs utilizados atualmente por equipes da SSL, é importante
   ressaltar que o robô pode ter um conjunto de sensores que
@@ -83,10 +78,16 @@ um estado particular $x \in X$ e compute o estado seguinte $x^{'}
 \end{defi}
 
 \begin{defi}[Time]
-  Um time $T$ é sistema multi-agente composto dos robôs
-  $\langle rob_1, ..., rob_n \rangle$ baseado em uma função
-  função utilidade $f$. Logo ele possue uma função de utilidade
-  que mede suas preferências entre estados do mundo. Em
-  seguida, ele escolhe a ação que leva á melhor utilidade
-  esperada
+  Seja $X$ o espaço de estado de todos os corpos rígidos envolvidos na partida,
+  $x_{init} \in X$, seja $X_{goal}\subset X$ o conjunto de estados, e seja $A = A_{rob 1} 
+  \cup ... \cup A_{rob n}$ o conjunto das ações possíveis. Seja $e$ a função de transição
+  de estado que pode aplicar uma ação $a\in A$ em um estado particular
+  $x \in X$ e compute o estado seguinte $x^{'} \in X$, i.e.: 
+  $e: \langle x,a \rangle \longrightarrow x^{'}$.
+  Um time $T$ é um sistema multi-agente composto pelos robôs 
+  $\langle rob_1, ..., rob_n \rangle$ e baseado em uma função utilidade
+  $f_{U}: X \longrightarrow \mathbb{R^{+}} \cup\lbrace 0\rbrace$.
+  $f_{U}$ mede suas preferências entre estados do mundo. Assim, utilizando-se
+  de $e$, $T$ simula várias seguencia de ações $a$ e escolhe a ação $a^{*}$ que
+  leva á melhor utilidade avalida por $f_{U}$. 
 \end{defi}
