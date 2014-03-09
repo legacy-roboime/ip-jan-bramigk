@@ -1,0 +1,92 @@
+\section{Definições}
+
+Primeiramente definimos o problema geral de planejamento. Seja $X$
+espaço de estado, $x_{init} \in X$, seja $X_{goal}\int X$ o conjunto
+de estados, e seja $A$ o conjunto das ações possíveis. Seja $e$ a
+função de transição de estado que pode aplicar uma ação $a\in A$ em
+um estado particular $x \in X$ e compute o estado seguinte $x^{'}
+\in X$, i.e.: $e: \langle x,a \rangle \longrightarrow x^{'}$.
+
+\begin{defi}[Corpo Rígido]
+  Um corpo rígido $r$ é definido por dois subconjuntos disjuntos
+  de parâmetros $r= \langle \hat{r}, \bar{r} \rangle$ onde:
+  \begin{itemize}
+    \item $\hat{r} = \langle \alpha, \beta, \gamma, \omega \rangle$,
+    que são os parâmetros de estado mutaveis, respectivamente:
+    posição ($\mathbb{R} ^{3}$), orientação($\mathbb{R} ^{3}$),
+    velocidade linear($\mathbb{R} ^{3}$), velocidade angular
+    ($\mathbb{R} ^{3}$)
+    
+    \item $\bar{r} :$ parâmetros imutaveis corpo que descrevem sua
+    natureza fixa e que permanece constante ao longo do curso de 
+    planejamento.
+  \end{itemize}
+  
+  Exemplos de parâmetros considerados nesta modelagem imutaveis são:
+  coeficiente de atrito estático e dinâmico, descrição $3D$ do corpo
+  (por exemplo, através de um conjunto de primitívas $3D$), centro de
+  massa no referencial do corpo, coeficiente de restituição,
+  coeficiente de amortecimento linear e angular. Note que a matrix de
+  rotação $R\in\mathbb{R}^{3\times 3}$) gerada a partir da rotação
+  em torno de um vetor unitário direção $d\in\mathbb{R}^{3}$  de
+  $\theta \in \mathbb{R}$ radianos satisfaz a equação
+  $R = exp\left( \beta \right)$ (onde $\beta = d. \theta \in \mathbb{R} ^{3}$)
+  \cite{math2robotics}.
+\end{defi}
+
+\begin{defi}[Bola]\label{def:bola}
+  Bola é um corpo rígido $\hat{b}$ no qual somente o parâmetro
+  $\hat{b}.\alpha$ é observável. De acordo com acordo com a
+  aquitetura considerada para a SSL descrita na figura
+  \ref{arquitetura_ssl}, tem-se que a partir de uma sequênicia
+  de quadros é possível obter um valor estimado para o parâmetro
+  $\hat{b}.\gamma$ a partir do intervalo entre os dados recebidos
+  da \textit{SSL-Vision} e da equação $ \gama \approxeq 
+  \frac{\delta \alpha}{\delta t} $. Entretanto, uma vez que o
+  parâmetro $\hat{b}.\beta$, não se pode estimar o valor de
+  $\hat{b}.\omega$.
+\end{defi}
+
+\begin{defi}[Robô]
+  Robô $rob$ é um conjunto de sistemas compostos de corpos rígidos,
+  \textit{hardware} e \textit{firmware}. São eles:
+  
+  \begin{itemize}
+    \item Drible: imprime um torque a bola
+    \item Chute baixo: imprime uma força a bola $\hat{b}$
+          e possivelmente um torque, com o objetivo de
+          alterar as componentes $\langle x,y \rangle$
+          o parâmetro $\hat{b}.\gamma$ 
+    \item Chute alto: Chute baixo: imprime uma força a bola $\hat{b}$
+          e possivelmente um torque, com o objetivo de
+          alterar as componentes $\langle x,y,z \rangle$
+          o parâmetro $\hat{b}.\gamma$, com $\hat{b}.\gamma_z \neq 0$
+    \item Receptor: rebe comandos enviados pelo sistema de
+          transmissão de seu respectivo time
+    \item Sistema de movimentação: imprime uma força e um torque
+          o centro de massa global do $rob$
+  \end{itemize}  
+  
+  Apesar de o modelo descrito acima abranger a mairia dos
+  robôs utilizados atualmente por equipes da SSL, é importante
+  ressaltar que o robô pode ter um conjunto de sensores que
+  poderiam coletar informações adicionais ás transmitidas pela
+  \textit{SSL-Vision} juntamente com um sistema de transmissão
+  para envia-las ao software do seu respectivo time. Isso é
+  interessante, pois, conforme observado na definição \ref{def:bola},
+  o parâmetro $\hat{b}.\beta$ não é observavel. Como o sitema de
+  drible impoem um torque a bola, através de um sensor é possível
+  estimar o valor de $\hat{b}.\omega$. Sem esse sensor não é possível
+  prever com exatidão a tragetória da bola através do módulo de
+  simulação apenas com os dados da \textit{SSL-Vision}.
+  
+\end{defi}
+
+\begin{defi}[Time]
+  Um time $T$ é sistema multi-agente composto dos robôs
+  $\langle rob_1, ..., rob_n \rangle$ baseado na função utilidade
+  . Logo
+  ele possue uma função de utilidade que mede suas preferências entre
+  estados do mundo. Em seguida, ele escolhe a ação que leva á melhor
+  utilidade esperada
+\end{defi}
