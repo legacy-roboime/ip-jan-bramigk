@@ -35,9 +35,9 @@
   de quadros é possível obter um valor estimado para o parâmetro
   $\hat{b}.\gamma$ a partir do intervalo entre os dados recebidos
   da \textit{SSL-Vision} e da equação $ \gamma \approxeq 
-  \frac{\delta \alpha}{\delta t} $. Entretanto, uma vez que o
-  parâmetro $\hat{b}.\beta$, não se pode estimar o valor de
-  $\hat{b}.\omega$.
+  \frac{\Delta \alpha}{\Delta t} $. Entretanto, uma vez que o
+  parâmetro $\hat{b}.\beta$ não pode ser observado,
+  não se pode estimar o valor de $\hat{b}.\omega$ com exatidão.
 \end{defi}
 
 \begin{defi}[Robô]
@@ -49,15 +49,15 @@
     \item Chute baixo: imprime uma força a bola $\hat{b}$
           e possivelmente um torque, com o objetivo de
           alterar as componentes $\langle x,y \rangle$
-          o parâmetro $\hat{b}.\gamma$ 
+          do parâmetro $\hat{b}.\gamma$ 
     \item Chute alto: Chute baixo: imprime uma força a bola $\hat{b}$
           e possivelmente um torque, com o objetivo de
           alterar as componentes $\langle x,y,z \rangle$
-          o parâmetro $\hat{b}.\gamma$, com $\hat{b}.\gamma_z \neq 0$
+          do parâmetro $\hat{b}.\gamma$, com $\hat{b}.\gamma_z \neq 0$
     \item Receptor: rebe comandos enviados pelo sistema de
           transmissão de seu respectivo time
     \item Sistema de movimentação: imprime uma força e um torque
-          o centro de massa global do $rob$
+          ao centro de massa global do $rob$
   \end{itemize}  
   
   Através desses sistemas $rob$ pode executar um conjunto de ações $A_{rob}$.
@@ -78,16 +78,59 @@
 \end{defi}
 
 \begin{defi}[Time]
-  Seja $X$ o espaço de estado de todos os corpos rígidos envolvidos na partida,
-  $x_{init} \in X$, seja $X_{goal}\subset X$ o conjunto de estados, e seja $A = A_{rob 1} 
-  \cup ... \cup A_{rob n}$ o conjunto das ações possíveis. Seja $e$ a função de transição
-  de estado que pode aplicar uma ação $a\in A$ em um estado particular
-  $x \in X$ e compute o estado seguinte $x^{'} \in X$, i.e.: 
-  $e: \langle x,a \rangle \longrightarrow x^{'}$.
-  Um time $T$ é um sistema multi-agente composto pelos robôs 
-  $\langle rob_1, ..., rob_n \rangle$ e baseado em uma função utilidade
-  $f_{U}: X \longrightarrow \mathbb{R^{+}} \cup\lbrace 0\rbrace$.
-  $f_{U}$ mede suas preferências entre estados do mundo. Assim, utilizando-se
-  de $e$, $T$ simula várias seguencia de ações $a$ e escolhe a ação $a^{*}$ que
-  leva á melhor utilidade avalida por $f_{U}$. 
+  Sejam os seguintes parâmetros: 
+
+  \begin{description}
+    \item $Rob_c$ o conjunto dos robôs controlados
+    \item $Rob_i$ o conjunto dos robôs inimigos, i.e., não controlados
+    \item $X$ o espaço de estado de todos os corpos rígidos envolvidos na partida considerada
+    \item $x_{init} \in X$ o estado inicial
+    \item $X_{goal}\subset X$ o conjunto de estados objetivo
+    \item $x_{ob}^{i}$ os estados observados pelo módulo \textit{SSL-Vision} no instante $i$
+    \item $X_{ob}^{i} =  \lbrace{x_{ob}^{0} = x_{init},...,x_{ob}^{i}}\rbrace$
+    \item $Sk \subset A_{rob}$ um conjunto de \textit{skills}
+    \item $prob: X \longrightarrow [0,1]$ uma distribuição de probabilidade cujo argumento é
+          $x \in X$
+    \item $Tk = G(V \in Sk, E \in {prob} )$ o conjunto de todas as táticas possíveis
+          formados a partir de grafos orientados onde os vértices são \textit{skills} $sk \in Sk$
+          e as arestas são $prob$, associadas a possibilidade de ocorrerem as transições
+          entre uma skill e outra
+    \item $Pl = {}$
+    \item $A_c = A_{rob 1} \cup ... \cup A_{rob n_c}$ o conjunto das ações possíveis de $Rob_c$
+    \item $A_i = A_{rob 1} \cup ... \cup A_{rob n_i}$ o conjunto das ações possíveis de $Rob_i$
+    \item $A = A_c \cup A_i$ o conjunto das ações possíveis de $Rob_c \cup Rob_i$
+    \item $e$ a função de transição de estado que pode aplicar uma ação $a\in A$ em um estado particular
+          $x \in X$ e compute o estado seguinte $x^{'} \in X$, i.e.:
+          $e: \langle x,a \rangle \longrightarrow x^{'}$.
+    \item $f_{U}: X \longrightarrow \mathbb{R^{+}} \cup\lbrace 0\rbrace$ uma função utilidade tal que
+          $f_{U}(x)$ mede a utilidade do estado $x \in X$ um entre estados do mundo dado os estados.
+    \item $r_i: \langle A_i, X_{ob}^{i}\rangle \longrightarrow a_i^{'}$ o modelo de reação dos robôs
+          inimigos dado $X_{ob}^{i}$
+    \item $AB =\lbrace V \subset X, E \subset A\rbrace$ uma árvore de busca
+    \item $e_b: \langle X_{ob}^{i}, e, f_{U}, r_i, AB\rangle \longrightarrow AB^{'}$ uma estratégia de busca
+    
+  \end{description}
+  
+  Então um time $T$ é definido por:
+  \[
+    T: \langle A, X_{ob}^{i}, e, e_b, \rangle \longrightarrow a_c^{i+1}
+  \]
+  Assim, utilizando-se de $e$, $T$ simula várias sequência de ações $a$ dado $X_{ob}^{i}$,
+  gerando  a partir de $f_{U}$, $e_b$ e.
+\end{defi}
+
+\begin{defi}[Partida]
+  Dado dois times $T_1$ e $T_2$. Uma partida $p$ é definida por
+  uma sequência de $\langle Ref^{i}, X_{ob}^{i}, A_1^{i}, A_2^{i} \rangle$ para
+  $i \in \lbrace 0,1,...,k\rbrace$, onde:
+  \begin{description}
+    \item $Ref^{i}$ são os comandos envidos pelo módulo \textit{Referee-Box} no instante $i$
+    \item $X_{ob}^{i}$ são os dados enviados pelo módulo \textit{SSL-Vision} no instante $i$
+    \item $A_1^{i}$ são as ações executadas por $T_1$ no instante $i$
+    \item $A_2^{i}$ são as ações executadas por $T_2$ no instante $i$
+  \end{description}
+\end{defi}
+
+\begin{defi}[Logs]
+  
 \end{defi}
