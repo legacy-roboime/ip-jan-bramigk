@@ -91,11 +91,10 @@
     \item $Sk \subset A_{rob}$ um conjunto de \textit{skills}
     \item $prob: X \longrightarrow [0,1]$ uma distribuição de probabilidade cujo argumento é
           $x \in X$
-    \item $Tk = G(V \in Sk, E \in {prob} )$ o conjunto de todas as táticas possíveis
+    \item $tk = G(V \in Sk, E \in {prob} )$ o conjunto de todas as táticas possíveis
           formados a partir de grafos orientados onde os vértices são \textit{skills} $sk \in Sk$
           e as arestas são $prob$, associadas a possibilidade de ocorrerem as transições
           entre uma skill e outra
-    \item $Pl = {}$
     \item $A_c = A_{rob 1} \cup ... \cup A_{rob n_c}$ o conjunto das ações possíveis de $Rob_c$
     \item $A_i = A_{rob 1} \cup ... \cup A_{rob n_i}$ o conjunto das ações possíveis de $Rob_i$
     \item $A = A_c \cup A_i$ o conjunto das ações possíveis de $Rob_c \cup Rob_i$
@@ -113,17 +112,24 @@
   
   Então um time $T$ é definido por:
   \[
-    T: \langle A, X_{ob}^{i}, e, e_b, \rangle \longrightarrow a_c^{i+1}
+    T: \langle A, X_{ob}^{i}, e, e_b, r_i \rangle \longrightarrow a_c^{i+1}
   \]
   Assim, utilizando-se de $e$, $T$ simula várias sequência de ações $a$ dado $X_{ob}^{i}$,
   gerando  a partir de $f_{U}$, $e_b$ e.
 \end{defi}
 
 \begin{defi}[Partida]
-  Dado dois times $T_1$ e $T_2$. Uma partida $p$ é definida por
-  uma sequência de $\langle Ref^{i}, X_{ob}^{i}, A_1^{i}, A_2^{i} \rangle$ para
+  Dado dois times $T_1$ e $T_2$. Uma partida $p$ é definida por:
+ 
+  
+  \[
+  \]
+  
+  uma sequência $\langle Ref^{i}, X_{ob}^{i}, A_1^{i}, A_2^{i} \rangle$ para
   $i \in \lbrace 0,1,...,k\rbrace$, onde:
   \begin{description}
+    \item $\Delta t$ é o tempo de duração da partida
+    \item $\delta t$ é o tempo médio entre cada frame enviado pela \textit{SSL-Vision} ao longo de $\Delta t$
     \item $Ref^{i}$ são os comandos envidos pelo módulo \textit{Referee-Box} no instante $i$
     \item $X_{ob}^{i}$ são os dados enviados pelo módulo \textit{SSL-Vision} no instante $i$
     \item $A_1^{i}$ são as ações executadas por $T_1$ no instante $i$
@@ -132,5 +138,12 @@
 \end{defi}
 
 \begin{defi}[Logs]
-  
+  Dada uma partida $p$. O $log$ de $p$ é definidor por:
+
+  \[
+    log(p) = \lbrace p.\langle Ref^{0}, X_{ob}^{0}\rangle, ..., p.\langle Ref^{N}, X_{ob}^{N}\rangle \rbrace
+  \]
+
+  Onde $N \approxeq \frac{\Delta t}{\delta t}$ é o número total de frames enviados pela \textit{SSL-Vision}
+  ao longo de $\Delta t$.
 \end{defi}
