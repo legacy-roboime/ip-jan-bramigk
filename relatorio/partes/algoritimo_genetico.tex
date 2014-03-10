@@ -137,5 +137,33 @@ As limitações mais comuns no emprego de um algorítimo genético são:
 %  \href{http://www.cs.ucc.ie/~dgb/courses/tai/notes/handout12.pdf}{Genetic Algorithms - Derek Bridge}
 %\end{itemize}
 
-% TODO[jansegre]: exemplo de utilização
-% TODO[jansegre]: como pode ser utilizado
+\subsection{Exemplo}
+
+Suponha uma fábrica com duas máquinas, e chegam quatro pedidos, em ordem, para serem produzidos.
+Cada pedido consiste irá levar um tempo fixo para ser produzido.
+O problema a ser resolvido é determinar qual máquina processa cada pedido, de tal modo que
+o tempo total (até o último pedido ser atendido) seja mínimo.
+Concretizando o exemplo supõe-se os seguintes pedidos: $A$: 1h, $B$: 5h, $C$: 2h, $D$: 3h.
+
+Primeiro deve ser modelado a representação genética, ou fenótipo.
+Uma proposta simples é uma string de 4 bits, em que cada bit representa qual das duas máquinas produz
+o pedido, e a ordem dos bits é a ordem dos pedidos.
+
+Segundo uma função de aptidão, que nesse caso é determinística: o maior entre a soma dos tempos dos pedidos
+de bits 0 e a soma dos de bit 1. Isto é para uma sequencia $0110$ teríamos o maior entre $1h + 3h$ e $5h + 2h$,
+ou seja $7h$.
+
+Terceiro uma regra de cruzamento, que nesse caso pode simplesmente ser a troca aleatória de alguns bits.
+Por exemplo, o cruzamento de $1100$ e $0011$ pode trocar apenas o primeiro bit, resultando em $0100$ e $1011$.
+
+Por último uma regra de mutação, nesse caso é sufiente a inversão de um bit.
+
+Com esses quatro requisitos é possível aplicar a iteração genética sobre uma população inicial.
+
+Esse exemplo demonstra a modelagem de uma otimização usando um algorítimo genético.
+
+
+\subsection{Aplicação ao problema}
+
+O problema descrito neste trabalho pode se beneficiar de algorítimos genéticos para otimizar conjuntos de
+parâmetros de outras heurísticas.
