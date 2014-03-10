@@ -28,15 +28,19 @@
 \end{defi}
 
 \begin{defi}[Bola]\label{def:bola}
-  Bola é um corpo rígido $\hat{b}$ no qual somente o parâmetro
-  $\hat{b}.\alpha$ é observável. De acordo com acordo com a
+  Bola é um corpo rígido $\hat{b}$ no qual somente as componentes 
+  $\langle x,y \rangle$ do o parâmetro $\hat{b}.\alpha$ são
+  observáveis. De acordo com acordo com a
   aquitetura considerada para a SSL descrita na figura
   \ref{arquitetura_ssl}, tem-se que a partir de uma sequênicia
   de quadros é possível obter um valor estimado para o parâmetro
   $\hat{b}.\gamma$ a partir do intervalo entre os dados recebidos
   da \textit{SSL-Vision} e da equação $ \gamma \approxeq 
-  \frac{\Delta \alpha}{\Delta t} $. Entretanto, uma vez que o
-  parâmetro $\hat{b}.\beta$ não pode ser observado,
+  \frac{\Delta \alpha}{\Delta t} $. Entretanto, uma vez que a componente
+  $z$ de $\hat{b}.\alpha$ não é observável, $\hat{b}.\gamma.z$ 
+  não pode ser estimada a partir do intervalo entre os dados recebidos
+  da \textit{SSL-Vision}. Semelhantemente,  uma vez que o
+  parâmetro $\hat{b}.\beta$ também não pode ser observado,
   não se pode estimar o valor de $\hat{b}.\omega$ com exatidão.
 \end{defi}
 
@@ -77,7 +81,7 @@
   
 \end{defi}
 
-\begin{defi}[Time]
+\begin{defi}[Time]\label{def:time}
   Sejam os seguintes parâmetros: 
 
   \begin{description}
