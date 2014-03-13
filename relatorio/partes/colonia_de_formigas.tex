@@ -24,7 +24,7 @@ comportamento natural das formigas descrito anteriormente.
 
 \subsection{Meta-heurística do ACO}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width = 0.9 \linewidth]{imgs/meta_heuristica_aco}
   \label{diagrama_metaheuristica_aco}
   \caption{Diagrama de funcionamento da meta-heurística do ACO \cite{blum2005aco}}
@@ -84,30 +84,35 @@ utilizada depende das características do problema que se deseja resolver.
 
 \subsection{Exemplo de utilização}
 
-\begin{figure}[h]
-  \subfigure[caption]{
-    \includegraphics[width = 0.35 \linewidth]{imgs/exemplo_aco_1}
-  }
-  \subfigure[caption]{
-    \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_2}
-  }
-  \subfigure[caption]{
-    \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_3}
-  }\\
+\begin{figure}[ht]
+  \includegraphics[width=0.32 \linewidth]{imgs/exemplo_aco_1}
+  \includegraphics[width=0.32 \linewidth]{imgs/exemplo_aco_2}
+  \includegraphics[width=0.32 \linewidth]{imgs/exemplo_aco_3}
+  %\begin{subfigure}[b]
+  %  \includegraphics[width = 0.35 \linewidth]{imgs/exemplo_aco_1}
+  %  \label{img:exemplo_aco_1}
+  %\end{subfigure}
+  %\begin{subfigure}
+  %  \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_2}
+  %\end{subfigure}
+  %\begin{subfigure}
+  %  \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_3}
+  %\end{subfigure}
+
   \label{img:exemp_aco}
-  \caption{Example of the solution construction for a TSP problem consisting
-  of 4 cities (modelled by a graph with 4 nodes; see Definition 1). The
-  solution construction starts by randomly choosing a start node for the ant;
-  in this case node 1. Figures (a) and (b) show the choices of the first,
-  respectively the second, construction step. Note that in both cases the
-  current node (i.e., location) of the ant is marked by dark gray color, and
-  the already visited nodes are marked by light gray color (respectively
-  yellow color, in the online version of this article). The choices of the ant
-  (i.e., the edges she may traverse) are marked by dashed lines. The probabilities
-  for the different choices (according to Eq. (4)) are given underneath the
-  graphics. Note that after the second construction step, in which we exemplary
-  assume the ant to have selected node 4, the ant can only move to node 3, and
-  then back to node 1 in order to close the tour. \cite{blum2005aco}}
+  \caption{Example of the solution construction for a TSP problem}
+  %It consists of 4 cities (modelled by a graph with 4 nodes; see Definition 1). The
+  %solution construction starts by randomly choosing a start node for the ant;
+  %in this case node 1. Figures (a) and (b) show the choices of the first,
+  %respectively the second, construction step. Note that in both cases the
+  %current node (i.e., location) of the ant is marked by dark gray color, and
+  %the already visited nodes are marked by light gray color (respectively
+  %yellow color, in the online version of this article). The choices of the ant
+  %(i.e., the edges she may traverse) are marked by dashed lines. The probabilities
+  %for the different choices (according to Eq. (4)) are given underneath the
+  %graphics. Note that after the second construction step, in which we exemplary
+  %assume the ant to have selected node 4, the ant can only move to node 3, and
+  %then back to node 1 in order to close the tour. \cite{blum2005aco}}
 \end{figure}
 
 Definition 1. In the TSP is given a completely connected, undirected
