@@ -171,12 +171,12 @@
       \parbox[t]{1.5cm}{\hspace{2mm} #1}% código estranho
         \parbox[t]{11cm}{\noindent #2}\\% autores com abreviações estranhas
         \parbox[t]{1.5cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} \imprimirtitulo \hspace{1mm}/ \hspace{6mm} {\let\\=, \imprimirautor} : Instituto Militar de Engenharia, 2013.}\\
+        \parbox[t]{11cm}{\noindent \hspace{4mm} \imprimirtitulo \hspace{1mm}/ \hspace{6mm} {\let\\=, \imprimirautor} : Instituto Militar de Engenharia, 2014.}\\
         \parbox[t]{1.5cm}{\ }
         \parbox[t]{11cm}{\noindent \hspace{4mm}}\\
         [\baselineskip]
         \parbox[t]{1.5cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP) - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, 2013. } \\
+        \parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP) - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, 2014. } \\
         [\baselineskip]
         \parbox[t]{1.5cm}{\ }
         \parbox[t]{11cm}{\noindent \hspace{4mm} #3}\\% tags estranhas
