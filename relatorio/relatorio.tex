@@ -70,8 +70,8 @@
 \usepackage{lscape}				% Para usar landscape
 \usepackage{amsthm}				% Para usar Definições e lemas
 \usepackage{amssymb}			% \mathbb{•}
-%\usepackage{subcaption}			% Para usar \subfigure
-\usepackage{subfigure}  
+%\usepackage{caption}			% dependencia de subcaption
+%\usepackage{subcaption}			% Para usar \begin{subfigure}
 \newtheorem{teo}{Teorema}[section]	%Renomear o comando
 \newtheorem{defi}[teo]{Definição}
 % o seguinte é necessário para corrigir um bug no algorithm2e
@@ -118,7 +118,7 @@
   Victor Bramigk
 }
 \local{Rio de Janeiro}
-\data{Outubro de 2013}
+\data{Março de 2014}
 \orientador{Paulo F. F. Rosa - Ph.D}
 %\coorientador{Equipe \abnTeX}
 \instituicao{%
@@ -272,7 +272,7 @@ Engenharia.}
 %
 \convidadoum{Julio Cesar Duarte - D.Sc. do IME}{}
 \convidadodois{Ricardo Choren Noya - Ph.D do IME}{}
-\imprimirfolhadeaprovacao{9 de outubro de 2013}
+\imprimirfolhadeaprovacao{27 de março de 2014}
 % ---
 
 % ---
@@ -334,14 +334,17 @@ Engenharia.}
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 
-% TODO[vbramigk] contextualizar o tema antes
-
-O objetivo deste trabalho é prever como um time de futebol de robôs irá se comportar baseado
-somente nas posições e orientações de um conjunto discreto de amostras. Para isso, foram estudados
-os métodos da ACO (Ant Colony Optimization), SA (Simulated Annealing), Algorítimo  Genético, Lógica Nebulosa
-e Redes Neurais. A partir do estudo detalhado desse algoritmos definiu-se duas linhas principais de
-ação para a solução do problema: uma baseada em Logica Nebulosa e a outra baseada em Redes Neurais. Após
-um estudo mais aprofundado deseja-se implementar um processo de otimização em ambos os algorítimos para
+Neste trabalho são abordadas maneiras de analisar \textit{logs} de partidas de futebol de robôs
+da categoria SSL da competição RoboCup com a finalidade de obter melhores resultades na Inteligência
+Artificial do time RoboIME (do laboratório de robótica do IME) que participa anualmente dessa competição.
+O objetivo desejado é prever como um time de futebol de robôs irá se comportar baseado
+somente nas informações coletadas de partidas.
+Foi elaborado uma modelagem de alto nível que permite utilizar rotinas já existentes tanto para testes
+quanto predições.
+Foram estudados os métodos da ACO (Ant Colony Optimization), SA (Simulated Annealing), Algorítimo  Genético,
+Lógica Nebulosa e Redes Neurais. A partir do estudo detalhado desse algoritmos definiu-se duas linhas
+principais de ação para a solução do problema: uma baseada em Logica Nebulosa e a outra baseada em Redes Neurais.
+Após um estudo mais aprofundado deseja-se implementar um processo de otimização em ambos os algorítimos para
 que o resultado seja refinado.
 
 % Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
@@ -360,13 +363,15 @@ que o resultado seja refinado.
 \begin{resumo}[Abstract]
 \begin{otherlanguage*}{english}
 
-% TODO[jansegre]: atualizar para refletir o resumo
-
-The main objective of this work is predicting how a robot soccer team whill behave, based
-on a set of positions and orientations of a discrete sample. For that, some heuristics were
-studied: ACO (Ant Colony Optimization), SA (Simulated Annealing), GA (Genetic Algorithm),
-and Neural Networks. Based on the detailed study of these algorithms two branches were defined
-as candidate solutions: one based on the Neural Network heuristics, and the other based on
+This paper presents ways to analyze logs of robot soccer game matches from the
+SSL category of the RoboCup competition in order to obtain better results on the Artificial
+Intelligence of RoboIME team (from IME's robotics laboratory) which attends yearly to that competition.
+The desired objective of this work is predicting how a robot soccer team whill behave, based
+on a set of information acquired from game matches.
+A high level model was made such that existing routines can be used for both tests and predictions.
+The following heuristics were studied: ACO (Ant Colony Optimization), SA (Simulated Annealing), GA (Genetic Algorithm),
+and Neural Networks. Based on a detailed study of these algorithms two branches of work were defined
+for candidate solutions: one based on the Neural Network heuristics, and the other based on
 Fuzzy logic. After a deeper study on of these methods it's desirable to implement an algori-
 thm which will refine the result.
 
@@ -423,12 +428,20 @@ thm which will refine the result.
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-%\begin{siglas}
-%  \item[Fig.] Area of the $i^{th}$ component
-%  \item[456] Isto é um número
-%  \item[123] Isto é outro número
-%  \item[lauro cesar] este é o meu nome
-%\end{siglas}
+\begin{siglas}
+%	\item[Fig.] Area of the $i^{th}$ component
+%	\item[456] Isto é um número
+%	\item[123] Isto é outro número
+%	\item[lauro cesar] este é o meu nome
+	\item[ACO] \textit{Ant Colony Optimization}
+	\item[AG] Algoritmo genético
+	\item[IA] Inteligência artificial
+	\item[RoboCup] \textit{Robot World Cup Initiative}
+	\item[SA] \textit{Simulated Annealing}
+	\item[SAM] \textit{Standard Addition Method}
+	\item[SSL] \textit{Small Size League}
+	\item[STP] \textit{Skill Tactic Play}
+\end{siglas}
 % ---
 
 % ---

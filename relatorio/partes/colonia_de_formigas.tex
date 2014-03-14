@@ -18,13 +18,13 @@ Apesar dessa heurística utilizada pelas formigas ser interessante para se resol
 do tipo NP(i.e., com complexidade não polinomial), são necessários algumas adaptações na construção
 de um algoritmo computacional.
 
-A seguir é apresentado a meta-heurística do ACO(\textit{Ant Colony Optimization}) algoritmo,
+A seguir é apresentado a meta-heurística do ACO (\textit{Ant Colony Optimization}) algoritmo,
 juntamente com observações relacionadas as diferenças entre a heurística do ACO e o
 comportamento natural das formigas descrito anteriormente.
 
 \subsection{Meta-heurística do ACO}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width = 0.9 \linewidth]{imgs/meta_heuristica_aco}
   \label{diagrama_metaheuristica_aco}
   \caption{Diagrama de funcionamento da meta-heurística do ACO \cite{blum2005aco}}
@@ -60,7 +60,7 @@ conforme proposto por \cite{doringo2004ant}: \textit{ConstruirSolucoesFormigas},
 em torno dos nós vizinhos. A escolha do próximo nó é feita através de uma decisão
 estocástica que é função da quantidade de feromônio no nós vizinhos e informação heurística.
 Quando uma formiga encontra uma solução, ou enquanto a solução é construída, esta avalia a
-qualidade da solução(completa ou parcial) que será utilizada pelo procedimento
+qualidade da solução (completa ou parcial) que será utilizada pelo procedimento
 \textit{AtualizarFeromonios} para decidir a quantidade de feromônio que será depositada.
 Outro procedimento relevante na construção da solução é a eliminação de possíveis ciclos, utilizado
 por exemplo, no problema do caixeiro viajante.
@@ -84,63 +84,69 @@ utilizada depende das características do problema que se deseja resolver.
 
 \subsection{Exemplo de utilização}
 
-\begin{figure}[h]
-  \subfigure[caption]{
-    \includegraphics[width = 0.35 \linewidth]{imgs/exemplo_aco_1}
-  }
-  \subfigure[caption]{
-    \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_2}
-  }
-  \subfigure[caption]{
-    \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_3}
-  }\\
+\begin{figure}[ht]
+  \includegraphics[width=0.32 \linewidth]{imgs/exemplo_aco_1}
+  \includegraphics[width=0.32 \linewidth]{imgs/exemplo_aco_2}
+  \includegraphics[width=0.32 \linewidth]{imgs/exemplo_aco_3}
+  %\begin{subfigure}[b]
+  %  \includegraphics[width = 0.35 \linewidth]{imgs/exemplo_aco_1}
+  %  \label{img:exemplo_aco_1}
+  %\end{subfigure}
+  %\begin{subfigure}
+  %  \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_2}
+  %\end{subfigure}
+  %\begin{subfigure}
+  %  \includegraphics[width = 0.25 \linewidth]{imgs/exemplo_aco_3}
+  %\end{subfigure}
+
   \label{img:exemp_aco}
-  \caption{Example of the solution construction for a TSP problem consisting
-  of 4 cities (modelled by a graph with 4 nodes; see Definition 1). The
-  solution construction starts by randomly choosing a start node for the ant;
-  in this case node 1. Figures (a) and (b) show the choices of the first,
-  respectively the second, construction step. Note that in both cases the
-  current node (i.e., location) of the ant is marked by dark gray color, and
-  the already visited nodes are marked by light gray color (respectively
-  yellow color, in the online version of this article). The choices of the ant
-  (i.e., the edges she may traverse) are marked by dashed lines. The probabilities
-  for the different choices (according to Eq. (4)) are given underneath the
-  graphics. Note that after the second construction step, in which we exemplary
-  assume the ant to have selected node 4, the ant can only move to node 3, and
-  then back to node 1 in order to close the tour. \cite{blum2005aco}}
+  \caption{Example of the solution construction for a TSP problem}
+  %It consists of 4 cities (modelled by a graph with 4 nodes; see Definition 1). The
+  %solution construction starts by randomly choosing a start node for the ant;
+  %in this case node 1. Figures (a) and (b) show the choices of the first,
+  %respectively the second, construction step. Note that in both cases the
+  %current node (i.e., location) of the ant is marked by dark gray color, and
+  %the already visited nodes are marked by light gray color (respectively
+  %yellow color, in the online version of this article). The choices of the ant
+  %(i.e., the edges she may traverse) are marked by dashed lines. The probabilities
+  %for the different choices (according to Eq. (4)) are given underneath the
+  %graphics. Note that after the second construction step, in which we exemplary
+  %assume the ant to have selected node 4, the ant can only move to node 3, and
+  %then back to node 1 in order to close the tour. \cite{blum2005aco}}
 \end{figure}
 
-Definition 1. In the TSP is given a completely connected, undirected
-graph $G = (V , E)$ with edge-weights. The nodes $V$ of this graph
-represent the cities, and the edge weights represent the distances
-between the cities. The goal is to find a closed path in $G$ that
-contains each node exactly once (henceforth called a tour) and whose
-length is minimal. Thus, the search space $S$ consists of all tours in
-$G$. The objective function value $f(s)$ of a tour $s \in S$ is defined as
-the sum of the edge-weights of the edges that are in $s$. The TSP can
-be modelled in many different ways as a discrete optimization problem.
-The most common model consists of a binary decision variable $X_e$ for
-each edge in $G$. If in a solution $X_e = 1$, then edge e is part of the
-tour that is defined by the solution. Concerning the AS approach, the
-edges of the given TSP graph can be considered solution components,
-i.e., for each $e_{i,j}$ is introduced a pheromone value $\tau_{i,j}$. The task of
-each ant consists in the construction of a feasible TSP solution, i.e.,
-a feasible tour. In other words, the notion of task of an ant changes
-from “choosing a path from the nest to the food source” to “constructing
-a feasible solution to the tackled optimization problem”. Note that with
-this change of task, the notions of nest and food source loose their
-meaning. Each ant constructs a solution as follows. First, one of the
-nodes of the TSP graph is randomly chosen as start node. Then, the ant
-builds a tour in the TSP graph by moving in each construction step from
-its current node (i.e., the city in which she is located) to another
-node which she has not visited yet. At each step the traversed edge is
-added to the solution under construction. When no unvisited nodes are
-left the ant closes the tour by moving from her current node to the
-node in which she started the solution construction. This way of
-constructing a solution implies that an ant has a memory $T$ to store
-the already visited nodes. Each solution construction step is performed
-as follows. Assuming the ant to be in node $v_i$ , the subsequent
-construction step is done with probability:
+No TSP (\textit{Traveling Salesman Problem}) é dado um grafo completamente conectado e
+não direcionado $G = (V , E)$ com pesos nas arestas.
+Os nós $V$ do grafo representa as cidades e os pesos das arestas
+distâncias entre as cidades. O objetivo é encontrar um caminho fechado em $G$
+que contenha cada nó exatamente uma vez (portanto chamado passeio)
+e cujo comprimento é mínimo. Logo, o espaço de busca $S$ consiste de todos os
+passeios em $G$. O valor da função objetivo $f(s)$ de um passeio $s \in S$ 
+é definido pela soma dos pesos das arestas que existem em $s$. O TSP pode ser
+modelado de diverças maneiras como um problema de otimização discreta.
+O modelo mais comum consiste de uma variavel binária de decisão $X_e$ para
+cada aresta em $G$.
+Se em uma solução $X_e = 1$, então a aresta $e$ participa do passeio definido pela solução.
+
+No que se refere abordagem do (Ant System, the algorithm)AS, 
+as arestas de um dado grafo do TSP podem ser consideradas componentes da solução,
+i.e., para cada $e_{i,j}$ é introduzido um valor de feromônio $\tau_{i,j}$. 
+A tarefa de cada formiga consiste em construir uma solução plausível para o TSP, i.e,
+um passeio realizável. Em outras palavras, a noção de uma tarefa para uma formiga
+muda de \textit{“escolher um caminho da colônia à fonte de comida”} para \textit{“
+construir uma possível solução para o problema de otimização abordado"}. Note que com essa
+mudança de tarefa, as noções de colônia e fonte de comida perdem seu significado.
+
+Cada formiga constroe uma solução da seguinte maneira.
+Primeramente, um dos nós do grafo do TSP é aleatóriamente selecionada como sendo nó inicial.
+Então, cada formiga constroe seu passeio no grafo do TSP movendo-se em cada iteração de construção
+de seu nó atual (i.e., a cidade na qual ela esta localizada) á outro nó que ela ainda não visitou.
+A cada passo (iteração) a aresta percorrida é adicionada a solução em construção. Quando não 
+restam nenhum nó não-visitado a formiga fecha o passeio movendo-se de seu nó atual até
+o nó inicial, selecionado aleatoriamente no início da construção da solução. Dessa maneira a 
+construção da solução implica que a formiga tem memória $T$ para armazenar os nó já
+visitados. Cada iteração da solução é executado da seguinte maneira. 
+Assumindo que a formiga esteja no nó $v_i$ , a subsequente iteração de solução é executada com probabilidade:
 
 \begin{equation}
   \emph{p}(e_{i,j}) = \frac{\tau_{i,j}}{\sum_{k \in \lbrace 1,...,
@@ -148,29 +154,30 @@ construction step is done with probability:
   \forall j \in \lbrace 1,...,\vert V \vert\rbrace, v_j \not\in T
 \end{equation}
 
-For an example of such a solution construction see Fig. \ref{img:exemp_aco}.
-Once all ants of the colony have completed the construction of their solution,
-pheromone evaporation is performed as follows:
+Para um exemplo de tal construção de solução  veja Fig. \ref{img:exemp_aco}.
+Uma vez que todas as formigas de colônia tenham completado a construção de sua
+solução, a evaporação do feromônio é executada da seguinte maneira:
 
 \begin{equation}
   \tau_{i,j} \leftarrow (1-\rho)\cdot \tau_{i,j}, \forall \tau_{i,j}\in \mathcal{T}
 \end{equation}
 
-where $\mathcal{T }$ is the set of all pheromone values. Then the ants perform
-their return trip. Hereby, an ant—having constructed a solution $s$— performs
-for each $e_{i,j} \in s$ the following pheromone deposit:
+Onde $\mathcal{T }$ é o conjunto de todos os valores de feromônio.
+Então as formigas executam seu respectivos passeios. Dessa maneira,
+para cada $e_{i,j} \in s$ o seguinte feromônio é depositado:
 
 \begin{equation}
   \tau_{i,j} \leftarrow \tau_{i,j} + \frac{Q}{f(s)}
 \end{equation}
 
-where $Q$ is again a positive constant and $f(s)$ is the objective function
-value of the solution $s$. As explained in the previous section, the system
-is iterated—applying $n_a$ ants per iteration—until a stopping condition
-(e.g., a time limit) is satisfied.
-Even though the AS algorithm has proved that the ants foraging behaviour
-can be transferred into an algorithm for discrete optimization, it was 
-generally found to be inferior to state-of-the-art algorithms. Therefore, 
+Onde $Q$ é novamente uma constante positiva e $f(s)$ é o valor da função objetivo
+da solução $s$. O sistema esta iterativamente aplicando $n_a$ 
+formigas por iteração até que condição de parada
+(e.g., o tempo limite) seja satisfeita.
+Mesmo que o \textit{AS algorithm} tenha provado que o comportamento das formigas
+descrito anteriormente (no inicio da seção) pode ser tranferido para um algorítmo 
+de otimização discreta, foi
+em geral descoberto que ele é inferior aos algoŕtmos do estado da arte. Therefore, 
 over the years several extensions and improvements of the original AS
 algorithm were introduced. They are all covered by the definition of the
 ACO metaheuristic, which we will outline in the following section.
