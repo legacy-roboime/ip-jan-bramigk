@@ -3,7 +3,7 @@
 % TODO: falta a sec Motivação
 % =======================================
 
-Cooperação é uma relação de ajuda mútua entre indivíduos e/ou entidades, no sentido
+Cooperação é uma relação de ajuda mútua entre indivíduos ou entidades, no sentido
 de alcançar objetivos em comum, utilizando métodos mais ou menos consensuais. Projetar
 robôs para trabalhar juntos não é uma tarefa trivial. A tarefa se torna mais difícil
 ainda quando os robôs devem ser autônomos. Nos trabalhos em que o domínio da aplicação
@@ -23,24 +23,24 @@ in Artificial Inteligence}, em Outubro de 1992, Tóquio, discutindo e propondo p
 representavam grandes desafios. Esse \textit{Workshop} os levou a sérias discussões sobre
 usar um jogo de futebol para promover ciência e tecnologia. Estudos foram feitos para
 analisar a viabilidade dessa idéia. Os resultados desses estudos mostram que
-a idéia era viável, desejável e engloba diversas aplicações práticas. Em 1993 um
-grupo de pesquisadores incluindo Minoru Asada, Yasuo Kuniyoshi e Hiroaki Kitano,
-lançaram uma competição robótica chamada de Robot \textit{J-League} (fazendo uma analogia à
-\textit{J-League}, nome da Liga Japonesa de Futebol Profissional). Em um mês vários
+a idéia era viável, desejável e englobava diversas aplicações práticas. Em 1993, um
+grupo de pesquisadores, incluindo Minoru Asada, Yasuo Kuniyoshi e Hiroaki Kitano,
+lançaram uma competição de robótica chamada de Robot \textit{J-League} (fazendo uma analogia à
+\textit{J-League}, nome da Liga Japonesa de Futebol Profissional). Em um mês, vários
 pesquisadores já se pronunciavam dizendo que a iniciativa deveria ser estendida ao
-âmbito internacional. Surgia então a \textit{Robot World Cup Initiative} (RoboCup).
+âmbito internacional. Surgia então, a \textit{Robot World Cup Initiative} (RoboCup).
 
-RoboCup é uma competição destinada a desenvolver os estudos na área de robótica e
-inteligência artificial (IA) através de um competição amigável. Além disso, ela tem
-como objetivo até 2050, desenvolver uma equipe de robôs humanóides totalmente
+RoboCup é uma competição destinada a desenvolver os estudos na área de robótica e,
+inteligência artificial (IA), por meio de um competição amigável. Além disso, ela tem
+como objetivo, até 2050, desenvolver uma equipe de robôs humanóides totalmente
 autônomos capazes de derrotar a equipe campeã mundial de futebol humano. A competição
-possui várias modalidades. Neste trabalho será analizada a \textit{Small Size Robot League} (SSL),
+possui várias modalidades. Neste trabalho, será analisada a \textit{Small Size Robot League} (SSL),
 também conhecida como F180. De acordo com as regras da SSL, as equipes devem ser
-compostas por 6 robôs, sendo um deles o goleiro. O goleiro deve ser
-designado antes do início do jogo. Durante o jogo nenhuma interferência humana é
+compostas por 6 robôs, sendo um deles o goleiro, que deve ser
+designado antes do início do jogo. Durante o jogo, nenhuma interferência humana é
 permitida com o sistema de controle dos robôs. É fornecido aos times um sistema de
 visão global e esses controlam seus robôs com máquinas próprias. O sistema de controle
-dos robôs geralmente é externo, recebe os dados de um conjunto de câmeras
+dos robôs é, geralmente externo, recebe os dados de um conjunto de câmeras
 localizada acima do campo, processa os dados, determina qual comando deve ser executado
 em cada robô e envia este comando através de ondas de rádio aos robôs. Embora seja
 permitido que as equipes utilizem sistemas próprios de visão, a maioria das equipes utiliza
@@ -63,13 +63,13 @@ prover redundância e contribuir cooperativamente para resolver o problema em qu
 Com efeito, eles podem resolver o problema de maneira mais confiável, mais rápida e
 mais econômica, quando comparado com o desempenho de um único robô.
 
-Devido a grande complexidade do problema de interação com humanos, faz-se necessário
+Devido à grande complexidade do problema de interação com humanos, faz-se necessário
 que os robôs sejam dotados de uma capacidade de aprendizado para facilitar a interação
-desses com o mundo real. Isso é relevante tanto para aplicações industriais quanto para
-aplicações em resgates e militares. Isso diminui a necessidade de modelagem
+desses com o mundo real. Isso é relevante tanto para aplicações industriais, quanto para
+aplicações em resgates e, militares. Isso diminui a necessidade de modelagem
 exata dos ambientes em que os sistemas robóticos serão introduzidos e permite que
 a adaptação a ambientes complexos seja realizada através da exposição destes sistemas
-às possíveis situações de trabalho. Através da incorporação do sistema de
+às possíveis situações de trabalho. Por meio da incorporação do sistema de
 aprendizagem, situações não consideradas podem ser incorporadas ao algoritmo de
 controle dos robôs e permitir que esses reajam de maneira mais eficiente em futuras
 cituações semelhantes.
@@ -77,7 +77,7 @@ cituações semelhantes.
 \section{Objetivos}
 
 A pesquisa tem por finalidade realizar um estudo sobre métodos para que agentes controláveis
-possam interagir de maneira eficiente com agentes do time inimigo, que não são controláveis.
+possam interagir de maneira eficiente com os agentes do time inimigo, que não são controláveis.
 A pesquisa se propoem a realizar esse aprendizado dos agentes inimigos baseado em gravações
 coletadas da visão e juiz de partidas, também conhecidas como \textit{logs}, para posteriormente
 serem incorporados ao sistema de inteligência da equipe de futebol de robôs do Laboratório
@@ -97,27 +97,27 @@ das tecnologias envolvidas.
 
 \section{Metodologia}
 
-Para atingir os objetivos propostos será seguida a seguinte metodologia.
+Para atingir os objetivos propostos, será seguida a seguinte metodologia:
 Inicialmente o problema a ser investigado será definido formalmente,
-utilizando-se de definições e teoremas.
+utilizando definições e teoremas.
 
-Posteriormente a bibliografia é revisada. São evidenciados os métodos comumente
-utilizados para a abordagem do problema mais geral de classificação. Também são
-analisádos trabalhos aplicados especificamente à SSL.
+Posteriormente, a bibliografia é revisada, são evidenciados os métodos comumente
+utilizados para a abordagem do problema mais geral de classificação e também são
+analisados trabalhos aplicados especificamente à SSL.
 
-A seguir são analisadas as heurísticas levantadas durante a
+A seguir, são analisadas as heurísticas levantadas durante a
 revisão da bibliografia. Cada uma delas é descrita. Após descrição sumária de
 de cada heurística, são apresentados os respectivos exemplos de cada aplicação.
-Ao fim de cada exemplo são apresentados como as respectivas heurísticas se encaixam na
+Ao fim de cada exemplo, são apresentados como as respectivas heurísticas se encaixam na
 resolução do problema.
 
-A seguir são apresentadas abordagens envolvendo as heurísticas introduzidas
-anteriormente. Cada abordagem relaciona no mínimo uma dessas heurísticas.
-Ao final de cada seção é apresentado uma metodologia a ser aplicada
+Então, são apresentadas abordagens envolvendo as heurísticas introduzidas
+anteriormente. Cada abordagem relaciona, no mínimo, uma dessas heurísticas.
+Ao final de cada seção, é apresentado uma metodologia a ser aplicada
 na resolução do problema. Uma análise das características de cada abordagem
 é feita ao final da descrição de cada abordagem.
 
-Posteriormente, utilizando-se das análises de cada abordagem feitas anteriormente,
+Após, utilizando as análises de cada abordagem feitas anteriormente,
 uma das abordagens é selecionada. Essa análise é estudada mais profundamente.
 São descritos possíveis algorítmos para implementar essa abordagem. Também são
 analisados os \textit{Frameworks} mais comumente utilizados, levando os pontos
@@ -130,17 +130,17 @@ desenvolvidos métricas para análise da abordagem selecionada.
 
 \section{Estrutura do Trabalho}
 
-No capítulo \ref{cap:def_problema} o problema a ser resolvido é definido formalmente.
+No capítulo \ref{cap:def_problema}, o problema a ser resolvido é definido formalmente.
 
-No capítulo \ref{cap:rev_bibliografica} a bibliografia é revisada.
+No capítulo \ref{cap:rev_bibliografica}, a bibliografia é revisada.
 
-No capítulo \ref{cap:heuristicas} são apresentados tutoriais relacionados às
+No capítulo \ref{cap:heuristicas}, são apresentados tutoriais relacionados às
 heurísticas comumente utilizadas em problemas de classificação.
 
-No capítulo \ref{cap:anal_abordagens} são descritas possíveis abordagens a serem
+No capítulo \ref{cap:anal_abordagens}, são descritas possíveis abordagens a serem
 seguidas para resolução do problema.
 
-No capítulo \ref{cap:cronograma} o cronograma de estudo é apresentado.
+No capítulo \ref{cap:cronograma}, o cronograma de estudo é apresentado.
 
-No capítulo \ref{cap:conclusao} são apresentadas as principais conclusões atingidas
+No capítulo \ref{cap:conclusao}, são apresentadas as principais conclusões atingidas
 até o momento.
