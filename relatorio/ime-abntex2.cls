@@ -134,7 +134,8 @@
   \let\footnote\thanks
   \noindent
   %XXX: what's the best way to parametrize this year?
-  c2013
+  %TODO: do it! parametrize this
+  c2014
 
   \vspace{10mm}
 
