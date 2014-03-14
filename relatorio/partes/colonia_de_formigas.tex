@@ -128,7 +128,7 @@ O modelo mais comum consiste de uma variavel binária de decisão $X_e$ para
 cada aresta em $G$.
 Se em uma solução $X_e = 1$, então a aresta $e$ participa do passeio definido pela solução.
 
-No que se refere abordagem do (Ant System, the algorithm)AS, 
+No que se refere abordagem do TSP usando ACO, 
 as arestas de um dado grafo do TSP podem ser consideradas componentes da solução,
 i.e., para cada $e_{i,j}$ é introduzido um valor de feromônio $\tau_{i,j}$. 
 A tarefa de cada formiga consiste em construir uma solução plausível para o TSP, i.e,
@@ -177,9 +177,9 @@ formigas por iteração até que condição de parada
 Mesmo que o \textit{AS algorithm} tenha provado que o comportamento das formigas
 descrito anteriormente (no inicio da seção) pode ser tranferido para um algorítmo 
 de otimização discreta, foi
-em geral descoberto que ele é inferior aos algoŕtmos do estado da arte. Therefore, 
-over the years several extensions and improvements of the original AS
-algorithm were introduced. They are all covered by the definition of the
-ACO metaheuristic, which we will outline in the following section.
-
+em geral descoberto que ele é inferior aos algoŕtmos do estado da arte.
+Portanto, ao longo dos anos várias extensões e aprimoramentos do algorítimo
+original de resolução do TSP usando ACO foram introduzidas. Todos eles combrem a definição de metaheurística do ACO,
+descrito anteriormente.
+ 
 \subsection{Aplicação ao Problema}
