@@ -8,25 +8,26 @@ problema, a arquitetura a ser considerada é apresentada na figura
 sistemas:
 
 \begin{itemize}
-  \item Câmeras Visão: conjunto de câmeras firewire que captura as imagens do
+  \item Câmeras Visão: conjunto de câmeras \textit{firewire} que captura as imagens do
         campo e as envia para a SSL-Vision;
-  \item Comunicação: Módulo responsável por receber os parâmetros
-        dos motores e enviar o comando via ondas de rádio para os
-        robôs;
+  \item Comunicação: módulo responsável por receber os parâmetros
+        dos motores, drible, chute baixo e chute alto e enviar o comando via
+        ondas de rádio para os robôs;
   \item Execução: módulo responsável por realizar a tomada de decisões
         em baixo nível de quais ações os robôs devem realizar a partir
         da decisão tomada pelo módulo de inteligência;
   \item Inteligência: módulo responsável por realizar a tomada de
         decisão em alto nível de quais ações os robôs devem realizar
         tendo auxílio de um módulo de Simulação;
-  \item Mundo Real: mundo real, onde os agentes agem
-  \item Referee-Box: \textit{Software} padronizado pela Robocup para que as
+  \item Mundo Real: campo de futebol real, onde os times 1 e 2 interagem
+        através de seus respectivos robôs
+  \item Referee-Box: \textit{software} padronizado pela Robocup para que as
         regras da competição sejam cumpridas sem que haja intervenção
         humana excessiva durante uma partida;
-  \item Simulação: módulo do software do time responsável por simular
+  \item Simulação: módulo do \textit{software} do time responsável por simular
         o ambiente da partida, tendo como entrada os parâmetros do mundo
         real;
-  \item Software Time 1/2: \textit{software} do time 1/2;
+  \item \textit{Software} Time 1/2: \textit{software} do time 1/2;
   \item SSL-Vision: \textit{software} padronizado pela Robocup que permite a
         integração com um conjunto de câmeras \textit{firewire} que capturam
         imagens do campo e as processa, extraindo informações sobre os objetos na

@@ -3,16 +3,23 @@
 % TODO: falta a sec Motivação
 % =======================================
 
-Cooperação é uma relação de ajuda mútua entre indivíduos ou entidades, no sentido
-de alcançar objetivos em comum, utilizando métodos mais ou menos consensuais. Projetar
-robôs para trabalhar juntos não é uma tarefa trivial. A tarefa se torna mais difícil
-ainda quando os robôs devem ser autônomos. Nos trabalhos em que o domínio da aplicação
-é o futebol de robôs, é comum a idéia de se distribuir papéis dinamicamente entre os
-membros que compõem a equipe. Este tipo de modelo em um ambiente cooperativo se torna
-menos complexo quando todos os membros tem características em comum, não havendo especialização
-entre eles. Adicionalmente, é comum a adoção de objetivos globais e locais ao sistema.
+Projetar robôs autônomos para trabalharem juntos não é uma tarefa trivial. Essa tarefa se
+complica quando um robô não tem um modelo bem definido dos outros robôs que atuarão em
+conjunto. Um domínio de aplicalção que envolve essa problemática é o futebol de robôs.
+Nesse domínio é comum a distribuição de papéis dinamicamente entre os membros de cada
+time. Entretanto, um time não tem conhecimento dos papéis atribuídos aos robôs
+do time oponente. O planejamento de um time pode ser aprimorado através de um modelo
+aproximado desse time oponente, pois levará em consideração a maneira como o
+time reagirá às diverças ações possíveis.
+
+A seguir, descreve-se a história da competição de futebol de robôs.
 
 \section{\textit{RoboCup Small Size League}}
+
+\begin{figure}
+  \includegraphics[width = \linewidth]{imgs/robocup}\label{robocup2013}
+  \caption{Imagem da SSL \textit{RoboCup} 2013 em Eindhoven, na Holanda}
+\end{figure}
 
 A idéia de robôs jogando futebol foi mencionada pela primeira vez pelo professor
 Alan Mackworth (\textit{Univercity of British Columbia}, Canadá) em um artigo intitulado
@@ -31,7 +38,7 @@ pesquisadores já se pronunciavam dizendo que a iniciativa deveria ser estendida
 âmbito internacional. Surgia então, a \textit{Robot World Cup Initiative} (RoboCup).
 
 RoboCup é uma competição destinada a desenvolver os estudos na área de robótica e,
-inteligência artificial (IA), por meio de um competição amigável. Além disso, ela tem
+Inteligência Artificial (IA), por meio de um competição amigável. Além disso, ela tem
 como objetivo, até 2050, desenvolver uma equipe de robôs humanóides totalmente
 autônomos capazes de derrotar a equipe campeã mundial de futebol humano. A competição
 possui várias modalidades. Neste trabalho, será analisada a \textit{Small Size Robot League} (SSL),
@@ -43,8 +50,10 @@ visão global e esses controlam seus robôs com máquinas próprias. O sistema d
 dos robôs é, geralmente externo, recebe os dados de um conjunto de câmeras
 localizada acima do campo, processa os dados, determina qual comando deve ser executado
 em cada robô e envia este comando através de ondas de rádio aos robôs. Embora seja
-permitido que as equipes utilizem sistemas próprios de visão, a maioria das equipes utiliza
-a visão centralizada.
+permitido que as equipes utilizem sistemas próprios de visão, a maioria das
+equipes utiliza a visão centralizada. A figura \ref{robocup2013} mostra uma
+imagem da SSL Robocup 2013, da qual o a ROBOIME (Equipe de Futebol de Robôs do
+Laboratório de Robótica do IME) participou.
 
 \section{Motivação}
 
@@ -63,22 +72,27 @@ prover redundância e contribuir cooperativamente para resolver o problema em qu
 Com efeito, eles podem resolver o problema de maneira mais confiável, mais rápida e
 mais econômica, quando comparado com o desempenho de um único robô.
 
+% TODO Incluir imagem do robô
+%\begin{figure}
+%  \includegraphics[width = \pagewidth]{}
+%\end{figure}
+
 Devido à grande complexidade do problema de interação com humanos, faz-se necessário
 que os robôs sejam dotados de uma capacidade de aprendizado para facilitar a interação
 desses com o mundo real. Isso é relevante tanto para aplicações industriais, quanto para
-aplicações em resgates e, militares. Isso diminui a necessidade de modelagem
+aplicações em resgates e militares. Isso diminui a necessidade de modelagem
 exata dos ambientes em que os sistemas robóticos serão introduzidos e permite que
 a adaptação a ambientes complexos seja realizada através da exposição destes sistemas
 às possíveis situações de trabalho. Por meio da incorporação do sistema de
 aprendizagem, situações não consideradas podem ser incorporadas ao algoritmo de
 controle dos robôs e permitir que esses reajam de maneira mais eficiente em futuras
-cituações semelhantes.
+situações semelhantes.
 
 \section{Objetivos}
 
 A pesquisa tem por finalidade realizar um estudo sobre métodos para prever comportamentos.
 Isso para que agentes controláveis
-possam interagir de maneira eficiente com os agentes do time inimigo, que não são controláveis.
+possam reagir de maneira eficiente às ações dos agentes do time inimigo, que não são controláveis.
 A pesquisa se propoem a realizar esse aprendizado dos agentes inimigos baseado em gravações
 coletadas da visão e juiz de partidas, também conhecidas como \textit{logs}, para posteriormente
 serem incorporados ao sistema de inteligência da equipe de futebol de robôs do Laboratório
@@ -90,9 +104,9 @@ de Robótica, denominada RoboIME.
 
 Um método concreto que possa prever o comportamento de agentes inteligêntes de um jogo de
 futebol de robôs permite com que seja possível prever o comportamento de um time inimigo.
-Com tal mecanismo é possível melhorar a Inteligência Artificial em uso pelo RoboIME
+Com tal mecanismo é possível melhorar a Inteligência Artificial em uso pela RoboIME
 para tomar decisões que levem a resultados melhores e, por consequencia, ganhar mais partidas.
-Outras equipes participantes da SSL usam mecanismo de predição do inimigo.
+Outras equipes participantes da SSL já utilizam mecanismo de predição do inimigo.
 Portanto, é de grande importância desenvolver também tal mecanismo para acompanhar a evolução
 das tecnologias envolvidas.
 
@@ -102,12 +116,12 @@ Para atingir os objetivos propostos, será seguida a seguinte metodologia:
 Inicialmente o problema a ser investigado será definido formalmente,
 utilizando definições e teorias apropriadas.
 
-Posteriormente, a bibliografia é revisada, são evidenciados os métodos comumente
-utilizados para a abordagem do problema mais geral de classificação e também são
+Posteriormente, a bibliografia é revisada e são evidenciados os métodos comumente
+utilizados para a abordagem do problema mais geral de classificação, bem como são
 analisados trabalhos aplicados especificamente à SSL.
 
 A seguir, são analisadas as heurísticas levantadas durante a
-revisão da bibliografia. Cada uma delas é descrita. Após descrição sumária de
+revisão da bibliografia. Cada uma delas é descrita. Após descrição sumária
 de cada heurística, são apresentados os respectivos exemplos de cada aplicação.
 Ao fim de cada exemplo, são apresentados como as respectivas heurísticas se encaixam na
 resolução do problema.
@@ -118,8 +132,8 @@ Ao final de cada seção, é apresentado uma metodologia a ser aplicada
 na resolução do problema. Uma análise das características de cada abordagem
 é feita ao final da descrição de cada abordagem.
 
-Após, são descritos possíveis algorítmos para implementar essa abordagem. Também são
-desenvolvidos métricas para análise de abordagem.
+A seguir, são descritos possíveis algorítmos para implementar essas abordagens. Também são
+desenvolvidos métricas para avaliar os algorítmos desenvolvidos.
 
 % NOTE: não é bem verdade isso:
 %Para validar os estudos desenvolvidos, o projeto de um software

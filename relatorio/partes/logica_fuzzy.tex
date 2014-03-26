@@ -8,8 +8,7 @@ processamento de sinais. Uma arquiterura funcional generica de um Sistema Nebulo
 
 A qualidade da aproximação difusa depende da qualidade das regras. Na prática especialistas sugerem regras
 difusas ou aprendem-nas através de esquemas neurais através de dados e ajustam as regras com novos dados.
-Os resultados sempre aproximam alguma função não linear desconhecida que pode mudar com o tempo. Melhores 
-cérebros e melhores redes neurais resultam em melhores aproximações \cite{kosko1997fuzzy}.
+Os resultados sempre aproximam alguma função não linear desconhecida que pode mudar com o tempo. Regras e redes neurais mais apropriadas ao domínio do problema resultam em melhores aproximações \cite{kosko1997fuzzy}.
 
 \begin{figure}
   \includegraphics[width=15cm]{imgs/arquitetura_fuzzy}\label{arq_fuzzy}
@@ -22,15 +21,15 @@ O sistema difuso $F:\Re^n \rightarrow \Re^p$ é em si uma árvore de regras rasa
 por antecipação. Existem $m$ regras da forma "Se $X$ é conjunto difuso $A$ então $Y$ é conjunto difuso $B$".
 A relação de pertinência "$X$ é conjunto difuso $A$" é descrita por uma função de pertinência
 $\mu_A: x \longrightarrow [0,1]$. No diagrama da figura \ref{arq_fuzzy} esse processo é representado pela
-caixa \emph{Fuzzificação}. A regra nebulosa "Se <antecedente nebuloso> então <consequente nebuloso>" dispara
-o processo de \emph{Defuzzificação} descrito no <consequente nebuloso>. Esse processo de conecção é a
+caixa \emph{Fuzzificação}. A regra nebulosa "Se <\textit{antecedente nebuloso}> então <\textit{consequente nebuloso}>" dispara
+o processo de \emph{Defuzzificação} descrito no <\textit{consequente nebuloso}>. Esse processo de conecção é a
 \emph{Inferência Nebulosa}.
 
 Cada entrada $x$ aciona parcialmente todas as regras em paralelo. Então o sistema age como um processador 
 associativo a medida que calcula a saída $F(x)$.
 
-Essas regras relacionam os conjuntos $A_j$ e $B_j$, gerando o caminho difuso $A_j x B_j$. Na prática,
-é utilizado o produto para definir $ a_j x b_j (x,y) = a_j(x).b_j(y)$. Esta é a parte "padrão" no SAM.
+Essas regras relacionam os conjuntos $A_j$ e $B_j$, gerando o caminho difuso $A_j \otimes B_j$. Na prática,
+é utilizado o produto para definir $ a_j \otimes b_j (x,y) = a_j(x).b_j(y)$. Esta é a parte "padrão" no SAM.
 A parte "aditiva" se refere ao fato de a entrada $x$ acionar a $j$-ésima regra em um grau $a_j(x)$ e o sistema 
 soma os acionamentos ou partes escaladas dos conjuntos escalados $a_j(x)B_j$, \cite{kosko1997fuzzy}:
 
@@ -45,9 +44,10 @@ V_j = \int{b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p > 0\\
 c_j = \frac{\int{y.b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p}{V_j}
 \end{eqnarray}
 
-\subsection{Exemplo de aplicação}
- Este exemplo foi retirado de \cite{passos2005datamining}. Deseja-se neste exemplo de terminar qual o valor da
- apólice de seguro a ser pago pelo cliente João a partir dos valores de idade e de pressão deste cliente.
+\subsection{Exemplo de Aplicação}
+ Este exemplo foi retirado de \cite{passos2005datamining}. Deseja-se neste
+ exemplo determinar qual o valor da apólice de seguro a ser pago pelo
+ cliente João a partir dos valores de idade e de pressão arterial deste cliente.
  Considerando-se as Regras Nebulosas
  \begin{itemize}
    \item \emph{SE} idade é \textit{meia-idade} \emph{E} pressão é \textit{baixa} \emph{ENTÂO} seguro é \textit{baixo}
@@ -64,8 +64,8 @@ c_j = \frac{\int{y.b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p}{V_j}
  
  Logo, para a regras 1 e 2, considerando-se o modelo de Mandani descrito em \cite{passos2005datamining}, tem-se que 
  \begin{description}
-   \item $0.8$ \emph{E} $0.6 = Min{0.8,0.6} = 0.6 = \mu_{baixo}(X)$ 
-   \item $0.6$ \emph{E} $0.5 = Min{0.6,0.5} = 0.5 = \mu_{alto}(Y)$
+   \item $0.8$ \emph{E} $0.6 = Min \lbrace 0.8,0.6 \rbrace = 0.6 = \mu_{baixo}(X)$ 
+   \item $0.6$ \emph{E} $0.5 = Min \lbrace 0.6,0.5 \rbrace = 0.5 = \mu_{alto}(Y)$
  \end{description}
  
  A partir de um processo de defuzzificação, das as distribuições $\mu_{baixo}$ e $\mu_{alto}$, tem-se que

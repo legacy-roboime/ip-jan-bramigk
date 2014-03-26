@@ -1,5 +1,7 @@
 \subsection{Definições}
 
+% TODO imagem de um corpo genérico
+
 \begin{defi}[Corpo Rígido]
   Um corpo rígido $r$ é definido por dois subconjuntos disjuntos
   de parâmetros $r= \langle \hat{r}, \bar{r} \rangle$ em que:
@@ -27,6 +29,8 @@
   \cite{math2robotics}.
 \end{defi}
 
+% TODO imagem da bola
+
 \begin{defi}[Bola]\label{def:bola}
   Bola é um corpo rígido $\hat{b}$, no qual somente as componentes 
   $\langle x,y \rangle$ do o parâmetro $\hat{b}.\alpha$ são
@@ -44,9 +48,13 @@
   não se pode estimar o valor de $\hat{b}.\omega$ com exatidão.
 \end{defi}
 
+% TODO definir skill
+% TODO imagem do robô e seus atuadores
+
 \begin{defi}[Robô]
   Robô $rob$ é um conjunto de sistemas compostos de corpos rígidos,
-  \textit{hardware} e \textit{firmware}. São eles:
+  \textit{hardware} e \textit{firmware}. Neste trabalho será considerado
+  que o robô tem os seguintes sistemas:
 
   \begin{itemize}
     \item Drible: imprime um torque a bola;
@@ -80,6 +88,12 @@
   simulação ou da visão.
 
 \end{defi}
+
+% referenciar zicler para exemplos de skills
+% Sk pode ser uma sequência de ações
+% exemplo de árvore de busca
+% exemplo de estratégia (pode ser o BK-BGK)
+
 
 \begin{defi}[Time]\label{def:time}
   Sejam os seguintes parâmetros:
@@ -118,8 +132,8 @@
   \[
     T: \langle A, X_{ob}^{i}, e, e_b, r_i \rangle \longrightarrow a_c^{i+1}
   \]
-  Assim, utilizando-se de $e$, $T$ simula várias sequência de ações $a$ dado $X_{ob}^{i}$,
-  gerando  a partir de $f_{U}$, $e_b$ e.
+  Assim, utilizando-se de $e$, $T$ simula várias sequência de ações $a_c$ dado $X_{ob}^{i}$
+  a partir de $f_{U}$ e $e_b$.
 \end{defi}
 
 \begin{defi}[Partida]
