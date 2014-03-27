@@ -1,0 +1,28 @@
+\frame{
+  \frametitle{Otimização da Colonia de Formigas}
+  \begin{block}{}
+    \subsection{Pseudo código da meta-heurística do ACO}
+      %Algoritmo
+      \begin{algorithm}[H]
+
+      %Macros
+      \SetKwBlock{AgendarAtividade}{AgendarAtividade}{fim}
+      \SetKwBlock{Procedimento}{Procedimento}{fim}
+
+      \Procedimento{
+        \Enqto{$n < N_{MAX\_IT}$}{
+          %\tcp*[f]{$N_{MAX\_IT}$ é o número máximo de iterações\\}
+          \AgendarAtividade{
+            ConstruirSolucoesFormigas\\
+            AtualizarFeromonios\\
+            %\tcp*[f]{opcional}\\
+            \tcp{opcional:}
+            AcoesGlobais
+          }
+        }
+      }
+
+      \caption{Pseudo código da meta-heurística do ACO}
+    \end{algorithm}
+  \end{block}
+}
