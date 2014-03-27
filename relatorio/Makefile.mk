@@ -1,6 +1,8 @@
 # options
 #BUILD_STRATEGY	:= htlatex
 
+neverclean := *.pdf
+
 
 # UTILS
 #
