@@ -1,28 +1,36 @@
 \frame{
   \frametitle{Otimização da Colonia de Formigas}
   \begin{block}{}
-    \subsection{Pseudo código da meta-heurística do ACO}
-      %Algoritmo
-      \begin{algorithm}[H]
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.8 \linewidth]
+      {imgs/ilustrativa_aco}
+      \caption{Idéia Básica do ACO}
+    \end{figure}
+  \end{block}
+}
 
-      %Macros
-      \SetKwBlock{AgendarAtividade}{AgendarAtividade}{fim}
-      \SetKwBlock{Procedimento}{Procedimento}{fim}
+\frame{
+  \frametitle{Otimização da Colonia de Formigas}
+  \begin{block}{}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.8 \linewidth]
+      {imgs/meta_heuristica_aco}
+      \caption{Diagrama de Funcionamento da Meta-Heurística do ACO}
+    \end{figure}
+  \end{block}
+}
 
-      \Procedimento{
-        \Enqto{$n < N_{MAX\_IT}$}{
-          %\tcp*[f]{$N_{MAX\_IT}$ é o número máximo de iterações\\}
-          \AgendarAtividade{
-            ConstruirSolucoesFormigas\\
-            AtualizarFeromonios\\
-            %\tcp*[f]{opcional}\\
-            \tcp{opcional:}
-            AcoesGlobais
-          }
-        }
-      }
+\frame{
+  \frametitle{Otimização da Colonia de Formigas}
+  \begin{block}{}
+    \begin{figure}[ht]
+      \includegraphics[width=0.4 \linewidth, height = 0.4 \linewidth]{imgs/exemplo_aco_1}
+      \includegraphics[width=0.3 \linewidth, height = 0.4 \linewidth]{imgs/exemplo_aco_2}
+      \includegraphics[width=0.3 \linewidth, height = 0.4 \linewidth]{imgs/exemplo_aco_3}
 
-      \caption{Pseudo código da meta-heurística do ACO}
-    \end{algorithm}
+     \caption{Exemplo da construção da solução para o TSP problem}
+    \end{figure}
   \end{block}
 }
