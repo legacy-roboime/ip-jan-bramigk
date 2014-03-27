@@ -1,6 +1,6 @@
-\section{Algorítimo Genético}
+\section{Algoritmo Genético}
 
-Um \emph{algorítimo genético} é uma heurística de busca que procura
+Um \emph{algoritmo genético} é uma heurística de busca que procura
 imitar a seleção natural que ocorre no processo evolucionário dos
 organismos vivos.
 
@@ -56,7 +56,7 @@ As condições mais comuns para terminação do processo são as seguintes:
 
 \subsection{Limitações}
 
-As limitações mais comuns no emprego de um algorítimo genético são:
+As limitações mais comuns no emprego de um algoritmo genético são:
 
 \begin{itemize}
 \item
@@ -65,20 +65,20 @@ As limitações mais comuns no emprego de um algorítimo genético são:
 \item
   Não escala bem com a complexidade, isto é, quando o número de
   elementos expostos a mutação é grande o espaço de busca cresce
-  exponencialmente. Por isso, na prática algorítimos genéticos são
+  exponencialmente. Por isso, na prática algoritmos genéticos são
   usados para, por exemplo, projetar uma hélice e não um motor.
 \item
   A melhor solução é relativa às outras soluções, por isso o critério de
   parada não é muito claro em alguns problemas.
 \item
-  Em muitos problemas os algorítimos genéticos tendem a convergir para
+  Em muitos problemas os algoritmos genéticos tendem a convergir para
   um ótimo local ou as vezes pontos arbitrários em vez do ótimo global.
 \item
-  É difícil aplicar algorítimos genéticos para conjunto de dados
+  É difícil aplicar algoritmos genéticos para conjunto de dados
   dinâmicos. Pois as soluções podem começar a convergir para um conjunto
   de dados que já não é mais válido.
 \item
-  Algorítimos genéticos não conseguem resolver eficientemente problemas
+  Algoritmos genéticos não conseguem resolver eficientemente problemas
   em que a avaliação é binária (certo/errado), como em problemas de
   decisão. Nesse caso buscas aleatórias convergem tão rápido quanto essa
   heurística.
@@ -87,7 +87,7 @@ As limitações mais comuns no emprego de um algorítimo genético são:
   encontram a solução mais rapidamente.
 \end{itemize}
 
-\subsection{Pseudo código de um Algorítimo Genético}
+\subsection{Pseudo código de um Algoritmo Genético}
 
 %\begin{lstlisting}
 \begin{algorithm}[H]
@@ -160,10 +160,10 @@ Por último uma regra de mutação, nesse caso é sufiente a inversão de um bit
 
 Com esses quatro requisitos é possível aplicar a iteração genética sobre uma população inicial.
 
-Esse exemplo demonstra a modelagem de uma otimização usando um algorítimo genético e foi baseado em \cite{vieira2002algogeneticos}.
+Esse exemplo demonstra a modelagem de uma otimização usando um algoritmo genético e foi baseado em \cite{vieira2002algogeneticos}.
 
 
 \subsection{Aplicação ao problema}
 
-O problema descrito neste trabalho pode se beneficiar de algorítimos genéticos para otimizar conjuntos de
+O problema descrito neste trabalho pode se beneficiar de algoritmos genéticos para otimizar conjuntos de
 parâmetros de outras heurísticas.
