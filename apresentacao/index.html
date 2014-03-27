@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+
+    <title>Heurística Estática para Times Cooperativos de Robôs</title>
+    <!-- some actual meta -->
+    <meta name="author" content="Jan Segre" /><!-- of this document, not the reasearch -->
+    <meta name="description" content="Apresentação do trabalho de Iniciação à Pesquisa do Instituto Militar de Engenharia feito em 2014." />
+
+    <!-- styles -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- (the following are temporary) -->
+<!--<link href="css/impress-demo.css" rel="stylesheet" />-->
+</head>
+<body>
+
+<div class="fallback-message">
+    <!-- TODO: translate this -->
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!-- the presentation, voilà -->
+<div id="impress">
+
+    <div id="capa" class="step" data-x="0" data-y="0">
+        <h1>Heurística Estática para Times Cooperativos de Robôs</h1>
+        <br>
+        <h2>Victor Bramigk</h2>
+        <h2>Jan Segre</h2>
+        <br>
+        orientado por
+        <h2>Paulo F. F. Rosa</h2>
+    </div>
+
+    <div id="robocup" class="step" data-x="0" data-y="1000">
+        <h2>A RoboCup</h2>
+        <img src="img/robocup.jpg" alt="RoboCup" width="700px" />
+    </div>
+
+    <div id="problema" class="step" data-x="0" data-y="2000">
+        <h2>O Problema</h2>
+    </div>
+
+    <div id="heuristicas" class="step" data-x="0" data-y="3000">
+        <h2>Soluções com heurísticas?</h2>
+    </div>
+
+    <!-- lógica nebulosa -->
+    <div id="fuzzy" class="step" data-x="0" data-y="4000">
+        <h2>Lógica Nebulosa</h2>
+    </div>
+
+    <div id="fuzzy_sam" class="step" data-x="1000" data-y="4000">
+        <h2>Modelo Aditivo Padrão</h2>
+    </div>
+
+    <div id="fuzzy_exemplo" class="step" data-x="2000" data-y="4000">
+        <h2>Exemplo</h2>
+    </div>
+
+    <div id="fuzzy_como" class="step" data-x="3000" data-y="4000">
+        <h2>Como pode ser utilizada?</h2>
+    </div>
+
+    <!-- otimização da colônia de formigas -->
+    <div id="aco" class="step" data-x="0" data-y="5000">
+        <h2>Otimização da Colônia de Formigas</h2>
+        <h3>também conhecido por ACO (Ant Colony Optimization)</h3>
+    </div>
+
+    <div id="aco_meta" class="step" data-x="-1000" data-y="5000">
+        <h2>Meta-heurística do ACO</h2>
+    </div>
+
+    <div id="aco_exemplo" class="step" data-x="-2000" data-y="5000">
+        <h2>Exemplo</h2>
+    </div>
+
+    <div id="aco_como" class="step" data-x="-3000" data-y="5000">
+        <h2>Como pode ser utilizada?</h2>
+    </div>
+
+    <!-- recozimento simulado -->
+    <div id="sa" class="step" data-x="0" data-y="6000">
+        <h2>Recozimento Simulado</h2>
+        <h3>também conhecido por SA (Simulated Annealing)</h3>
+    </div>
+
+    <div id="sa_meta" class="step" data-x="1000" data-y="6000">
+        <h2>Meta-heurística do SA</h2>
+    </div>
+
+    <div id="sa_exemplo" class="step" data-x="2000" data-y="6000">
+        <h2>Exemplo</h2>
+    </div>
+
+    <div id="sa_como" class="step" data-x="3000" data-y="6000">
+        <h2>Como pode ser utilizada?</h2>
+    </div>
+
+    <!-- algorítimo genético -->
+    <div id="ga" class="step" data-x="0" data-y="7000">
+        <h2>Algorítmo Genético</h2>
+    </div>
+
+    <div id="ga_meta" class="step" data-x="-1000" data-y="7000">
+        <h2>Funcionamento</h2>
+    </div>
+
+    <div id="ga_exemplo" class="step" data-x="-2000" data-y="7000">
+        <h2>Exemplo</h2>
+    </div>
+
+    <div id="ga_limitations" class="step" data-x="-3000" data-y="7000">
+        <h2>Limitações</h2>
+    </div>
+
+    <div id="ga_como" class="step" data-x="-4000" data-y="7000">
+        <h2>Como pode ser utilizada?</h2>
+    </div>
+
+    <!-- rede neural -->
+    <div id="ann" class="step" data-x="0" data-y="8000">
+        <h2>Rede Neural</h2>
+    </div>
+
+    <div id="ann_meta" class="step" data-x="1000" data-y="8000">
+        <h2>O Perceptron</h2>
+    </div>
+
+    <div id="ann_exemplo" class="step" data-x="2000" data-y="8000">
+        <h2>Exemplo</h2>
+    </div>
+
+    <div id="ann_como" class="step" data-x="3000" data-y="8000">
+        <h2>Como pode ser utilizada?</h2>
+    </div>
+
+    <!-- abordagens, cronograma e conclusão -->
+    <div id="abordagens" class="step" data-x="0" data-y="9000">
+        <h2>Abordagens</h2>
+    </div>
+
+    <div id="cronograma" class="step" data-x="0" data-y="10000">
+        <h2>Cronograma</h2>
+    </div>
+
+    <div id="conclusao" class="step" data-x="0" data-y="11000">
+        <h2>Conclusão</h2>
+    </div>
+
+    <!--
+    <div id="name" class="step" data-x="0" data-y="Y000">
+    </div>
+    -->
+
+</div>
+
+<footer>
+    <img src="logo_ime.svg" alt="IME" class="logo" />
+</footer>
+
+<!-- let the magic begin -->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
