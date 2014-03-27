@@ -3,7 +3,7 @@
   \begin{block}{}
     \begin{figure}
       \centering
-      \includegraphics[width = 0.8 \linewidth]{imgs/ilustrativa_sa}
+      \includegraphics[width = 0.6 \linewidth]{imgs/ilustrativa_sa}
       \caption{Idéia Básica do SA}
     \end{figure}
   \end{block}
@@ -33,11 +33,11 @@
   \begin{block}{}
     Elementos básicos do SA:
     \begin{itemize}
-      \item $S$ espaço de estado
-      \item $J: S \rightarrow \mathbf{R}$, avalia os estados
+      \item $S$, espaço de estado finito
+      \item $J: S \rightarrow \mathbb{R}$, função de custo
       \item $S(i) \subset S - \lbrace i \rbrace$ para cada $i \in S$
       \item $q_{ij}, j \in S(i)$, tal que $\sum_{j \in S_{i}} q_{ij} = 1$
-      \item $T$, função de resfriamento
+      \item $T: \mathbb{N} \rightarrow (0, \infty)$, rotina de resfriamento
       \item $x(0) \in S$, estado inicial
     \end{itemize}
   \end{block}
