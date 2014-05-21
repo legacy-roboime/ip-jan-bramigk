@@ -32,7 +32,7 @@ size_t read_message(FILE *f, Message *m);
 
 size_t skip_message(FILE *f);
 
-uint32_t count_messages(FILE *f, std::function<bool(Message&)> filter=[](Message&){ return true; });
+uint32_t count_messages(FILE *f, std::function<bool(Message &)> filter=[](Message &){ return true; });
 //uint32_t count_messages(FILE *f) {
 //  return count_messages(f, [](Message&){ return true; });
 //}
