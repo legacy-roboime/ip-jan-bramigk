@@ -1,0 +1,6 @@
+# More info at https://github.com/guard/guard#readme
+
+watch(/.*\.tex/) { `make` }
+#watch(/.*/) { |m| puts "#{m[0]} changed." }
+
+# vim: filetype=ruby
