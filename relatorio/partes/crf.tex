@@ -1,0 +1,16 @@
+\section{\textit{Conditional Random Fields}}
+
+\textit{Conditional Random Fields}, ou CRFs, são modelos de grafos não direcionados
+utilizados para classificação estruturada. Os vétices são compostos por
+observações, $X$, ou classes, $Y$.
+
+A representação um dos aspectos fundamentais no problema de classificação de
+dados sequenciais. Claramente, um modelo que suporta inferencia tratavel é
+necessário, mas um modelo que representa os dados sem fazer suposições de
+dependências não garantidas também é desejavel. Um jeito de satisfazer ambos
+os critérios é usar um modelo que define uma probabilidade condicional
+$p(Y|x)$
+
+Um caso particular dos CRF é quando as classes formam uma cadeia linear.
+Isso pressupõem que a classificação atual só depende imediatamente da
+anterior.

@@ -22,7 +22,7 @@ por antecipação. Existem $m$ regras da forma "Se $X$ é conjunto difuso $A$ en
 A relação de pertinência "$X$ é conjunto difuso $A$" é descrita por uma função de pertinência
 $\mu_A: x \longrightarrow [0,1]$. No diagrama da figura \ref{arq_fuzzy} esse processo é representado pela
 caixa \emph{Fuzzificação}. A regra nebulosa "Se <\textit{antecedente nebuloso}> então <\textit{consequente nebuloso}>" dispara
-o processo de \emph{Defuzzificação} descrito no <\textit{consequente nebuloso}>. Esse processo de conecção é a
+o processo de \emph{Defuzzificação} descrito no <\textit{consequente nebuloso}>. Esse processo de conecção é conhecido como
 \emph{Inferência Nebulosa}.
 
 Cada entrada $x$ aciona parcialmente todas as regras em paralelo. Então o sistema age como um processador 
@@ -79,4 +79,13 @@ c_j = \frac{\int{y.b_j(y_1,...,y_p)}_{\Re^{p}}.dy_1...dy_p}{V_j}
 \subsection{Aplicação ao problema}
 
 Para aplicar esse método ao problema analisádo neste trabalho é necessário definir as regras e as distribuições
-das variáveis. A partir de então, bastaria encontrar os pesos para minimizar o erro.
+das variáveis.
+
+A vantagem dos conjuntos difusos é que eles tornam o modelo mais robusto.
+A principal desvantagem deste método a modelagem necessária para encaixar os conceitos descritos acima.
+Isso, pois o conceito de conjuntos nebulosos ainda estão em desenvolvimento para o problema abordado
+neste trabalho. Essa modelagem não é imediata, pois o problema é de classificação temporal. Não basta que
+as características do ambiente sejam associadas a conjuntos nebulosos de características. É necessário
+que regras sejam especificadas estática ou dinamicamente. No caso estático, elas seriam incorporadas
+ao modelo através de especialístas. No caso dinâmico, uma solução é utilizar um classificador para
+deduzir as regras.

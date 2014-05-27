@@ -18,7 +18,7 @@ Apesar dessa heurística utilizada pelas formigas ser interessante para se resol
 do tipo NP (i.e., com complexidade não polinomial), são necessários algumas adaptações na construção
 de um algoritmo computacional.
 
-A seguir é apresentado a meta-heurística do algorítmo ACO (\textit{Ant Colony Optimization}),
+A seguir é apresentado a meta-heurística do algoritmo ACO (\textit{Ant Colony Optimization}),
 juntamente com observações relacionadas as diferenças entre a heurística do ACO e o
 comportamento natural das formigas descrito anteriormente.
 
@@ -123,8 +123,8 @@ que contenha cada nó exatamente uma vez (portanto chamado passeio)
 e cujo comprimento é mínimo. Logo, o espaço de busca $S$ consiste de todos os
 passeios em $G$. O valor da função objetivo $f(s)$ de um passeio $s \in S$ 
 é definido pela soma dos pesos das arestas que existem em $s$. O TSP pode ser
-modelado de diverças maneiras como um problema de otimização discreta.
-O modelo mais comum consiste de uma variavel binária de decisão $X_e$ para
+modelado de diversas maneiras como um problema de otimização discreta.
+O modelo mais comum consiste de uma variável binária de decisão $X_e$ para
 cada aresta em $G$.
 Se em uma solução $X_e = 1$, então a aresta $e$ participa do passeio definido pela solução.
 
@@ -137,12 +137,12 @@ muda de \textit{“escolher um caminho da colônia à fonte de comida”} para \
 construir uma possível solução para o problema de otimização abordado"}. Note que com essa
 mudança de tarefa, as noções de colônia e fonte de comida perdem seu significado.
 
-Cada formiga constroe uma solução da seguinte maneira.
-Primeramente, um dos nós do grafo do TSP é aleatóriamente selecionada como sendo nó inicial.
-Então, cada formiga constroe seu passeio no grafo do TSP movendo-se em cada iteração de construção
+Cada formiga constroem uma solução da seguinte maneira.
+Primeiramente, um dos nós do grafo do TSP é aleatoriamente selecionada como sendo nó inicial.
+Então, cada formiga constrói seu passeio no grafo do TSP movendo-se em cada iteração de construção
 de seu nó atual (i.e., a cidade na qual ela esta localizada) á outro nó que ela ainda não visitou.
 A cada passo (iteração) a aresta percorrida é adicionada a solução em construção. Quando não 
-restam nenhum nó não-visitado a formiga fecha o passeio movendo-se de seu nó atual até
+restam nenhum nó não visitado a formiga fecha o passeio movendo-se de seu nó atual até
 o nó inicial, selecionado aleatoriamente no início da construção da solução. Dessa maneira a 
 construção da solução implica que a formiga tem memória $T$ para armazenar os nó já
 visitados. Cada iteração da solução é executado da seguinte maneira. 
@@ -170,16 +170,16 @@ para cada $e_{i,j} \in s$ o seguinte feromônio é depositado:
   \tau_{i,j} \leftarrow \tau_{i,j} + \frac{Q}{f(s)}
 \end{equation}
 
-Onde $Q$ é novamente uma constante positiva e $f(s)$ é o valor da função objetivo
+Onde $Q$ é uma constante positiva e $f(s)$ é o valor da função objetivo
 da solução $s$. O sistema esta iterativamente aplicando $n_a$ 
 formigas por iteração até que condição de parada
 (e.g., o tempo limite) seja satisfeita.
-Mesmo que o \textit{AS algorithm} tenha provado que o comportamento das formigas
-descrito anteriormente (no inicio da seção) pode ser tranferido para um algorítmo 
-de otimização discreta, foi
-em geral descoberto que ele é inferior aos algoŕtmos do estado da arte.
-Portanto, ao longo dos anos várias extensões e aprimoramentos do algoritmo
-original de resolução do TSP usando ACO foram introduzidas. Todos eles combrem a definição de metaheurística do ACO,
+Mesmo que o algoritmo descrito acima tenha provado que o comportamento das formigas
+descrito anteriormente (no inicio da seção) pode ser transferido para um algoritmo 
+de otimização discreta, foi em geral descoberto que ele é inferior aos algoritmos do estado da arte
+para a solução do TSP. Portanto, ao longo dos anos várias extensões e aprimoramentos do algoritmo
+original de resolução do TSP usando ACO foram introduzidas. Todos eles cobrem a definição de
+meta-heurística do ACO,
 descrito anteriormente.
  
 \subsection{Aplicação ao Problema}
