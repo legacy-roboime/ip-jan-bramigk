@@ -3,25 +3,23 @@
 \section{Introdução}
 
 Conforme descrito no capítulo anterior, o problema a ser resolvido será
-encarado como um problema de classificação temporal. O sistema deve mapeiar uma
+encarado como um problema de classificação temporal. O sistema deve mapear uma
 sequência temporal de observações para um conjunto de regras associadas a
 subconjuntos de robôs. Essas regras definem o comportamento dos robôs.
 
-Outro problema relevante é definir o comportamento dos robôs a apartir do estado
+Outro problema relevante é definir o comportamento dos robôs a partir do estado
 atual do jogo e das regras associadas aos robôs. Entretanto, devido ao tempo
 destinado a esta pesquisa será modelado somente uma solução para o mapeamento das
-observações às regras. Entretanto, o módulo de inteligência necessita dos desse
-mapeamento para poder de maneira coerente estados futuros do jogo. Uma solução
-ingênua é utilizar os modelos de tática e \textit{skill}.
+observações às regras. Entretanto, o módulo de inteligência necessita dos dados
+desse mapeamento para poder de maneira coerente estados futuros do jogo. Uma
+solução ingênua é utilizar os modelos de tática e \textit{skill}.
 
 \subsection{Regras}
 
-Em princípio cada
-equipe utiliza seu próprio conjunto de regras. Na prática, entretanto, devido
-aos trabalhos publicados na comunidade científica relacionados ao problema de
-futebol de robôs, muitas regras são compartilhadas entre os times. Exemplos
-de regras típicas são:
-
+Em princípio cada equipe utiliza seu próprio conjunto de regras.
+Na prática, entretanto, devido aos trabalhos publicados na comunidade científica
+relacionados ao problema de futebol de robôs, muitas regras são compartilhadas
+entre os times. Exemplos de regras típicas são:
 
 \begin{table}
   \begin{center}
@@ -44,7 +42,7 @@ de regras típicas são:
       Posicionar             & Posicionamento no campo para\\
                              & receber um passe\\
       \hline
-      \textit{Penalty Kick}  & Take a penalty kick\\
+      \textit{Penalty Kick}  & Executa um chute a gol\\
       \hline
       Barreira               & Forma uma barreira com os \\
                              & jogadores do mesmo time \\
@@ -90,17 +88,17 @@ f_i(t,Y,X)=I(y_t == regra).g(t,X)\\
 \end{eqnarray}
 \end{centering}
 
-Onde a função $I$ só retorna um falor não nulo se seu argumento for verdadeiro e
+Onde a função $I$ só retorna um valor não nulo se seu argumento for verdadeiro e
 $g$ retorna um valor real.
 
 A partir desse protótipos, associando cada valor aos robôs presentes
-no campo, várias funções características podem ser instânciadas.
+no campo, várias funções características podem ser instanciadas.
 Tipicamente chega-se à ordem de 100 mil instâncias. Faz-se necessário
 selecionar quais funções efetivamente são relevantes para o problema.
 
 \subsection{Seleção de Características}
 
-A pesar de incorporar informção ao modelo, a inclusão de muitas características
+A pesar de incorporar informação ao modelo, a inclusão de muitas características
 pode fazer com que o modelo incorpore informações particulares dos dados de
 treinamento. Isso é chamado de \textit{overfitting}. Esse fenômeno reduz a precisão
 do modelo final por incorporar dados particulares do conjunto de dados de
@@ -115,6 +113,7 @@ jogo.
 \subsection{Modelagens}
 
 Várias estruturas são utilizadas em problemas de classificação. Dentre elas:
-Hidden Markov Models (HMM), i\textit{Conditional Random Fields} (CRF), Redes Neurais Artificiais (RNA), Support-Vector Machines.
+\textit{Hidden Markov Models} (HMM), \textit{Conditional Random Fields} (CRF),
+Redes Neurais Artificiais (RNA), \textit{Support Vector Machines}.
 
 As modelagens estudadas nesse trabalho serão as RNA e CRF.
