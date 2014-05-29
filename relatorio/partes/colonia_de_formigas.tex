@@ -149,12 +149,12 @@ visitados. Cada iteração da solução é executado da seguinte maneira.
 Assumindo que a formiga esteja no nó $v_i$ , a subsequente iteração de solução é executada com probabilidade:
 
 \begin{equation}
-  \emph{p}(e_{i,j}) = \frac{\tau_{i,j}}{\sum_{k \in \lbrace 1,...,
+  \emph{p}(e_{i,j}) = \frac{\tau_{i,j}}{\sum_{k \in \lbrace 1,\dots,
   \vert V \vert\rbrace, v_k \not\in T}\tau_{i,k}},
-  \forall j \in \lbrace 1,...,\vert V \vert\rbrace, v_j \not\in T
+  \forall j \in \lbrace 1,\dots,\vert V \vert\rbrace, v_j \not\in T
 \end{equation}
 
-Para um exemplo de tal construção de solução  veja Fig. \ref{img:exemp_aco}.
+Para um exemplo de tal construção de solução  veja Fig.~\ref{img:exemp_aco}.
 Uma vez que todas as formigas de colônia tenham completado a construção de sua
 solução, a evaporação do feromônio é executada da seguinte maneira:
 
@@ -177,9 +177,7 @@ formigas por iteração até que condição de parada
 Mesmo que o algoritmo descrito acima tenha provado que o comportamento das formigas
 descrito anteriormente (no inicio da seção) pode ser transferido para um algoritmo 
 de otimização discreta, foi em geral descoberto que ele é inferior aos algoritmos do estado da arte
-para a solução do TSP. Portanto, ao longo dos anos várias extensões e aprimoramentos do algoritmo
+para a solução do TSP\@. Portanto, ao longo dos anos várias extensões e aprimoramentos do algoritmo
 original de resolução do TSP usando ACO foram introduzidas. Todos eles cobrem a definição de
 meta-heurística do ACO,
 descrito anteriormente.
- 
-\subsection{Aplicação ao Problema}
