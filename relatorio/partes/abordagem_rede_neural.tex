@@ -16,17 +16,19 @@ e $y$, e velocidades em $x$ e $y$, como os \textit{logs} não possuem informaç�
 de velocidade essa foi calculada usando a diferença entre dois quadros
 consecutivos. São 2 nós de saída: as posições $x$ e $y$, do próximo quadro. Foi
 usada ativação sigmoid simétrica. Nessa implementação o treinamento convergiu
-para um erro muito alto, como pode ser visto na tabela abaixo. % ref para tabela
+para um erro muito alto, como pode ser visto abaixo na saída (resumida) do
+treinamento com 32 nós ocultos, é usado o erro médio quadrático e a unidade de
+distância é o milímetro.
 
-% ... mostrar tabela
-<< mostrar tabela >>
+% saída do treinamento
+\lstinputlisting{../train.log}
 
 Esse problema não era esperado, foi decidido que seria necessário analisar
 melhor os dados de treinamento para entender os motivos do ocorrido. Para tanto
 foi modificada uma ferramenta desenvolvida no laboratório, originalmente usada
 para visualizar as partidas em tempo real, a fim de visualizar os \textit{logs}
 das partidas. Ao inspecionar esses logs notou-se dois tipos de irregularidades
-relevantes para o treinamento, mostradas na figura abaixo. % ref para figura
+relevantes para o treinamento, mostradas na figura~\ref{fig:logs}.
 
 \begin{figure}[thpb]
   \centering
@@ -41,17 +43,21 @@ relevantes para o treinamento, mostradas na figura abaixo. % ref para figura
   \caption{Análise dos logs.}\label{fig:logs}
 \end{figure}
 
-A figura~\ref{fig:log_rastro} mostra o problema que ocorre numa faixa no meio do campo: a
-posição dos objetos (robôs e bola) oscila quadro a quadaro. O motivo desse
-problema é o fato das duas câmeras que capturam os dados possuirem uma área de
-interseção e devido a diferenças sutis na calibração a posição dos objetos
-difere quando vista de câmeras distintas. Uma saída trivial seria ignorar os
-dados de uma das câmeras, mas isso é não é desejado pois uma parte fundamental
-do estado do jogo estaria sendo ignorada.
+A figura~\ref{fig:log_rastro} mostra o problema que ocorre numa faixa no meio do
+campo: a posição dos objetos (robôs e bola) oscila quadro a quadaro. O motivo
+desse problema é o fato das duas câmeras que capturam os dados possuirem uma
+área de interseção e devido a diferenças sutis na calibração a posição dos
+objetos difere quando vista de câmeras distintas. Uma saída trivial seria
+ignorar os dados de uma das câmeras, mas isso é não é desejado pois uma parte
+fundamental do estado do jogo estaria sendo ignorada.
 
-Já na figura~\ref{fig:log_multi}, pode ser observado o segundo problema: há momentos em que
-vários objetos "fantasmas" aparecem, isto é, são detectados objetos que não
-existem no campo físico. O efeito disso é que a posição da bola muda
-drasticamente para pontos que não fazem sentido.
+Já na figura~\ref{fig:log_multi}, pode ser observado o segundo problema: há
+momentos em que vários objetos "fantasmas" aparecem, isto é, são detectados
+objetos que não existem no campo físico. O efeito disso é que a posição da bola
+muda drasticamente para pontos que não fazem sentido.
+
+A abordagem da rede neural, apesar de ocultar a semântica da relação dos fatores
+analisados, parece bem apta a resolver o problema. Porém é necessário contornar
+o problema dos dados de treinamento para poder implementar uma solução de fato.
 
 % vim: tw=80 et ts=2 sw=2 sts=2
