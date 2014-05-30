@@ -1,0 +1,8 @@
+Max epochs      120. Desired error: 5.0000000000.
+Epochs            1. Current error: 443.7192382812. Bit fail 52.
+Epochs           20. Current error: 424.1158752441. Bit fail 52.
+Epochs           40. Current error: 429.2314758301. Bit fail 52.
+Epochs           60. Current error: 432.4390869141. Bit fail 52.
+Epochs           80. Current error: 432.4390869141. Bit fail 52.
+Epochs          100. Current error: 432.4390869141. Bit fail 52.
+Epochs          120. Current error: 432.4390869141. Bit fail 52.
