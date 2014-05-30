@@ -4,28 +4,30 @@
 
 \section{CRF}
 
-Como os métodos AG (Algoritmo Genético),
-SA e ACO são heurísticas de otimização, é necessário que o problema da aproximação
-de uma função seja reduzido a um problema de otimização. A abordagem que se escolheu
-foi utilizar os \textit{conditional random fields} para modelar um classificador
-para identificar as regras, ou táticas na abstração da STP\@. Os métodos de otimização
-estudados anteriormente podem ser aplicados para encontra os pesos do CRF.
+Como os métodos AG (Algoritmo Genético), SA e ACO são heurísticas de otimização,
+é necessário que o problema da aproximação de uma função seja reduzido a um problema
+de otimização. A abordagem que se escolheu foi utilizar os \textit{conditional random
+fields} para modelar um classificador para identificar as regras, ou táticas na
+abstração da STP\@. Os métodos de otimização estudados anteriormente podem ser
+aplicados para encontra os pesos do CRF.
 
 \section{Lógica Fuzzy}
 
-O método da Lógica Fuzzy, conforme exposto anteriormente, necessita que um conjunto de regras seja definido.
-Essas regras poder ser geradas a partir de uma análise mais detalhada do problema, mas também podem ser
-aprendidas via rede neural.
+O método da Lógica Fuzzy, conforme exposto anteriormente, necessita que um conjunto
+de regras seja definido. Essas regras poder ser geradas a partir de uma análise mais
+detalhada do problema, mas também podem ser obtidas utilizando algum algorítimo de
+aprendizagem de regras. Para aplicar esse método ao problema analisado neste trabalho
+é necessário definir as regras e as distribuições das variáveis.
 
-Já a Rede Neural define implicitamente a estrutura interna
-que minimiza a diferença entre a saída real e a saída desejada.
-Entretanto, é necessário definir a topologia mais adequada para o
-problema em questão. Também, apesar de não ser necessário, pode-se
-decompor o problema em subproblemas e "atribuir redes neurais um
-subconjunto de tarefas que coincidem com suas capacidades
-inerentes" \cite[pag. 29]{haykin2001redes} com o objetivo de aumentar a
-adaptabilidade da rede. Apesar de ser uma modelagem para a arquitetura
-da inteligência a ser mapeada, não representa uma restrição tão
-considerável quando a das abordagens citadas anteriormente.
+A vantagem dos conjuntos difusos é que eles tornam o modelo mais robusto. A lógica fuzzy
+tenta melhorar a classificação e os sistemas de decisão.
+
+A principal desvantagem deste método a modelagem necessária para encaixar os conceitos
+descritos acima. Isso, pois o conceito de conjuntos nebulosos ainda estão em desenvolvimento
+para o problema abordado neste trabalho. Essa modelagem não é imediata, pois o problema é de
+classificação temporal. Não basta que as características do ambiente sejam associadas aos
+conjuntos nebulosos de características. É necessário que regras sejam especificadas estática
+ou dinamicamente. No caso estático, elas seriam incorporadas ao modelo através de especialistas.
+No caso dinâmico, uma solução é utilizar um classificador para deduzir as regras.
 
 \input{partes/abordagem_rede_neural}
