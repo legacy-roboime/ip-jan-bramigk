@@ -1,31 +1,38 @@
+% TODO Evite nomes genéricos
 \chapter{Definição do Problema}\label{cap:def_problema}
 
 \section{KDD}
 
-De acordo com \cite{passos2005datamining}, a área responsável por estudar o processo de extração de informação com base em um conjunto de dados é
-chamada de Descoberta de Conhecimento em Bases de Dados, denominada
-KDD (\textit{Knowledge Discovery in Databases}). As etapas operacionais da KDD são:
+De acordo com \cite{passos2005datamining}, a área responsável por estudar o processo
+de extração de informação com base em um conjunto de dados é chamada de Descoberta
+de Conhecimento em Bases de Dados, denominada KDD (\textit{Knowledge Discovery in
+Databases}). As etapas operacionais da KDD são:
+
 \begin{itemize}
   \item \textit{Pré-processamento}: etapa relacionada à captação,
         organização e ao tratamento dos dados, com o objetivo de
         preparar os dados para a etapa de \textit{Mineração de Dados};
   \item \textit{Mineração de Dados}: etapa relacionada à busca por
         conhecimentos úteis no conjunto de dados analisado;
-  \item \textit{Pós-processamento}: etapa relacionada ao tratameto do
+  \item \textit{Pós-processamento}: etapa relacionada ao tratamento do
         conhecimento obtido na etapa de \textit{Mineração de Dados}, com
         o objetivo de viabilizar a utilização desse conhecimento
         (normalmente esta etapa é desnecessária).
 \end{itemize}
 
-Este trabalho objetiva, através do processo de \textit{Mineração de Dados}, extrair informação dos $logs$ (definido a seguir)
-de um jogo do futebol de robôs. O processo de préprocessamento será estudado futuramente. Deseja-se, para facilitar a avaliação dos algorítmos a serem desenvolvidos, que o resultado do KDD em questão seja pós processado. Esse processo também será estudado futuramente.
-A seção a seguir descreve de maneira detalhada o domínio que será estudado.
+Este trabalho objetiva, através do processo de \textit{Mineração de Dados}, extrair
+informação dos $logs$ (definido a seguir) de um jogo do futebol de robôs. O
+processo de preprocessamento será estudado futuramente. Deseja-se, para facilitar
+a avaliação dos algoritmos a serem desenvolvidos, que o resultado do KDD em questão
+seja pós processado. Esse processo também será estudado futuramente. A seção a
+seguir descreve de maneira detalhada o domínio que será estudado.
 
 \section{Domínio}
 
-O problema do time de futebol de robôs que será modelado neste capítulo é baseado no modelo de planejador apresentado em \cite{zickler}, na teoria
-de agentes descrita em \cite{russellnorvig} e na aqruitetura
-de sistemas multiagentes STP (Skills, Tactics and Plays) descrita em \cite{bowling2003plays}.
+O problema do time de futebol de robôs que será modelado neste capítulo é baseado
+no modelo de planejador apresentado em \cite{zickler}, na teoria de agentes descrita
+em \cite{russellnorvig} e na arquitetura de sistemas multiagentes
+STP (Skills, Tactics and Plays) descrita em \cite{bowling2003plays}.
 
 \input{partes/def_problema/arquitetura}
 \input{partes/def_problema/definicoes}
