@@ -344,19 +344,21 @@ Engenharia.}
 
 Neste trabalho são abordadas maneiras de analisar \textit{logs} de partidas
 de futebol de robôs
-da categoria SSL da competição RoboCup com a finalidade de obter melhores resultades na
+da categoria SSL da competição RoboCup com a finalidade de obter melhores resultados na
 Inteligência Artificial do time RoboIME (do Laboratório de Robótica do IME) que
 participa anualmente dessa competição.
 O objetivo desejado é prever como um time de futebol de robôs irá se comportar baseado
-somente nas informações coletadas de partidas.
+somente nas informações coletadas de partidas, chamados \textit{logs}.
 Foi elaborado uma modelagem de alto nível que permite utilizar rotinas já existentes
 tanto para testes quanto predições.
 Foram estudados os métodos da ACO (\textit{Ant Colony Optimization}), SA
 (\textit{Simulated Annealing}), AG (Algorítimo  Genético),
-Lógica Nebulosa e Redes Neurais. A partir do estudo detalhado foram definidos métodos de
-abordagem do problema. Foi necessário especificar o modelo de time nas abordagens
-envolvendo ACO, SA, AG e Lógica Nebulosa.
-Após um estudo mais aprofundado deseja-se implementar um processo de otimização em ambos
+lógica nebulosa, redes neurais e CRFs (\textit{Conditional Random Fields}). A partir do
+estudo detalhado foram definidos métodos de abordagem do problema. Foi necessário
+especificar o modelo de time nas abordagens envolvendo ACO e SA, que tem como base
+os CRFs. O modelo envolvendo lógica nebulosa se mostrou muito complexo para ser
+desenvolvido neste trabalho.
+Após um estudo mais aprofundado deseja-se futuramente implementar um processo de otimização em ambos
 os algorítimos para que o resultado seja refinado e para avaliar o desempenho dos
 métodos propostos.
 
@@ -380,7 +382,7 @@ métodos propostos.
 This paper presents ways to analyze logs of robot soccer game matches from the
 SSL category of the RoboCup competition in order to obtain better results on the Artificial
 Intelligence of RoboIME team (from IME's robotics laboratory) which attends yearly to that competition.
-The desired objective of this work is predicting how a robot soccer team whill behave, based
+The desired objective of this work is predicting how a robot soccer team will behave, based
 on a set of information acquired from game matches.
 A high level model was made such that existing routines can be used for both tests and predictions.
 The following heuristics were studied: ACO (Ant Colony Optimization), SA (Simulated Annealing), GA (Genetic Algorithm),
