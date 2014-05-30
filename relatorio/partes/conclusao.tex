@@ -5,8 +5,12 @@ da categoria SSL da competição RoboCup e introduz métodos que podem contribui
 para a confecção da solução final. Concluiu-se que nem todas as variáveis
 desejadas durante  processo de predição são observáveis, tornando o problema
 mais complexo do que realmente se imaginava. Os ACO, SA,
-\textit{Lógica Fuzzy} e o AG não são apropriadas para resolver diretamente o
-problema, porém são ótimos candidatos para otimizações pontuais. A rede neural
+lógica \textit{fuzzy} e o AG não são apropriadas para resolver diretamente o
+problema. O ACO e SA podem ser empregados utilizando um classificador 
+modelado com um CRF, onde atuariam na minimização do vetor de pesos associado
+a essa estrutura. A modelagem da solução utilizando lógica \textit{fuzzy} se
+mostrou muito complexa para este trabalho. Entretanto, de acordo com a
+bibliografia, ela confere mais robustez ao sistema. A rede neural
 parece ser uma boa abordagem para o problema, mas é necessário tratar melhor os
 dados dos \textit{logs} para prosseguir com uma implementação significativa.
 O futuro desse trabalho pode ser desenvolver uma inteligencia artificial baseada
