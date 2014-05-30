@@ -342,25 +342,27 @@ Engenharia.}
 % TODO Listar contribuições
 
 
-Neste trabalho são abordadas maneiras de analisar \textit{logs} de partidas
-de futebol de robôs
-da categoria SSL da competição RoboCup com a finalidade de obter melhores resultados na
-Inteligência Artificial do time RoboIME (do Laboratório de Robótica do IME) que
-participa anualmente dessa competição.
-O objetivo desejado é prever como um time de futebol de robôs irá se comportar baseado
-somente nas informações coletadas de partidas, chamados \textit{logs}.
-Foi elaborado uma modelagem de alto nível que permite utilizar rotinas já existentes
-tanto para testes quanto predições.
-Foram estudados os métodos da ACO (\textit{Ant Colony Optimization}), SA
-(\textit{Simulated Annealing}), AG (Algorítimo  Genético),
-lógica nebulosa, redes neurais e CRFs (\textit{Conditional Random Fields}). A partir do
-estudo detalhado foram definidos métodos de abordagem do problema. Foi necessário
-especificar o modelo de time nas abordagens envolvendo ACO e SA, que tem como base
-os CRFs. O modelo envolvendo lógica nebulosa se mostrou muito complexo para ser
-desenvolvido neste trabalho.
-Após um estudo mais aprofundado deseja-se futuramente implementar um processo de otimização em ambos
-os algorítimos para que o resultado seja refinado e para avaliar o desempenho dos
-métodos propostos.
+Neste trabalho são abordadas maneiras de analisar \textit{logs} de
+partidas de futebol de robôs da categoria SSL da competição RoboCup
+com a finalidade de obter melhores resultados na Inteligência
+Artificial do time RoboIME (do Laboratório de Robótica do IME) que
+participa anualmente dessa competição.  O objetivo desejado é prever
+como um time de futebol de robôs irá se comportar baseado somente nas
+informações coletadas de partidas, chamados \textit{logs}.  Foi
+elaborado uma modelagem de alto nível que permite utilizar rotinas já
+existentes tanto para testes quanto predições.  Foram estudados os
+métodos da ACO (\textit{Ant Colony Optimization}), SA
+(\textit{Simulated Annealing}), AG (Algoritimo  Genético), lógica
+nebulosa, redes neurais e CRFs (\textit{Conditional Random Fields}). A
+partir do estudo detalhado foram definidos métodos de abordagem do
+problema. Foi necessário especificar o modelo de time nas abordagens
+envolvendo ACO e SA, que tem como base os CRFs. A abordagem envolvendo
+lógica nebulosa se mostrou muito complexo para ser desenvolvido neste
+trabalho.  Após um estudo mais aprofundado deseja-se futuramente
+implementar um processo de otimização em ambos os algorítimos para que
+o resultado seja refinado e para avaliar o desempenho dos métodos
+propostos.  Para futuros trabalhos os métodos propostos são ideais
+para simular o adversário num algoritmo \textit{MiniMax}.
 
 % Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
 % objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
@@ -379,17 +381,25 @@ métodos propostos.
 \begin{resumo}[Abstract]
 \begin{otherlanguage*}{english}
 
-This paper presents ways to analyze logs of robot soccer game matches from the
-SSL category of the RoboCup competition in order to obtain better results on the Artificial
-Intelligence of RoboIME team (from IME's robotics laboratory) which attends yearly to that competition.
-The desired objective of this work is predicting how a robot soccer team will behave, based
-on a set of information acquired from game matches.
-A high level model was made such that existing routines can be used for both tests and predictions.
-The following heuristics were studied: ACO (Ant Colony Optimization), SA (Simulated Annealing), GA (Genetic Algorithm),
-and Neural Networks. Based on a detailed study of these algorithms two branches of work were defined
-for candidate solutions: one based on the Neural Network heuristics, and the other based on
-Fuzzy logic. After a deeper study on of these methods it's desirable to implement an algori-
-thm which will refine the result.
+This paper covers ways to analyze logs of robot soccer matches from
+RoboCup's SSL category in order to obtain better results on the
+RoboIME's artificial intelligence (from IME's robotics lab) which
+participates yearly on that competition.  The desired goal is to
+predict the behaviour of a robot team based solely on data collected
+on previous matches, which are called logs.  A high level modeling was
+developed such that existing routines could be used both for tests and
+to actual predictions.  The following methods were researched: ACO
+(Ant Colony Optimization), SA (Simulated Annealing), GA (Genetic
+Algorithm), fuzzy logic, neural networks and CRFs (Conditional Random
+Fields).  From the detailed research made, some approaches were
+defined.  It was necessary to specify the team model for the
+approaches involving the ACO and SA, which use CRFs as a base.  The
+approach involving fuzzy logic showed itself too complex to be
+developed in this paper.  After a thrill study it is desired to
+implement an optimization process for both algorithms, such that the
+result can be refined and the proposed methods benchmarked.  For
+future works the proposed methods are ideal adversary simulators for a
+MiniMax algorithm.
 
 %\vspace{\onelineskip}
 
