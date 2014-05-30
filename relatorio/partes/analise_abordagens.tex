@@ -4,7 +4,13 @@
 
 Como os métodos AG (Algoritmo Genético),
 SA e ACO são heurísticas de otimização, é necessário que o problema da aproximação
-de uma função seja reduzido a um problema de otimização. Uma abordagem é escolher uma
+de uma função seja reduzido a um problema de otimização. A abordagem que se escolheu
+foi utilizar os \textit{conditional random fields} para modelar um classificador
+para identificar as regras, ou táticas na abstração da STP. Os métodos de otmização
+e
+
+
+Uma abordagem é escolher uma
 base finita de funções ortonormadas e minimizar a soma dos quadrados da norma da diferença
 entre os valores de treinamento e uma combinação linear das funções da base escolhida.
 Foi suposto, por simplicidade, que o espaço dos vetores é um espaço vetorial com norma. Isso restringe o
