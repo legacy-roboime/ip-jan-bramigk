@@ -39,6 +39,14 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
+% Muda o cabeçalho (parte que tem o número da página, e originalmente o capítulo atual com uma linha embaixo)
+\makepagestyle{abntheadings}
+%\makeevenhead{abntheadings}{\ABNTEXfontereduzida\thepage}{}{\ABNTEXfontereduzida\textit\leftmark}
+%\makeoddhead{abntheadings}{\ABNTEXfontereduzida\textit\rightmark}{}{\ABNTEXfontereduzida\thepage}
+%\makeheadrule{abntheadings}{\textwidth}{\normalrulethickness}
+\makeevenhead{abntheadings}{\ABNTEXfontereduzida\thepage}{}{}
+\makeoddhead{abntheadings}{}{}{\ABNTEXfontereduzida\thepage}
+
 
 % Mudar fonte dos títulos para usar fontes com serif
 % olhar seção 6.1 de http://mirror.math.ku.edu/tex-archive/macros/latex/contrib/abntex2/doc/abntex2.pdf
