@@ -1,16 +1,17 @@
 \chapter{Conclusão}\label{cap:conclusao}
 
-Este trabalho descreve uma modelagem pesquisada para o jogo de futebol de robôs da
-categoria SSL da competição RoboCup e introduz métodos que podem
-contribuir para a confecção da solução final. Concluiu-se que nem todas as variáveis
-desejadas durante  processo de predição são observáveis, tornando o problema mais
-complexo do que realmente se imaginava. A Rede Neural, ACO, SA, \textit{Lógica Fuzzy}
-e o AG são abordagens apropriadas para o problema. Para a Rede Neural e \textit{Lógica Fuzzy}
-não é necessário supor uma modelagem, uma vez que ela incorpora conhecimento
-implicitamente em seus parâmetros. Esse já não é o caso dos métodos restantes, e por isso
-foi necessário definir alguns parâmetros inicialmente. As heurísticas de otimização
-serão de grande importância para a próxima etapa. Faz-se necessário continuar a
-pesquisa para desenvolver os algoritmos que serão efetivamente utilizados.
+Este trabalho descreve uma modelagem pesquisada para o jogo de futebol de robôs
+da categoria SSL da competição RoboCup e introduz métodos que podem contribuir
+para a confecção da solução final. Concluiu-se que nem todas as variáveis
+desejadas durante  processo de predição são observáveis, tornando o problema
+mais complexo do que realmente se imaginava. Os ACO, SA,
+\textit{Lógica Fuzzy} e o AG não são apropriadas para resolver diretamente o
+problema, porém são ótimos candidatos para otimizações pontuais. A rede neural
+parece ser uma boa abordagem para o problema, mas é necessário tratar melhor os
+dados dos \textit{logs} para prosseguir com uma implementação significativa.
+O futuro desse trabalho pode ser desenvolver uma inteligencia artificial baseada
+no \textit{MiniMax} que use a heurística pesquisada para simular o comportamento
+do adversário.
 
 % TODO Recontextualizar, 
 %      Listar objetivos
@@ -18,3 +19,4 @@ pesquisa para desenvolver os algoritmos que serão efetivamente utilizados.
 %      Apresentar as contribuições
 %      Trabalhos futuros
 
+% vim: tw=80
