@@ -1,6 +1,6 @@
 \section{Rede Neural}\label{cap:abordagem_rede_neural}
 
-Essa aborgem consiste em usar uma Rede Neural que tem como entrada o estado do
+Essa abordagem consiste em usar uma Rede Neural que tem como entrada o estado do
 jogo (todas as posições, orientações, velocidades e o comando do juiz) e como
 saída o estado do time adversário (todas as posições, orientações e velocidades
 dos robôs do time adversário), que visa prever as ações imediatas do adversário.
@@ -44,8 +44,8 @@ relevantes para o treinamento, mostradas na figura~\ref{fig:logs}.
 \end{figure}
 
 A figura~\ref{fig:log_rastro} mostra o problema que ocorre numa faixa no meio do
-campo: a posição dos objetos (robôs e bola) oscila quadro a quadaro. O motivo
-desse problema é o fato das duas câmeras que capturam os dados possuirem uma
+campo: a posição dos objetos (robôs e bola) oscila quadro a quadro. O motivo
+desse problema é o fato das duas câmeras que capturam os dados possuírem uma
 área de interseção e devido a diferenças sutis na calibração a posição dos
 objetos difere quando vista de câmeras distintas. Uma saída trivial seria
 ignorar os dados de uma das câmeras, mas isso é não é desejado pois uma parte

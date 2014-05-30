@@ -2,19 +2,16 @@
 
 % TODO(depois): está muito obscuro, ligar com o final de cada heurística, não deve mudar muito esse capítulo.
 
+\section{CRF}
+
 Como os métodos AG (Algoritmo Genético),
 SA e ACO são heurísticas de otimização, é necessário que o problema da aproximação
 de uma função seja reduzido a um problema de otimização. A abordagem que se escolheu
 foi utilizar os \textit{conditional random fields} para modelar um classificador
-para identificar as regras, ou táticas na abstração da STP. Os métodos de otmização
-e
+para identificar as regras, ou táticas na abstração da STP\@. Os métodos de otimização
+estudados anteriormente podem ser aplicados para encontra os pesos do CRF.
 
-
-Uma abordagem é escolher uma
-base finita de funções ortonormadas e minimizar a soma dos quadrados da norma da diferença
-entre os valores de treinamento e uma combinação linear das funções da base escolhida.
-Foi suposto, por simplicidade, que o espaço dos vetores é um espaço vetorial com norma. Isso restringe o
-espaço solução, uma vez que apenas funções que são combinação linear das funções da base serão solução.
+\section{Lógica Fuzzy}
 
 O método da Lógica Fuzzy, conforme exposto anteriormente, necessita que um conjunto de regras seja definido.
 Essas regras poder ser geradas a partir de uma análise mais detalhada do problema, mas também podem ser
@@ -30,20 +27,5 @@ inerentes" \cite[pag. 29]{haykin2001redes} com o objetivo de aumentar a
 adaptabilidade da rede. Apesar de ser uma modelagem para a arquitetura
 da inteligência a ser mapeada, não representa uma restrição tão
 considerável quando a das abordagens citadas anteriormente.
-
-Com base nisso, as seguintes abordagens foram estabelecidas:
-
-\begin{enumerate}
- \item Utilizar Lógica Fuzzy com regras geradas através de uma rede neural;
- \item Utilizar Rede Neural com uma topologia mista.
-\end{enumerate}
-
-Na primeira abordagem, pretende-se utilizar os métodos de otimização para se
-encontrar a melhor topologia de rede neural que melhor otimiza o conjunto de
-regras buscado.
-
-Pretende-se também, na segunda abordagem, utilizar os métodos de otimização
-descritos anteriormente para se encontrar a melhor topologia que aproxima da
-melhor maneira.
 
 \input{partes/abordagem_rede_neural}
