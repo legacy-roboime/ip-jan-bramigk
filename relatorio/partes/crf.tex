@@ -4,14 +4,14 @@
 utilizados para classificação estruturada. Os vértices são compostos por
 observações, $X$, ou classes, $Y$.
 
-A representação um dos aspectos fundamentais no problema de classificação de
+A representação é um dos aspectos fundamentais no problema de classificação de
 dados sequenciais. Claramente, um modelo que suporta inferência tratável é
 necessário, mas um modelo que representa os dados sem fazer suposições de
 dependências não garantidas também é desejável. Um jeito de satisfazer ambos
 os critérios é usar um modelo que define uma probabilidade condicional
-$p(Y|x)$
+$p(Y|x)$.
 
-Um caso particular dos CRF é quando as classes formam uma cadeia linear.
+Um caso particular dos CRFs é quando as classes formam uma cadeia linear.
 Isso pressupõem que a classificação atual só depende imediatamente da
 anterior.
 
@@ -35,20 +35,20 @@ sequências de rótulos. Com o objetivo de definir uma probabilidade conjunta de
 natureza, os modelos generativos precisam enumerar todas as possíveis sequências de
 observações - uma tarefa que, para alguns domínios, é intratável ao menos que os
 elementos da observação forem representados por unidades isoladas, independente dos
-outros elementos em uma sequencia de observações. Mais precisamente, um elemento
+outros elementos em uma sequência de observações. Mais precisamente, um elemento
 de observação em um dado instante no tempo só pode depender diretamente do estado,
 ou rótulo, naquele tempo. Essa é uma suposição apropriada para poucos conjuntos de
 dados simples, entretanto a maioria das sequencias de observação do mundo real são
 bem representadas em termos de \textit{features} interativos múltiplos e dependências
-de longo prazo elementos de observação.
+de longo prazo entre os elementos de observação.
 
 Essa questão de representação é um dos problemas mais fundamentais do rotulamento de
 dados sequenciais. Claramente, um modelo que suporte \textit{tractable inference} é
-necessário, entretanto um moledo que represente os dados sem fazer suposições não
+necessário, entretanto um modelo que represente os dados sem fazer suposições não
 garantidas de independências também é desejável. Uma maneira de satisfazer ambos os
 critérios é usar um modelo que define a probabilidade condicional $p(Y|x)$ ao longo
 das sequências rotuladas dada uma sequência de observações particular $x$, ao invés de
-um a distribuição conjunta ao longo de ambos as sequencias de rótulos e observações.
+um a distribuição conjunta ao longo de ambas as sequencias de rótulos e observações.
 Modelos condicionais são usados para rotular uma sequência nova de observações $x_*$
 selecionando uma sequência de rótulos $y_*$ que maximize a probabilidade condicional
 $p(y_*|x_*)$. A natureza condicional de tais modelos significa que nenhum esforço é
@@ -66,7 +66,7 @@ condicional, resultando em um \textbf{relachamento} das suposições de independ
 necessárias pelos HMMs para garantir \textit{tractable inference}. Adicionalmente,
 CRFs evitam o \textit{bias} de rotulamento, um problema dos modelos de máxima entropia
 de Markov (MEMMs) e outros modelos de Markov condicionais baseados em modelos de grafos
-direcionados. CRFs supera ambos os MEMMs e HMMs no número de tarefas de rotulamento de
+direcionados. CRFs superam ambos os MEMMs e HMMs no número de tarefas de rotulamento de
 sequências.
 
 \subsection{Modelos Gráficos Não Direcionados}
@@ -86,7 +86,7 @@ ilustrado na figura~\ref{grafo_crf}.
 <<incluir imagem>>
 
 caption: Estrutura gráfica de CRFs de com estruturas em cadeia para sequências.
-As variáveis correspondentes aos nós em braco não são geradas pelo modelo.
+As variáveis correspondentes aos nós em branco não são geradas pelo modelo.
 
 \subsection{Funções Potencias}
 
@@ -94,7 +94,7 @@ A estrutura gráfica de um CRF pode ser utilizada para fatorar a distribuição 
 ao longo dos elementos $Y_v$ de $Y$ em um produto normalizado de funções potencias de
 valor real derivadas da noção de independência condicional. Cada função potencial
 opera em um subconjunto das variáveis aleatórias representadas pelo vértices em $G$.
-De acordo com a definição de independência condicional para um modelos gráficos não
+De acordo com a definição de independência condicional para modelos gráficos não
 direcionados, a ausência de uma aresta entre dois vértices em $G$ implica que as variáveis
 aleatórias representadas por esses vértices são condicionalmente independentes dado todos
 as outras variáveis aleatórias no modelo. A função potencial precisa garantir que é
