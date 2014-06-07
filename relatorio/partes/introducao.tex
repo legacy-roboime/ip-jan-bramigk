@@ -50,8 +50,8 @@ lançaram uma competição de robótica chamada de Robot \textit{J-League} (faze
 pesquisadores já se pronunciavam dizendo que a iniciativa deveria ser estendida ao
 âmbito internacional. Surgia então, a \textit{Robot World Cup Initiative} (RoboCup).
 
-RoboCup é uma competição destinada a desenvolver os estudos na área de robótica e,
-Inteligência Artificial (IA), por meio de um competição amigável. Além disso, ela tem
+RoboCup é uma competição destinada a desenvolver os estudos na área de robótica e
+Inteligência Artificial (IA) por meio de um competição amigável. Além disso, ela tem
 como objetivo, até 2050, desenvolver uma equipe de robôs humanoides totalmente
 autônomos capazes de derrotar a equipe campeã mundial de futebol humano. A competição
 possui várias modalidades. Neste trabalho, será analisada a \textit{Small Size Robot League} (SSL),
@@ -60,12 +60,12 @@ compostas por 6 robôs, sendo um deles o goleiro, que deve ser
 designado antes do início do jogo. Durante o jogo, nenhuma interferência humana é
 permitida com o sistema de controle dos robôs. É fornecido aos times um sistema de
 visão global e esses controlam seus robôs com máquinas próprias. O sistema de controle
-dos robôs é, geralmente externo, recebe os dados de um conjunto de câmeras
-localizada acima do campo, processa os dados, determina qual comando deve ser executado
-em cada robô e envia este comando através de ondas de rádio aos robôs. Embora seja
+dos robôs geralmente é externo e recebe os dados de um conjunto de duas câmeras
+localizadas acima do campo. Esse sistema de controle processa os dados, determina qual comando deve ser executado por
+cada robô e envia este comando através de ondas de rádio aos robôs. Embora seja
 permitido que as equipes utilizem sistemas próprios de visão, a maioria das
 equipes utiliza a visão centralizada. A figura~\ref{robocup2013} mostra uma
-imagem da SSL Robocup 2013, da qual o a ROBOIME (Equipe de Futebol de Robôs do
+imagem da SSL Robocup 2013, da qual a RoboIME (Equipe de Futebol de Robôs do
 Laboratório de Robótica do IME) participou.
 
 \section{Motivação}
@@ -78,7 +78,8 @@ situações de risco de vida iminente.
 
 Há diversas novas áreas de aplicação da robótica, tais como exploração espacial e submarina,
 navegação em ambientes inóspitos e perigosos, serviço de assistência médica
-e cirúrgica, além do setor de entretenimento, podem beneficiar-se do uso de sistemas
+e cirúrgica, além do setor de entretenimento. Essas áreas podem ser beneficiadas com o
+desenvolvimento de sistemas
 multi robôs. Nestes domínios de aplicação, sistemas de multi robôs deparam-se sempre
 com tarefas muito difíceis de serem efetuadas por um único robô. Um time de robôs pode
 prover redundância e contribuir cooperativamente para resolver o problema em questão.
@@ -98,8 +99,8 @@ exata dos ambientes em que os sistemas robóticos serão introduzidos e permite 
 a adaptação a ambientes complexos seja realizada através da exposição destes sistemas
 às possíveis situações de trabalho. Por meio da incorporação do sistema de
 aprendizagem, situações não consideradas podem ser incorporadas ao algoritmo de
-controle dos robôs e permitir que esses reajam de maneira mais eficiente em futuras
-situações semelhantes.
+controle dos robôs dinamicamente. Isso permitiria que esses reagissem de maneira mais
+eficiente em futuras situações semelhantes.
 
 \section{Objetivo}
 
@@ -120,7 +121,7 @@ Um método concreto que possa prever o comportamento de agentes inteligentes de 
 futebol de robôs permite com que seja possível prever o comportamento de um time adversário.
 Com tal mecanismo é possível melhorar a Inteligência Artificial em uso pela RoboIME
 para tomar decisões que levem a resultados melhores e, por consequência, ganhar mais partidas.
-Outras equipes participantes da SSL já utilizam mecanismo de predição do adversário.
+Outras equipes participantes da SSL já utilizam mecanismos de predição do adversário.
 Portanto, é de grande importância desenvolver também tal mecanismo para acompanhar a evolução
 das tecnologias envolvidas.
 
@@ -137,8 +138,6 @@ analisados trabalhos aplicados especificamente à SSL.
 A seguir, são analisadas as heurísticas levantadas durante a
 revisão da bibliografia. Cada uma delas é descrita. Após descrição sumária
 de cada heurística, são apresentados os respectivos exemplos de cada aplicação.
-Ao fim de cada exemplo, são apresentados como as respectivas heurísticas se encaixam na
-resolução do problema.
 
 Então, são apresentadas abordagens envolvendo as heurísticas introduzidas
 anteriormente. Cada abordagem relaciona, no mínimo, uma dessas heurísticas.
@@ -147,7 +146,7 @@ na resolução do problema. Uma análise das características de cada abordagem
 é feita ao final da descrição de cada abordagem.
 
 A seguir, são descritos possíveis algoritmos para implementar essas abordagens. Também são
-desenvolvidos métricas para avaliar os algoritmos desenvolvidos.
+desenvolvidas métricas para avaliar os algoritmos desenvolvidos.
 
 % NOTE: não é bem verdade isso:
 %Para validar os estudos desenvolvidos, o projeto de um software
