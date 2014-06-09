@@ -31,3 +31,48 @@ ou dinamicamente. No caso estático, elas seriam incorporadas ao modelo através
 No caso dinâmico, uma solução é utilizar um classificador para deduzir as regras.
 
 \input{partes/abordagem_rede_neural}
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+                        &      &           &          &              &            \\
+      Critério          & CRF  & CRF + ACO & CRF + SA & Lógica Fuzzy & Rede Neural\\
+                        &      &           &          &              &            \\
+      \hline
+                        &      &           &          &              &            \\
+      Requer modelo     &  X   &     X     &    X     &      X       &      -     \\
+      de classificação  &      &           &          &              &            \\
+                        &      &           &          &              &            \\
+      \hline
+                        &      &           &          &              &            \\
+      Estrutura de      &  X   &     X     &    X     &      X       &      -     \\
+      fácil análise     &      &           &          &              &            \\
+                        &      &           &          &              &            \\
+      \hline
+                        &      &           &          &              &            \\
+      Degradação devido &  -   &     X     &    -     &      -       &      -     \\
+      a discretização   &      &           &          &              &            \\
+                        &      &           &          &              &            \\
+      \hline
+                        &      &           &          &              &            \\
+      Fácil             &  -   &     -     &    -     &      -       &      X     \\
+      pré-processamento &      &           &          &              &            \\
+                        &      &           &          &              &            \\
+      \hline
+                        &      &           &          &              &            \\
+      Fácil             &  -   &     -     &    -     &      -       &      X     \\
+      pós-processamento &      &           &          &              &            \\
+                        &      &           &          &              &            \\
+      \hline
+                        &          &          &           &           &          \\
+      Característica    & Modelo   & Modelo   & Parte das & Parte das & Somente  \\
+      reutilizável      & treinado & treinado & regras    & regras    & topologia\\
+                        &          &          &           &           &          \\
+      \hline
+    \end{tabular}
+  \caption{Tabela comparativa dos métodos}
+  \label{regras}
+  \end{center}
+\end{table}
