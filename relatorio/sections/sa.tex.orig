@@ -1,13 +1,13 @@
-%\frame{
-% \frametitle{Recozimento Simulado}
-% \begin{block}{}
-%   \begin{figure}
-%     \centering
-%     \includegraphics[width = 0.6 \linewidth]{imgs/ilustrativa_sa}
-%     \caption{Idéia Básica do SA}
-%   \end{figure}
-% \end{block}
-%}
+\frame{
+  \frametitle{Recozimento Simulado}
+  \begin{block}{}
+    \begin{figure}
+      \centering
+      \includegraphics[width = 0.6 \linewidth]{imgs/ilustrativa_sa}
+      \caption{Idéia Básica do SA}
+    \end{figure}
+  \end{block}
+}
 
 \frame{
   \frametitle{Recozimento Simulado}
@@ -41,4 +41,8 @@
 %      \item $x(0) \in S$, estado inicial
 %    \end{itemize}
 %  \end{block}
+<<<<<<< HEAD
 %}
+=======
+%}
+>>>>>>> b1c651dfbd216eab5694f021f653d94b5d587996

@@ -1,0 +1,11 @@
+\section{Cronograma}
+\frame{
+  \frametitle{Cronograma}
+  \begin{block}{}
+    \begin{figure}
+      \centering
+      \includegraphics[width = 0.99 \linewidth]{imgs/cronograma}
+      \caption{Cronograma de Atividades}
+    \end{figure}
+  \end{block}
+}
