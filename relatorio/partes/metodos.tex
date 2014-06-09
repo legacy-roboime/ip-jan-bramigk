@@ -12,7 +12,7 @@ atual do jogo e das regras associadas aos robôs. Entretanto, devido ao tempo
 destinado a esta pesquisa será modelado somente uma solução para o mapeamento das
 observações às regras. Também, o módulo de inteligência necessita dos dados
 desse mapeamento para poder prever de maneira coerente estados futuros do jogo. Uma
-solução ingênua é utilizar os modelos de tática e \textit{skill} do próprio time.
+solução ingênua é utilizar os modelos de táticas e \textit{skills} do próprio time.
 Isso não representa a realidade, pois é pouco provável que dois times desenvolvam
 todos os algoritmos que controlam os robôs de tal maneira que eles tenham o mesmo
 resultado.
@@ -23,7 +23,8 @@ Em princípio cada equipe utiliza seu próprio conjunto de regras.
 Na prática, entretanto, devido aos trabalhos publicados na comunidade científica
 relacionados ao problema de futebol de robôs, muitas regras são compartilhadas
 entre os times. Outra razão plausível é que muitas heurísticas e regras mimicam
-as regras dos times de futebol jogados por humanos. Exemplos de regras típicas são:
+as regras dos times de futebol jogados por humanos. Exemplos de regras típicas são
+apresentados na tabela~\ref{regras}.
 
 \begin{table}
   \begin{center}
@@ -65,7 +66,6 @@ as regras dos times de futebol jogados por humanos. Exemplos de regras típicas 
   \label{regras}
   \end{center}
 \end{table}
-
 
 \subsection{Características}
 
@@ -117,7 +117,7 @@ jogo.
 \subsection{Modelagens}
 
 Várias estruturas são utilizadas em problemas de classificação. Dentre elas:
-\textit{Hidden Markov Models} (HMM), \textit{Conditional Random Fields} (CRF),
-Redes Neurais Artificiais (RNA), \textit{Support Vector Machines}.
+\textit{Hidden Markov Models} (HMMs), \textit{Conditional Random Fields} (CRFs),
+Redes Neurais Artificiais (RNAs), \textit{Support Vector Machines}.
 
-As modelagens estudadas nesse trabalho serão as RNA e CRF.
+As modelagens estudadas nesse trabalho envolvem as RNAs e CRFs.
