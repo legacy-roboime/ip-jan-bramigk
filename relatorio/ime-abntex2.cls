@@ -18,7 +18,7 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ime-abntex2}[2013/10/10 v0.1 Modelo do Instituto Militar de Engenharia baseado em abnTeX2]
+\ProvidesClass{ime-abntex2}[2013/10/10 v0.2 Modelo do Instituto Militar de Engenharia baseado em abnTeX2]
 \usepackage[utf8]{inputenc} % Codificacao do documento atual, isto é, dessa classe
 
 % para mais detalhes sobre as opções:
@@ -26,15 +26,11 @@
 
 % brasao - opção para colocar o brasão no topo da primeira página
 \newif\ifime@brasao\ime@brasaofalse
-\DeclareOption{brasao}{
-  \ime@brasaotrue
-}
+\DeclareOption{brasao}{\ime@brasaotrue}
 
 %
 % Repassa todos os parametros a classe abntex2,
-\DeclareOption*{
-  \PassOptionsToClass{\CurrentOption}{abntex2}
-}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
 
 \ProcessOptions\relax
 \LoadClass{abntex2}
@@ -96,7 +92,7 @@
 
 \makeatletter
 
-\renewcommand{\folhaderostocontent}{
+\renewcommand{\folhaderostocontent}{\
   \begin{center}
   {\ABNTEXchapterfont\Large Instituto Militar de Engenharia}
 
@@ -142,8 +138,8 @@
   \let\footnote\thanks
   \noindent
   %XXX: what's the best way to parametrize this year?
-  %TODO: do it! parametrize this
-  c2014
+  %     it may not always be desirable to use the current year
+  c\the\year{}
 
   \vspace{10mm}
 
@@ -179,12 +175,12 @@
       \parbox[t]{1.5cm}{\hspace{2mm} #1}% código estranho
         \parbox[t]{11cm}{\noindent #2}\\% autores com abreviações estranhas
         \parbox[t]{1.5cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} \imprimirtitulo \hspace{1mm}/ \hspace{6mm} {\let\\=, \imprimirautor} : Instituto Militar de Engenharia, 2014.}\\
+        \parbox[t]{11cm}{\noindent \hspace{4mm} \imprimirtitulo \hspace{1mm}/ \hspace{6mm} {\let\\=, \imprimirautor} : Instituto Militar de Engenharia, \the\year{}.}\\
         \parbox[t]{1.5cm}{\ }
         \parbox[t]{11cm}{\noindent \hspace{4mm}}\\
         [\baselineskip]
         \parbox[t]{1.5cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP) - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, 2014. } \\
+        \parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP) - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, \the\year{}. } \\
         [\baselineskip]
         \parbox[t]{1.5cm}{\ }
         \parbox[t]{11cm}{\noindent \hspace{4mm} #3}\\% tags estranhas
