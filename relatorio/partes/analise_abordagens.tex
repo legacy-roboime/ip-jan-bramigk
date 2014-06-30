@@ -2,14 +2,14 @@
 
 % TODO(depois): está muito obscuro, ligar com o final de cada heurística, não deve mudar muito esse capítulo.
 
-\section{CRF}
+% \section{CRF}
 
-Como os métodos AG (Algoritmo Genético), SA e ACO são heurísticas de otimização,
-é necessário que o problema da aproximação de uma função seja reduzido a um problema
-de otimização. A abordagem que se escolheu foi utilizar os \textit{conditional random
-fields} para modelar um classificador para identificar as regras, ou táticas na
-abstração da STP\@. Os métodos de otimização estudados anteriormente podem ser
-aplicados para encontra os pesos do CRF.
+% Como os métodos AG (Algoritmo Genético), SA e ACO são heurísticas de otimização,
+% é necessário que o problema da aproximação de uma função seja reduzido a um problema
+% de otimização. A abordagem que se escolheu foi utilizar os \textit{conditional random
+% fields} para modelar um classificador para identificar as regras, ou táticas na
+% abstração da STP\@. Os métodos de otimização estudados anteriormente podem ser
+% aplicados para encontra os pesos do CRF.
 
 \section{Lógica Fuzzy}
 
@@ -32,47 +32,90 @@ No caso dinâmico, uma solução é utilizar um classificador para deduzir as re
 
 \input{partes/abordagem_rede_neural}
 
-
-\begin{table}
-  \begin{center}
-    \begin{tabular}{|c|c|c|c|c|c|}
-      \hline
-                        &      &           &          &              &            \\
-      Critério          & CRF  & CRF + ACO & CRF + SA & Lógica Fuzzy & Rede Neural\\
-                        &      &           &          &              &            \\
-      \hline
-                        &      &           &          &              &            \\
-      Requer modelo     &  X   &     X     &    X     &      X       &      -     \\
-      de classificação  &      &           &          &              &            \\
-                        &      &           &          &              &            \\
-      \hline
-                        &      &           &          &              &            \\
-      Estrutura de      &  X   &     X     &    X     &      X       &      -     \\
-      fácil análise     &      &           &          &              &            \\
-                        &      &           &          &              &            \\
-      \hline
-                        &      &           &          &              &            \\
-      Degradação devido &  -   &     X     &    -     &      -       &      -     \\
-      a discretização   &      &           &          &              &            \\
-                        &      &           &          &              &            \\
-      \hline
-                        &      &           &          &              &            \\
-      Fácil             &  -   &     -     &    -     &      -       &      X     \\
-      pré-processamento &      &           &          &              &            \\
-                        &      &           &          &              &            \\
-      \hline
-                        &      &           &          &              &            \\
-      Fácil             &  -   &     -     &    -     &      -       &      X     \\
-      pós-processamento &      &           &          &              &            \\
-                        &      &           &          &              &            \\
-      \hline
-                        &          &          &           &           &          \\
-      Característica    & Modelo   & Modelo   & Parte das & Parte das & Somente  \\
-      reutilizável      & treinado & treinado & regras    & regras    & topologia\\
-                        &          &          &           &           &          \\
-      \hline
-    \end{tabular}
-  \caption{Tabela comparativa dos métodos}
-  \label{regras}
-  \end{center}
-\end{table}
+ \begin{table}
+   \begin{center}
+     \begin{tabular}{|c|c|c|c|c|c|}
+       \hline
+                         &      &          &              &            \\
+       Critério          &  ACO &    SA    & Lógica Fuzzy & Rede Neural\\
+                         &      &          &              &            \\
+       \hline
+                         &      &          &              &            \\
+       Requer modelo     &      &    X     &      X       &      -     \\
+       de classificação  &      &          &              &            \\
+                         &      &          &              &            \\
+       \hline
+                         &      &          &              &            \\
+       Estrutura de      &      &    X     &      X       &      -     \\
+       fácil análise     &      &          &              &            \\
+                         &      &          &              &            \\
+       \hline
+                         &      &          &              &            \\
+       Degradação devido &      &    -     &      -       &      -     \\
+       a discretização   &      &          &              &            \\
+                         &      &          &              &            \\
+       \hline
+                         &      &          &              &            \\
+       Fácil             &      &    -     &      -       &      X     \\
+       pré-processamento &      &          &              &            \\
+                         &      &          &              &            \\
+       \hline
+                         &      &          &              &            \\
+       Fácil             &      &    -     &      -       &      X     \\
+       pós-processamento &      &          &              &            \\
+                         &      &          &              &            \\
+       \hline
+                         &         &           &           &          \\
+       Característica    & odelo   & Parte das & Parte das & Somente  \\
+       reutilizável      & reinado & regras    & regras    & topologia\\
+                         &         &           &           &          \\
+       \hline
+     \end{tabular}
+   \caption{Tabela comparativa dos métodos}
+   \label{table:metodos}
+   \end{center}
+ \end{table}
+% TODO: Adicionar classificação temporal e viabilidade
+% \begin{table}
+%   \begin{center}
+%     \begin{tabular}{|c|c|c|c|c|c|}
+%       \hline
+%                         &      &           &          &              &            \\
+%       Critério          & CRF  & CRF + ACO & CRF + SA & Lógica Fuzzy & Rede Neural\\
+%                         &      &           &          &              &            \\
+%       \hline
+%                         &      &           &          &              &            \\
+%       Requer modelo     &  X   &     X     &    X     &      X       &      -     \\
+%       de classificação  &      &           &          &              &            \\
+%                         &      &           &          &              &            \\
+%       \hline
+%                         &      &           &          &              &            \\
+%       Estrutura de      &  X   &     X     &    X     &      X       &      -     \\
+%       fácil análise     &      &           &          &              &            \\
+%                         &      &           &          &              &            \\
+%       \hline
+%                         &      &           &          &              &            \\
+%       Degradação devido &  -   &     X     &    -     &      -       &      -     \\
+%       a discretização   &      &           &          &              &            \\
+%                         &      &           &          &              &            \\
+%       \hline
+%                         &      &           &          &              &            \\
+%       Fácil             &  -   &     -     &    -     &      -       &      X     \\
+%       pré-processamento &      &           &          &              &            \\
+%                         &      &           &          &              &            \\
+%       \hline
+%                         &      &           &          &              &            \\
+%       Fácil             &  -   &     -     &    -     &      -       &      X     \\
+%       pós-processamento &      &           &          &              &            \\
+%                         &      &           &          &              &            \\
+%       \hline
+%                         &          &          &           &           &          \\
+%       Característica    & Modelo   & Modelo   & Parte das & Parte das & Somente  \\
+%       reutilizável      & treinado & treinado & regras    & regras    & topologia\\
+%                         &          &          &           &           &          \\
+%       \hline
+%     \end{tabular}
+%   \caption{Tabela comparativa dos métodos}
+%   \label{regras}
+%   \end{center}
+% \end{table}

@@ -2,122 +2,13 @@
 
 \section{Introdução}
 
-Conforme descrito no capítulo anterior, o problema a ser resolvido será
-encarado como um problema de classificação temporal. O sistema deve mapear uma
-sequência temporal de observações para um conjunto de regras associadas a
-subconjuntos de robôs. Essas regras definem o comportamento dos robôs.
+Esta secção tem o objetivo de apresentar um estudo dos seguinter algoritmos:
+ACO, SA, ANN e GA\@. Também contém uma descrição da lógica fuzzy, inicialmente
+proposta para resolver o problema.
 
-Outro problema relevante é definir o comportamento dos robôs a partir do estado
-atual do jogo e das regras associadas aos robôs. Entretanto, devido ao tempo
-destinado a esta pesquisa será modelado somente uma solução para o mapeamento das
-observações às regras. Também, o módulo de inteligência necessita dos dados
-desse mapeamento para poder prever de maneira coerente estados futuros do jogo. Uma
-solução ingênua é utilizar os modelos de táticas e \textit{skills} do próprio time.
-Isso não representa a realidade, pois é pouco provável que dois times desenvolvam
-todos os algoritmos que controlam os robôs de tal maneira que eles tenham o mesmo
-resultado.
+%Várias estruturas são utilizadas em problemas de classificação. Dentre elas:
 
-\subsection{Regras}
+%\textit{Hidden Markov Models} (HMMs), \textit{Conditional Random Fields} (CRFs),
+%Redes Neurais Artificiais (RNAs), \textit{Support Vector Machines}.
 
-Em princípio cada equipe utiliza seu próprio conjunto de regras.
-Na prática, entretanto, devido aos trabalhos publicados na comunidade científica
-relacionados ao problema de futebol de robôs, muitas regras são compartilhadas
-entre os times. Outra razão plausível é que muitas heurísticas e regras mimicam
-as regras dos times de futebol jogados por humanos. Exemplos de regras típicas são
-apresentados na tabela~\ref{regras}.
-
-\begin{table}
-  \begin{center}
-    \begin{tabular}{|c|c|}
-      \hline
-      Regra                  & Descrição \\
-      \hline
-      \textit{Kick Off}      & Posicionamento antes do\\
-                             & início do jogo\\
-      \hline
-      Marcar Oponente        & Defesa corpo-a-corpo\\
-                             & contra um robô particular\\
-      \hline
-      Posicionar Para Passe  & Cria aberturas para passes\\
-      \hline
-      Receber Chute Alto     & Recebe um passe executado\\
-                             & através do dispositivo de\\
-      & chute alto\\
-      \hline
-      Posicionar             & Posicionamento no campo para\\
-                             & receber um passe\\
-      \hline
-      \textit{Penalty Kick}  & Executa um chute a gol\\
-      \hline
-      Barreira               & Forma uma barreira com os \\
-                             & jogadores do mesmo time \\
-                             & para bloquear chutes\\
-      \hline
-      \textit{Set-Play-Kick} & Uma \textit{play} coordenada onde\\
-                             & um robô passa a bola à outro que \\
-                             & chuta de primeira em direção ao gol.\\
-      \hline
-      Atacante               & Regra de ataque primária\\
-      \hline
-      Defesa circular        & Defende o gol á um raio fixo\\
-      \hline
-    \end{tabular}
-  \caption{Lista de regras comuns entre as equipes}
-  \label{regras}
-  \end{center}
-\end{table}
-
-\subsection{Características}
-
-Comumente informação é adicionada ao modelo através do pré-processamento dos
-dados coletados nos sensores. Essas informações são chamadas de características.
-Características são funções dos dados coletados nos sensores. Elas são utilizadas
-para adicionar informação do domínio ao modelo.
-
-As características tomam a forma:
-
-\begin{centering}
-\begin{equation}
-f_i(t,Y,X)
-\end{equation}
-\end{centering}
-
-Os protótipos de características típicos do domínio do futebol de robôs são:
-
-\begin{centering}
-\begin{eqnarray}
-f_i(t,Y,X)=I(y_t == regra)\\
-f_i(t,Y,X)=I(y_{t-1} == regra_1)I(y_t == regra_2)\\
-f_i(t,Y,X)=I(y_t == regra).g(t,X)\\
-\end{eqnarray}
-\end{centering}
-
-Onde a função $I$ só retorna um valor não nulo se seu argumento for verdadeiro e
-$g$ retorna um valor real.
-
-A partir desse protótipos, associando cada valor aos robôs presentes
-no campo, várias funções características podem ser instanciadas.
-Tipicamente chega-se à ordem de 100 mil instâncias. Faz-se necessário
-selecionar quais funções efetivamente são relevantes para o problema.
-
-\subsection{Seleção de Características}
-
-Apesar de incorporar informação ao modelo, a inclusão de muitas características
-pode fazer com que o modelo incorpore informações particulares dos dados de
-treinamento. Isso é chamado de \textit{overfitting}. Esse fenômeno reduz a precisão
-do modelo final por incorporar dados particulares do conjunto de dados de
-treinamento. Devido a isso é necessário selecionar quais características devem
-ser incorporadas ao modelo final.
-
-A seleção de características reduz o tamanho do modelo, bem como o custo
-computacional da classificação. Isso permite que as regras sejam reconhecidas
-em tempo viável para serem utilizadas pelo módulo da inteligência durante o
-jogo.
-
-\subsection{Modelagens}
-
-Várias estruturas são utilizadas em problemas de classificação. Dentre elas:
-\textit{Hidden Markov Models} (HMMs), \textit{Conditional Random Fields} (CRFs),
-Redes Neurais Artificiais (RNAs), \textit{Support Vector Machines}.
-
-As modelagens estudadas nesse trabalho envolvem as RNAs e CRFs.
+%As modelagens estudadas nesse trabalho envolvem as RNAs e CRFs.
