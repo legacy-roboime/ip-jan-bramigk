@@ -43,6 +43,10 @@
 \makeevenhead{abntheadings}{\ABNTEXfontereduzida\thepage}{}{}
 \makeoddhead{abntheadings}{}{}{\ABNTEXfontereduzida\thepage}
 
+% Aumentar o tamanho da linha de assinatura
+% XXX o tamanho deveria sempre abranger o maior nome, atualmente é fixo em 10cm
+\setlength{\ABNTEXsignwidth}{10cm}
+
 
 % Mudar fonte dos títulos para usar fontes com serif
 % olhar seção 6.1 de http://mirror.math.ku.edu/tex-archive/macros/latex/contrib/abntex2/doc/abntex2.pdf
@@ -171,11 +175,13 @@
     \hspace{3cm}
     \framebox[12.5cm]{\footnotesize
       \begin{minipage}{13cm}
-      \vspace*{1mm}
-      \parbox[t]{1.5cm}{\hspace{2mm} #1}% código estranho
-        \parbox[t]{11cm}{\noindent #2}\\% autores com abreviações estranhas
+        \vspace*{1mm}
+        % FIXME código tem 2 linhas e deve estar devidamente alinhado
+        \parbox[t]{2.5cm}{\hspace{2mm} #1}% código estranho
+        \parbox[t]{10cm}{\noindent #2}\\
         \parbox[t]{1.5cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} \imprimirtitulo \hspace{1mm}/ \hspace{6mm} {\let\\=, \imprimirautor} : Instituto Militar de Engenharia, \the\year{}.}\\
+        % FIXME a parte do título deve estar apenas com a primeira letra maiúscula
+        \parbox[t]{11cm}{\noindent \hspace{4mm} {\let\\=\ \imprimirtitulo} /{\let\\=, \imprimirautor}; orientados por \imprimirorientador : Instituto Militar de Engenharia, \the\year{}.}\\
         \parbox[t]{1.5cm}{\ }
         \parbox[t]{11cm}{\noindent \hspace{4mm}}\\
         [\baselineskip]
@@ -258,3 +264,5 @@
 
   \end{folhadeaprovacao}
 }
+
+% TODO corrigir modelo de referencias

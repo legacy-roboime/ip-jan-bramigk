@@ -85,7 +85,8 @@
 % ---
 % Pacotes de citacoes
 % ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+% O seguinte serve para mostrar as referencias reversas na bibliografia
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
 % --- 
@@ -95,18 +96,18 @@
 % ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+%\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 % Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
+%\renewcommand{\backref}{}
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #1 vezes nas páginas #2.%
-	\fi}%
+%\renewcommand*{\backrefalt}[4]{
+%	\ifcase #1 %
+%		Nenhuma citação no texto.%
+%	\or
+%		Citado na página #2.%
+%	\else
+%		Citado #1 vezes nas páginas #2.%
+%	\fi}%
 % ---
 
 
@@ -114,10 +115,8 @@
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \titulo{Heurística Estática para Times\\Cooperativos de Robôs}
-\autor{
-  Jan Segre\\
-  Victor Bramigk
-}
+\autor{Jan Segre\\
+Victor Bramigk}
 \local{Rio de Janeiro}
 \data{Julho de 2014}
 \orientador{Paulo Fernando Ferreira Rosa - Ph.D. do IME}
@@ -223,13 +222,17 @@ Engenharia.}
 %     \includepdf{fig_ficha_catalografica.pdf}
 % \end{fichacatalografica}
 \imprimirfichacatalografica
-{xxxx}
-{Segre, J., Bramigk, V.}
-{1. Engenharia da computação.
+{621-39\\
+5455h}
+{Segre, Jan}
+{1. Engenharia da computação - Iniciação à Pesquisa.
  2. Redes Neurais.
- 3. Conditional Random Fields
- 4. Lógica Nebulosa.
- 5. Otimização da Colônia de Formigas. Instituto Militar de Engenharia.
+ 3. Inteligência artificial.
+ 4. Robótica.
+ I. Bramigk, Victor.
+ II. Rosa, Paulo F.F.
+ III. Heurística Estática para Times Cooperativos de Robôs.
+ IV. Instituto Militar de Engenharia.
 }
 % ---
 
