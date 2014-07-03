@@ -1,10 +1,30 @@
 \section{Lógica Nebulosa}
 
-Sistemas nebulosos aproximam funções. Eles são aproximadores universais se usarem regras suficientes. 
-Neste sentido sistemas difusos podem modelar qualquer função ou sistema contínuos. Aqueles sistemas 
-podem vir tanto da física quanto da sociologia, bem como da teoria do controle ou do 
-processamento de sinais. Uma arquiterura funcional generica de um Sistema Nebuloso proposta por
-\cite{passos2005datamining} é apresentada na figura \ref{arq_fuzzy}.
+\subsection{Conjuntos Nebulosos}
+
+Na lógica chamada de nebulosa, diferentemente da lógica clássica, os elementos
+podem pertencer parcialmente a um conjunto. Normalmente, utiliza-se uma função
+de pertinência $\mu_A : x \rightarrow [0,1]$ que expressa o quanto um elemento
+$x$ pertence ao conjunto $A$. O conjuto $A$ é chamado de conjunto nebuloso e o
+valor $\mu(x_0)$ expressa o grau de pertinência de $x_0$ ao conjunto $A$. A
+figura~\ref{conj_fuzzy} a seguir mostra dois exemplos de conjuntos nebulosos
+construídos em função da variável temperatura, denotada por $T$. A função de
+pertinência esta denotada por $\mu$.
+
+\begin{figure}
+  \includegraphics[width=14cm]{imgs/fuzzy_graphic/fuzzy_graphic.eps}
+  \caption{Grau de pertinência da temperatura \cite{passos2005datamining}}
+  \label{conj_fuzzy}
+\end{figure}
+
+\subsection{Sistemas Nebulosos}
+
+Sistemas nebulosos aproximam funções. Eles são aproximadores universais se
+usarem regras suficientes. Neste sentido sistemas difusos podem modelar
+qualquer função ou sistema contínuos. Aqueles sistemas podem vir tanto da física
+quanto da sociologia, bem como da teoria do controle ou do processamento de
+sinais. Uma arquitetura funcional genérica de um Sistema Nebuloso proposta por
+\cite{passos2005datamining} é apresentada na figura~\ref{arq_fuzzy}.
 
 A qualidade da aproximação difusa depende da qualidade das regras. Na prática especialistas sugerem regras
 difusas ou aprendem-nas através de esquemas neurais através de dados e ajustam as regras com novos dados.
