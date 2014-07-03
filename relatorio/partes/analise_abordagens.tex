@@ -11,24 +11,31 @@
 
 \section{Lógica Fuzzy}
 
-O método da Lógica Fuzzy, conforme exposto anteriormente, necessita que um conjunto
-de regras seja definido. Essas regras poder ser geradas a partir de uma análise mais
-detalhada do problema, mas também podem ser obtidas utilizando algum algorítimo de
-aprendizagem de regras. Para aplicar esse método ao problema analisado neste trabalho
-é necessário definir as regras e as distribuições das variáveis.
+O método da Lógica Fuzzy, conforme exposto anteriormente, necessita que um
+conjunto de regras seja definido. Essas regras poder ser geradas a partir de uma
+análise mais detalhada do problema, mas também podem ser obtidas utilizando
+algum algorítimo de aprendizagem de regras. Para aplicar esse método ao problema
+analisado neste trabalho é necessário definir as regras e as distribuições das
+variáveis.
 
-A vantagem dos conjuntos difusos é que eles tornam o modelo mais robusto. A lógica fuzzy
-tenta melhorar a classificação e os sistemas de decisão.
+A vantagem dos conjuntos difusos é que eles tornam o modelo mais robusto. A
+lógica fuzzy tenta melhorar a classificação e os sistemas de decisão.
 
-A principal desvantagem deste método é a modelagem necessária para encaixar os conceitos
-descritos acima. Isso, pois o conceito de conjuntos nebulosos ainda estão em desenvolvimento
-para o problema abordado neste trabalho. Essa modelagem não é imediata, pois o problema é de
-classificação temporal. Não basta que as características do ambiente sejam associadas aos
-conjuntos nebulosos de características. É necessário que regras sejam especificadas estática
-ou dinamicamente. No caso estático, elas seriam incorporadas ao modelo através de especialistas.
-No caso dinâmico, uma solução é utilizar um classificador para deduzir as regras.
+A principal desvantagem deste método é a modelagem necessária para encaixar os
+conceitos descritos acima. Isso, pois o conceito de conjuntos nebulosos ainda
+estão em desenvolvimento para o problema abordado neste trabalho. Essa modelagem
+não é imediata, pois o problema é de classificação temporal. Não basta que as
+características do ambiente sejam associadas aos conjuntos nebulosos de
+características. É necessário que regras sejam especificadas estática ou
+dinamicamente. No caso estático, elas seriam incorporadas ao modelo através de
+especialistas. No caso dinâmico, uma solução é utilizar um classificador para
+deduzir as regras.
 
-% TODO[vbramigk] sim/não tabela
+\subsection{Comparação dos Métodos}
+
+A tabela~\ref{table:metodos} apresenta as principais diferenças dos métodos
+apresentados anteriormente.
+
 \input{partes/abordagem_rede_neural}
 
  \begin{table}
@@ -40,27 +47,27 @@ No caso dinâmico, uma solução é utilizar um classificador para deduzir as re
                          &          &           &              &            \\
        \hline
                          &          &           &              &            \\
-       Requer modelo     &          &    X      &      X       &      -     \\
+       Requer modelo     &   Sim    &    Sim    &     Sim      &    Não     \\
        de classificação  &          &           &              &            \\
                          &          &           &              &            \\
        \hline
                          &          &           &              &            \\
-       Estrutura de      &          &    X      &      X       &      -     \\
+       Estrutura de      &   Sim    &    Sim    &     Sim      &    Não     \\
        fácil análise     &          &           &              &            \\
                          &          &           &              &            \\
        \hline
                          &          &           &              &            \\
-       Degradação devido &          &    -      &      -       &      -     \\
+       Degradação devido &   Sim    &    Não    &     Não      &    Não     \\
        a discretização   &          &           &              &            \\
                          &          &           &              &            \\
        \hline
                          &          &           &              &            \\
-       Fácil             &          &    -      &      -       &      X     \\
+       Fácil             &   Não    &    Não    &     Não      &    Sim     \\
        pré-processamento &          &           &              &            \\
                          &          &           &              &            \\
        \hline
                          &          &           &              &            \\
-       Fácil             &          &    -      &      -       &      X     \\
+       Fácil             &   Não    &    Não    &     Não      &    Sim     \\
        pós-processamento &          &           &              &            \\
                          &          &           &              &            \\
        \hline
