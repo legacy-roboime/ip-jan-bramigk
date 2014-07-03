@@ -1,7 +1,5 @@
 \chapter{Análise das Possíveis Abordagens}\label{cap:anal_abordagens}
 
-% TODO(depois): está muito obscuro, ligar com o final de cada heurística, não deve mudar muito esse capítulo.
-
 % \section{CRF}
 
 % Como os métodos AG (Algoritmo Genético), SA e ACO são heurísticas de otimização,
@@ -30,52 +28,54 @@ conjuntos nebulosos de características. É necessário que regras sejam especif
 ou dinamicamente. No caso estático, elas seriam incorporadas ao modelo através de especialistas.
 No caso dinâmico, uma solução é utilizar um classificador para deduzir as regras.
 
+% TODO[vbramigk] sim/não tabela
 \input{partes/abordagem_rede_neural}
 
  \begin{table}
    \begin{center}
      \begin{tabular}{|c|c|c|c|c|c|}
        \hline
-                         &      &          &              &            \\
-       Critério          &  ACO &    SA    & Lógica Fuzzy & Rede Neural\\
-                         &      &          &              &            \\
+                         &          &           &              &            \\
+       Critério          &  ACO     &    SA     & Lógica Fuzzy & Rede Neural\\
+                         &          &           &              &            \\
        \hline
-                         &      &          &              &            \\
-       Requer modelo     &      &    X     &      X       &      -     \\
-       de classificação  &      &          &              &            \\
-                         &      &          &              &            \\
+                         &          &           &              &            \\
+       Requer modelo     &          &    X      &      X       &      -     \\
+       de classificação  &          &           &              &            \\
+                         &          &           &              &            \\
        \hline
-                         &      &          &              &            \\
-       Estrutura de      &      &    X     &      X       &      -     \\
-       fácil análise     &      &          &              &            \\
-                         &      &          &              &            \\
+                         &          &           &              &            \\
+       Estrutura de      &          &    X      &      X       &      -     \\
+       fácil análise     &          &           &              &            \\
+                         &          &           &              &            \\
        \hline
-                         &      &          &              &            \\
-       Degradação devido &      &    -     &      -       &      -     \\
-       a discretização   &      &          &              &            \\
-                         &      &          &              &            \\
+                         &          &           &              &            \\
+       Degradação devido &          &    -      &      -       &      -     \\
+       a discretização   &          &           &              &            \\
+                         &          &           &              &            \\
        \hline
-                         &      &          &              &            \\
-       Fácil             &      &    -     &      -       &      X     \\
-       pré-processamento &      &          &              &            \\
-                         &      &          &              &            \\
+                         &          &           &              &            \\
+       Fácil             &          &    -      &      -       &      X     \\
+       pré-processamento &          &           &              &            \\
+                         &          &           &              &            \\
        \hline
-                         &      &          &              &            \\
-       Fácil             &      &    -     &      -       &      X     \\
-       pós-processamento &      &          &              &            \\
-                         &      &          &              &            \\
+                         &          &           &              &            \\
+       Fácil             &          &    -      &      -       &      X     \\
+       pós-processamento &          &           &              &            \\
+                         &          &           &              &            \\
        \hline
-                         &         &           &           &          \\
-       Característica    & odelo   & Parte das & Parte das & Somente  \\
-       reutilizável      & reinado & regras    & regras    & topologia\\
-                         &         &           &           &          \\
+                         &          &           &              &            \\
+       Característica    & Modelo   & Parte das & Parte das    & Somente    \\
+       reutilizável      & treinado & regras    & regras       & topologia  \\
+                         &          &           &              &            \\
        \hline
      \end{tabular}
    \caption{Tabela comparativa dos métodos}
    \label{table:metodos}
    \end{center}
  \end{table}
-% TODO: Adicionar classificação temporal e viabilidade
+
+% XXX: Adicionar classificação temporal e viabilidade
 % \begin{table}
 %   \begin{center}
 %     \begin{tabular}{|c|c|c|c|c|c|}
