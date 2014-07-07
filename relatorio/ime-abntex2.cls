@@ -135,7 +135,7 @@
 % Ficha catalográfica
 % ===================
 
-\newcommand{\imprimirfichacatalografica}[3]{%
+\newcommand{\imprimirfichacatalografica}[5]{%
   \begin{fichacatalografica}
   \let\footnotesize\small
   \let\footnoterule\relax
@@ -149,7 +149,7 @@
 
   {\noindent
     INSTITUTO MILITAR DE ENGENHARIA\\
-    Praça General Tibúrcio, 80-Praia Vermelha \\
+    Praça General Tibúrcio, 80 - Praia Vermelha\\
     Rio de Janeiro-RJ CEP 22290-270}
 
   \vspace{10mm}
@@ -173,26 +173,29 @@
 
   {\noindent
     \hspace{3cm}
-    \framebox[12.5cm]{\footnotesize
-      \begin{minipage}{13cm}
+    \framebox[13cm]{\footnotesize
+      \begin{minipage}{13.5cm}
         \vspace*{1mm}
         % FIXME código tem 2 linhas e deve estar devidamente alinhado
-        \parbox[t]{2.5cm}{\hspace{2mm} #1}% código estranho
-        \parbox[t]{10cm}{\noindent #2}\\
-        \parbox[t]{1.5cm}{\ }
+        \parbox[t]{2cm}{\hspace{4mm} #1}% código CDD
+        \parbox[t]{11cm}{\noindent #3}\\
+        \parbox[t]{2cm}{\hspace{4mm} #2}% código estranho
+        %\parbox[t]{1.5cm}{\ }
         % FIXME a parte do título deve estar apenas com a primeira letra maiúscula
         \parbox[t]{11cm}{\noindent \hspace{4mm} {\let\\=\ \imprimirtitulo} /{\let\\=, \imprimirautor}; orientados por \imprimirorientador : Instituto Militar de Engenharia, \the\year{}.}\\
-        \parbox[t]{1.5cm}{\ }
+        \parbox[t]{2cm}{\ }
         \parbox[t]{11cm}{\noindent \hspace{4mm}}\\
         [\baselineskip]
-        \parbox[t]{1.5cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} Iniciação à Pesquisa (IP) - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, \the\year{}. } \\
+        \parbox[t]{2cm}{\ }
+        \parbox[t]{11cm}{\noindent \hspace{4mm} #4 - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, \the\year{}. } \\
         [\baselineskip]
-        \parbox[t]{1.5cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} #3}\\% tags estranhas
+        \parbox[t]{2cm}{\ }
+        \parbox[t]{11cm}{\noindent \hspace{4mm} #5}\\% tags estranhas
         [\baselineskip]
-        \parbox[t]{10cm}{\ }
-        \parbox[t]{4.0 cm}{}
+        \parbox[t]{10.5cm}{\ }
+        \parbox[t]{2.5cm}{CDD #1}
+        %[\baselineskip]
+        %\parbox[t]{13cm}{\ }
       \end{minipage}
     }
   }
@@ -209,6 +212,11 @@
 %
 % \convidadoum{Fulano da Silva - Ph.D}{Convidado Especial}
 %
+
+%\newcommand{\orientadorNome}{}
+\let\oldorientador\orientador
+\newcommand{\imprimirorientadorTitulo}{}
+\renewcommand{\orientador}[2]{\oldorientador{#1}\renewcommand{\imprimirorientadorTitulo}{#2}}
 
 \newcommand{\convidadoumNome}{}
 \newcommand{\convidadoumTitulo}{}
@@ -245,9 +253,9 @@
 
   Aprovado em #1 pela seguinte Banca Examinadora:
 
-  \assinatura{\textbf{\imprimirorientador} \\ Orientador}
-  \assinatura{\textbf{\convidadoumNome} \\ \convidadoumTitulo}
-  \assinatura{\textbf{\convidadodoisNome} \\ \convidadodoisTitulo}
+  \assinatura{\textbf{\imprimirorientador\ - \imprimirorientadorTitulo} \\ Orientador}
+  \assinatura{\textbf{\convidadoumNome\ - \convidadoumTitulo}}
+  \assinatura{\textbf{\convidadodoisNome\ - \convidadodoisTitulo}}
   %TODO: find out why does abntex@ifnotempty doesn't work so we can have some dynamic list
   %\abntex@ifnotempty{\convidadoumNome}{\assinatura{\textbf{\convidadoumNome} \\ \convidadoumTitulo}}
   %\abntex@ifnotempty{\convidadodoisNome}{\assinatura{\textbf{\convidadodoisNome} \\ \convidadodoisTitulo}}
