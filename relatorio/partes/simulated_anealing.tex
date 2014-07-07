@@ -89,3 +89,99 @@ SA apresentado no algoritmo~\ref{lst:meta-heuristica_sa}.
 No algoritmo~\ref{lst:meta-heuristica_sa}, o procedimento \textit{AtualizarTemperetura} executa a
 rotina de resfriamento através da função $T(t)$ definida anteriormente. Já o procedimento
 \textit{EscolherVisinho} escolhe aleatoriamente um dos elementos da vizinhança do vértice atual $i$.
+
+\subsection{Exemplo de Aplicação}
+
+O método SA pode ser aplicado para otimizar a busca em árvores de decisão.
+Com efeito, devido a complexidade de determinados jogos, não é possível
+avaliar todos os possíveis resultados de cada jogada em tempo habil. A
+tabela~\ref{table:games} apresenta a complexidade de alguns jogos de tabuleiro.
+Na tabela, \textbf{espaço-de-estado} denota o número de posições legais
+atingíveis a apartir da posição inicial e \textbf{árvore-do-jogo} denota o
+número total de jogos que podem ser jogados, i.e., o número de folhas na árvore
+de jogo cuja raiz é a posição inicial do jogo.
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+                        &                              &                      \\
+ \textbf{Jogo} & log(\textbf{espaço-de-estado}) & log(\textbf{árvore-do-jogo})\\
+                        &                              &                      \\
+      \hline
+        Jogo da velha   &             3               &          5           \\
+      \hline
+        Trilha          &             10              &          50          \\
+      \hline
+        Oware           &             16              &          32          \\
+      \hline
+        Pentaminó       &             12              &          18          \\
+      \hline
+        Lig 4           &             14              &          21          \\
+      \hline
+        Damas           &             33              &          50          \\
+      \hline
+        Lines of Action &             24              &          56          \\
+      \hline
+        Reversi         &             28              &          58          \\
+      \hline
+        Gamão           &             20              &          144         \\
+      \hline
+        Quoridor        &             42              &          162         \\
+      \hline
+        Xadrez          &             46              &          123         \\
+      \hline
+        Xadrez Chinês   &             52              &          150         \\
+      \hline
+        Arimaa          &             42              &          190         \\
+      \hline
+        Shogi           &             71              &          226         \\
+      \hline
+        Connect6        &             172             &          140         \\
+      \hline
+        Go              &             171             &          360         \\
+      \hline
+    \end{tabular}
+    \caption{Complexidades do espaço de estado e da árvore do jogo de alguns
+             jogos \cite{mertens2006quoridor}}
+  \label{table:games}
+  \end{center}
+\end{table}
+
+
+%%%%Applying Genetic Algorithms to
+%%%Quoridor Game Search Trees for Next-Move Selection
+Como o SA é uma otimização de busca local guloso, assumi-se que o adversário
+selecionará a melhor jogada de acordo com uma função de avaliação comum aos dois
+jogadores. Então a seleção de nós é feita utilizando-se o SA tradicional.
+
+Isso conceitualmente traduz no jogador SA ter olhado para baixo três níveis de
+uma determinada posição na árvore de jogo para avaliar a posição atual. A mesma
+função heurística de avaliação linear é usada para a avaliação da própria
+posição de jogo. No caso do jogo quoridor essa heurística leva em consideração
+tanto o número de paredes restantes para cada jogador quanto a distância de cada
+jogador ao lado objetivo.
+
+A função objetivo é responsável por determinar a probabilidade de movimentos
+piores serem tomados a partir de uma determinada posição. Uma possível função
+objetivo é da forma:
+
+\begin{equation}
+  exp\left\{\frac{h(atual)- h(vizinho)}{tempo}\right\}
+\end{equation}
+
+em que $h$ é uma função de avaliação heurística que é tanto menor quanto melhor
+for o estado do jogo. O parâmetro de controle aleatoriedade contra a busca
+ganaciosa pura é o tempo, e não um constante. Esse é o aspecto do SA que evita
+ficar preso em otimos locais.
+
+Quando se atinge estágios posteriores na árvore de busca jogo onde o jogador
+esta perto de seu estado objetivo, a diferença $h(atual)- h(vizinho)$
+será relativamente grande (sendo relativamente pequena no início do jogo). Isto
+sugere que o uso de um parâmetro constante no lugar do tempo resultaria em um
+jogador que seleciona movimentos ruins mais frequentemente perto do fim.
+Como o tempo também seria um valor relativamente grande perto do final do jogo,
+isso iria compensar essa grande diferença e levar-nos ao estado objetivo mais
+rápido \cite{mcdermid2003gaquoridor}.
+
