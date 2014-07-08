@@ -20,6 +20,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ime-abntex2}[2013/10/10 v0.2 Modelo do Instituto Militar de Engenharia baseado em abnTeX2]
 \usepackage[utf8]{inputenc} % Codificacao do documento atual, isto é, dessa classe
+\usepackage{lastpage} % Para total de páginas
 
 % para mais detalhes sobre as opções:
 % http://en.wikibooks.org/wiki/LaTeX/Creating_Packages
@@ -135,7 +136,7 @@
 % Ficha catalográfica
 % ===================
 
-\newcommand{\imprimirfichacatalografica}[5]{%
+\newcommand{\imprimirfichacatalografica}[6]{%
   \begin{fichacatalografica}
   \let\footnotesize\small
   \let\footnoterule\relax
@@ -143,15 +144,13 @@
   \noindent
   %XXX: what's the best way to parametrize this year?
   %     it may not always be desirable to use the current year
-  c\the\year{}
-
-  \vspace{10mm}
+  %c\the\year{}
+  %\vspace{10mm}
 
   {\noindent
     INSTITUTO MILITAR DE ENGENHARIA\\
     Praça General Tibúrcio, 80 - Praia Vermelha\\
     Rio de Janeiro-RJ CEP 22290-270}
-
   \vspace{10mm}
 
   {\noindent
@@ -173,29 +172,32 @@
 
   {\noindent
     \hspace{3cm}
-    \framebox[13cm]{\footnotesize
-      \begin{minipage}{13.5cm}
+    \framebox[11.5cm]{\footnotesize
+      \begin{minipage}{12cm}
         \vspace*{1mm}
-        % FIXME código tem 2 linhas e deve estar devidamente alinhado
         \parbox[t]{2cm}{\hspace{4mm} #1}% código CDD
-        \parbox[t]{11cm}{\noindent #3}\\
+        \parbox[t]{9.5cm}{\noindent #3}\\
         \parbox[t]{2cm}{\hspace{4mm} #2}% código estranho
         %\parbox[t]{1.5cm}{\ }
-        % FIXME a parte do título deve estar apenas com a primeira letra maiúscula
-        \parbox[t]{11cm}{\noindent \hspace{4mm} {\let\\=\ \imprimirtitulo} /{\let\\=, \imprimirautor}; orientados por \imprimirorientador : Instituto Militar de Engenharia, \the\year{}.}\\
+        % FIXME a parte do título deve estar apenas com a primeira letra maiúscula, não consegui fazer isso, coloquei para o título entrar como argumento
+        %\parbox[t]{9cm}{\noindent \hspace{4mm} {\let\\=\ \MakeLowercase{\imprimirtitulo}} /{\let\\=, \imprimirautor}; orientados por \imprimirorientador\ - Rio de Janeiro: Instituto Militar de Engenharia, \the\year{}.}\\
+        \parbox[t]{9.5cm}{\noindent \hspace{4mm} #6 /{\let\\=, \imprimirautor}; orientados por \imprimirorientador\ - Rio de Janeiro: Instituto Militar de Engenharia, \the\year{}.}\\
         \parbox[t]{2cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm}}\\
+        \parbox[t]{9.5cm}{\noindent \hspace{4mm}}\\
         [\baselineskip]
         \parbox[t]{2cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} #4 - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, \the\year{}. } \\
+        \parbox[t]{9.5cm}{\noindent \hspace{4mm} \pageref{LastPage}p. : il.} \\
         [\baselineskip]
         \parbox[t]{2cm}{\ }
-        \parbox[t]{11cm}{\noindent \hspace{4mm} #5}\\% tags estranhas
+        \parbox[t]{9.5cm}{\noindent \hspace{4mm} #4 - Instituto Militar de Engenharia \vspace{1mm} - Rio de Janeiro, \the\year{}. } \\
         [\baselineskip]
-        \parbox[t]{10.5cm}{\ }
-        \parbox[t]{2.5cm}{CDD #1}
+        \parbox[t]{2cm}{\ }
+        \parbox[t]{9.5cm}{\noindent \hspace{4mm} #5}\\% tags estranhas
         %[\baselineskip]
-        %\parbox[t]{13cm}{\ }
+        %\parbox[t]{9cm}{\ }
+        %\parbox[t]{2.5cm}{CDD #1}
+        %[\baselineskip]
+        %\parbox[t]{11.5cm}{\ }
       \end{minipage}
     }
   }
