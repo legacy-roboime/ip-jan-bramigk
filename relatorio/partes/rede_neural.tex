@@ -51,7 +51,9 @@ neural mais simples possível: é formada por apenas um neurônio.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=15cm]{figuras/rede_neural_perceptron}
+%\includegraphics[width=15cm]{figuras/rede_neural_perceptron}
+%\caption{\textit{Perceptron} de duas entradas e uma saída.}\label{fig:rede_neural_perceptron}
+\includegraphics[width=7cm]{figuras/rede_neural_neuronio}
 \caption{\textit{Perceptron} de duas entradas e uma saída.}\label{fig:rede_neural_perceptron}
 \end{figure}
 
@@ -63,10 +65,18 @@ O funcionamento de um \textit{perceptron} pode ser descrito nos seguintes passos
 \item
   Receber e armazenar as entradas;
 \item
-  Pesar as valores armazenados: consistem em multiplicar cada um pelo peso correspondente àquela entrada;
+  Pesar as valores armazenados: consiste em multiplicar cada um pelo peso correspondente àquela entrada;
 \item
-  Enviar o saída calculara anteriormente.
+  Aplicar a função de ativação na soma calculada e armazenar o resultado;
+\item
+  Enviar o resultado armazenado para a saída.
 \end{itemize}
+
+A função de ativação é especialmente útil para resolução de problemas não
+lineares. Para problemas cuja a solução é binária se utiliza a função degrau
+(ou de Heavside) para discretizar a saída em 2 valores. Outra função de
+ativação muito comum é a \textit{sigmoid}, que se aproxima bastante da curva de
+aprendizado natural biológica.
 
 \subsection{Exemplo de Aplicação}
 

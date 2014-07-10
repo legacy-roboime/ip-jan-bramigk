@@ -342,7 +342,7 @@ Engenharia.}
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 
-% TODO[jansegre] Dividir em 3 parágrafos:
+% DONE[jansegre] Dividir em 3 parágrafos:
 % - Tema
 % - Objetivo
 % - Contrubuições
@@ -416,25 +416,45 @@ minimax para efetuar a movimentação do adversário.
 
 % TODO[jansegre] refazer
 
-This paper covers ways to analyze logs of robot soccer matches from
-RoboCup's SSL category in order to obtain better results on the
-RoboIME's artificial intelligence (from IME's robotics lab) which
-participates yearly on that competition.  The desired goal is to
-predict the behaviour of a robot team based solely on data collected
-on previous matches, which are called logs.  A high level modeling was
-developed such that existing routines could be used both for tests and
-to actual predictions.  The following methods were researched: ACO
-(Ant Colony Optimization), SA (Simulated Annealing), GA (Genetic
-Algorithm), fuzzy logic, neural networks and CRFs (Conditional Random
-Fields).  From the detailed research made, some approaches were
-defined.  It was necessary to specify the team model for the
-approaches involving the ACO and SA, which use CRFs as a base.  The
-approach involving fuzzy logic showed itself too complex to be
-developed in this paper.  After a thrill study it is desired to
-implement an optimization process for both algorithms, such that the
-result can be refined and the proposed methods benchmarked.  For
-future works the proposed methods are ideal adversary simulators for a
-MiniMax algorithm.
+Every year countries from all over the world gather for the autonomous robot
+football world cup, known as RoboCup. Since 2012 IME's robotic laboratory team,
+RoboIME, is a regular contestant. Each year the matches get more and more
+complex and it is increasingly necessary to analyze them to improve the
+artificial intelligence used by RoboIME.
+
+The goal of this paper is to study ways to, given the log of a match, forsee
+the behaviour of the opponent. This study analyzes the possible use of neural
+networks, fuzzy logic, ant colony optimization, genetic algorithm and simulated
+annealing, and also proposes a model to abstract the behaviour of an unknown
+team.
+
+This paper reaches its goal, concluding that fuzzy logic is not adequate to
+approach the problem given the complexity to incorporate time awarness into it,
+furthermore the ant colony optimization, genetic algorithm and simulated
+annealing only have use to support an algorithm, while the main algorithm is
+best implemented with a neural network. It is suggested that a future work
+implements a neural network algorithm to be used on a minimax to make the moves
+of the rival team.
+
+%This paper covers ways to analyze logs of robot soccer matches from
+%RoboCup's SSL category in order to obtain better results on the
+%RoboIME's artificial intelligence (from IME's robotics lab) which
+%participates yearly on that competition.  The desired goal is to
+%predict the behaviour of a robot team based solely on data collected
+%on previous matches, which are called logs.  A high level modeling was
+%developed such that existing routines could be used both for tests and
+%to actual predictions.  The following methods were researched: ACO
+%(Ant Colony Optimization), SA (Simulated Annealing), GA (Genetic
+%Algorithm), fuzzy logic, neural networks and CRFs (Conditional Random
+%Fields).  From the detailed research made, some approaches were
+%defined.  It was necessary to specify the team model for the
+%approaches involving the ACO and SA, which use CRFs as a base.  The
+%approach involving fuzzy logic showed itself too complex to be
+%developed in this paper.  After a thrill study it is desired to
+%implement an optimization process for both algorithms, such that the
+%result can be refined and the proposed methods benchmarked.  For
+%future works the proposed methods are ideal adversary simulators for a
+%MiniMax algorithm.
 
 %\vspace{\onelineskip}
 
