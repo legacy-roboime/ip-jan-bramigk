@@ -171,7 +171,7 @@
   \vspace{10mm}
 
   {\noindent
-    \hspace{3cm}
+    \hspace{4.5cm}
     \framebox[11.5cm]{\footnotesize
       \begin{minipage}{12cm}
         \vspace*{1mm}
