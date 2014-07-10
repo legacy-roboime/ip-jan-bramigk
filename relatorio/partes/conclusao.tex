@@ -1,21 +1,64 @@
 \chapter{Conclusão}\label{cap:conclusao}
 
-Este trabalho descreve uma modelagem pesquisada para o jogo de futebol de robôs
+Este trabalho visa modelar o time adversário do jogo de futebol de robôs
 da categoria SSL da competição RoboCup e introduz métodos que podem contribuir
-para a confecção da solução final. Concluiu-se que nem todas as variáveis
-desejadas durante  processo de predição são observáveis, tornando o problema
-mais complexo do que realmente se imaginava. Os ACO, SA,
-lógica \textit{fuzzy} e o AG não são apropriadas para resolver diretamente o
-problema. O ACO e SA podem ser empregados utilizando um classificador 
-modelado com um CRF, onde atuariam na minimização do vetor de pesos associado
-a essa estrutura. A modelagem da solução utilizando lógica \textit{fuzzy} se
-mostrou muito complexa para este trabalho. Entretanto, de acordo com a
-bibliografia, ela confere mais robustez ao sistema. A rede neural
-parece ser uma boa abordagem para o problema, mas é necessário tratar melhor os
-dados dos \textit{logs} para prosseguir com uma implementação significativa.
-O futuro desse trabalho pode ser desenvolver uma inteligencia artificial baseada
-no \textit{MiniMax} que use a heurística pesquisada para simular o comportamento
-do adversário.
+para a confecção da solução final.
+
+No capítulo~\ref{cap:heuristicas}, foram estudados os algorítmos ACO, SA, GA,
+ANN assim como métodos da lógica fuzzy. Para cada um desses algorítimos, foi
+apresentado
+um exemplo de aplicação para se obter um melhor domínio do respectivo
+algorítimo.
+
+Com o objetivo de compreender melhor o problema e verificar se a IA de um time
+de
+futebol de robôs pode ser modelada utilizando esses algorítmos, no
+capítulo~\ref{cap:def_problema} foi desenvolvido o enunciado formal do problema
+a ser resolvido.
+Apesar de não ser o objetivo inicial, foi descoberto que o jogo da SSL não é
+completamente observável. Esse fato é de suma importância para o desenvolvimento
+de estratégias chava para este jogo e, como consequência, para se modelar a
+inteligência inimiga partindo-se dos dados coletados durante o jogo.
+
+No capítulo~\ref{cap:anal_abordagens}, as heurísticas estudadas foram analisadas
+criticamente, com o objetivo de determinar se são adequadas para modelar a IA
+do time adversário com base nas informações contidas nos logs de um jogo da SSL
+da RoboCup. Conclui-se que o método da lógica fuzzy estudado não é adequado para
+abordar o problema devido a complexidade de incorporar o conceito de
+temporalidade.
+Verificou-se também que métodos ACO, SA, GA servem primariamente para apoio de
+um
+gorítimo baseado em ANN\@.
+
+Como a ANN se mostrou ser o método mais adequado dentre os métodos estudados,
+foi desenvolvido um teste de conceito na secção~\ref{cap:abordagem_rede_neural}
+um teste de conceito. Concluiu-se que, apesar de ser necessário um
+pré-processamento, esse
+método é apto para resolver o problema utilizando os \textit{logs}.
+
+Como trabalho futuro, é sugerido que seja implementado preditor baseado em
+algoritmo com ANN para modelar o time adversário em uma IA que utilize o
+algoritmo minimax
+para efetuar a movimentação do time advesário.
+
+
+
+ %Este trabalho descreve uma modelagem pesquisada para o jogo de futebol de robôs
+ %da categoria SSL da competição RoboCup e introduz métodos que podem contribuir
+ %para a confecção da solução final. Concluiu-se que nem todas as variáveis
+ %desejadas durante  processo de predição são observáveis, tornando o problema
+ %mais complexo do que realmente se imaginava. Os ACO, SA,
+ %lógica \textit{fuzzy} e o AG não são apropriadas para resolver diretamente o
+ %problema. O ACO e SA podem ser empregados utilizando um classificador 
+ %modelado com um CRF, onde atuariam na minimização do vetor de pesos associado
+ %a essa estrutura. A modelagem da solução utilizando lógica \textit{fuzzy} se
+ %mostrou muito complexa para este trabalho. Entretanto, de acordo com a
+ %bibliografia, ela confere mais robustez ao sistema. A rede neural
+ %parece ser uma boa abordagem para o problema, mas é necessário tratar melhor os
+ %dados dos \textit{logs} para prosseguir com uma implementação significativa.
+ %O futuro desse trabalho pode ser desenvolver uma inteligencia artificial baseada
+ %no \textit{MiniMax} que use a heurística pesquisada para simular o comportamento
+ %do adversário.
 
 % TODO[vbramigk] Refazer conclusão:
 % - Recontextualizar
