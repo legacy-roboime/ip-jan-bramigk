@@ -19,14 +19,14 @@ de se modelar essas classes e atributos.
 
 \section{Modelagem por Classificação}
 
-O problema a ser resolvido
+O problema a ser resolvido pode ser
 encarado como um problema de classificação temporal. O sistema deve mapear uma
 sequência temporal de observações para um conjunto de regras associadas a
 subconjuntos de robôs. Essas regras definem o comportamento dos robôs.
 
 Outro problema relevante é definir o comportamento dos robôs a partir do estado
 atual do jogo e das regras associadas aos robôs. Entretanto, devido ao tempo
-destinado a esta pesquisa será modelado somente uma solução para o mapeamento das
+destinado a esta pesquisa, será modelado somente uma solução para o mapeamento das
 observações às regras. Também, o módulo de inteligência necessita dos dados
 desse mapeamento para poder prever de maneira coerente estados futuros do jogo. Uma
 solução ingênua é utilizar os modelos de táticas e \textit{skills} do próprio time.
@@ -115,7 +115,7 @@ $g$ retorna um valor real.
 
 A partir desse protótipos, associando cada valor aos robôs presentes
 no campo, várias funções características podem ser instanciadas.
-Tipicamente chega-se à ordem de 100 mil instâncias. Faz-se necessário
+Tipicamente chega-se à ordem de 100 mil instâncias \cite{vail2008crf}. Faz-se necessário
 selecionar quais funções efetivamente são relevantes para o problema.
 
 \subsection{Seleção de Características}
