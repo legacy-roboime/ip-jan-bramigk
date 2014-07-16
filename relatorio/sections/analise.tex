@@ -5,10 +5,41 @@
   \frametitle{Análise das Possíveis Abordagens}
   \begin{block}{}
 
-    \begin{enumerate}
-      \item Lógica Fuzzy
-      \item CRF + ACO/SA
-      \item Rede Neural
-    \end{enumerate}
+    %\begin{enumerate}
+    %  \item Lógica Fuzzy
+    %  %\item CRF + ACO/SA
+    %  \item Rede Neural
+    %\end{enumerate}
+
+ \begin{table}
+   \begin{center}
+     \begin{tabular}{|c|c|c|c|c|c|}
+       \hline
+       Critério          &  ACO & SA  & L. Fuzzy & ANN\\
+       \hline
+       Requer modelo     &  Sim & Sim &   Sim    & Não\\
+       de classificação  &      &     &          &    \\
+       \hline
+       Estrutura de      &  Sim & Sim &   Sim    & Não\\
+       fácil análise     &      &     &          &    \\
+       \hline
+       Degradação devido &  Sim & Não &   Não    & Não\\
+       a discretização   &      &     &          &    \\
+       \hline
+       Fácil             &  Não & Não &   Não    & Sim\\
+       pré-processamento &      &     &          &    \\
+       \hline
+       Fácil             &  Não & Não &   Não    & Sim\\
+       pós-processamento &      &     &          &    \\
+       \hline
+       Característica    & Modelo   & Parte das & Parte das    & Somente    \\
+       reutilizável      & treinado & regras    & regras       & topologia  \\
+       \hline
+     \end{tabular}
+   \caption{Tabela comparativa dos métodos}
+   \label{table:metodos}
+   \end{center}
+ \end{table}
+
   \end{block}
 }
