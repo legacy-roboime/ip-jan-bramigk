@@ -1,20 +1,12 @@
-\section{Enunciado do Problema}
+%\section{Enunciado do Problema}
+\section{Escopo da Pesquisa}
 
 A partir das definições apresentadas, pode-se enunciar o problema 
-abordado por este trabalho. Deseja-se prever $X_{ob}^{i+1}$ dado
+abordado por este trabalho. Deseja-se prever $x_{ob}^{i+1}$ dado
 $X_{ob}^{i}$. Uma abordagem que será seguida é considerar
-o problema como sendo uma tarefa de $classificação$ de KDD. Conforme
-\cite{passos2005datamining} tem-se que o problema de classificação:
-
-\begin{description}
-  \item \textit{"... Consistem em descobrir uma função que mapeie um conjunto de
-  registros em um conjunto de rótulos categóricos predefinidos, denominados
-  classes. Uma vez descoberta, tal função pode ser aplicada a novos registros
-  de forma a prever a classe em que tais registros se enquadram. ...."}
-\end{description}
-
+o problema como sendo uma tarefa de $classificação$ de KDD\@.
 Resta então definir as classes e os atributos de acordo com as definições
-apresentadas anteriormente. Assim, a secção a seguir descreve uma maneira
+apresentadas anteriormente. Assim, a seção a seguir descreve uma maneira
 de se modelar essas classes e atributos.
 
 \section{Modelagem por Classificação}
@@ -22,7 +14,12 @@ de se modelar essas classes e atributos.
 O problema a ser resolvido pode ser
 encarado como um problema de classificação temporal. O sistema deve mapear uma
 sequência temporal de observações para um conjunto de regras associadas a
-subconjuntos de robôs. Essas regras definem o comportamento dos robôs.
+subconjuntos de robôs. Essas regras definem o comportamento dos robôs. Assim,
+para prever o próximo movimento do adversário, e com isso determinar
+$x_{ob}^{i+1}$, pode-se descobrir quais são os robôs do time adversário que
+estão bloqueando, quais estão marcando o atacante, quais estão esperando para
+receber um passe dentre outras categorias comuns no futebol. A
+tabela~\ref{regras} apresenta uma lista de regras comuns em futebol de robôs.
 
 Outro problema relevante é definir o comportamento dos robôs a partir do estado
 atual do jogo e das regras associadas aos robôs. Entretanto, devido ao tempo
@@ -80,7 +77,7 @@ apresentados na tabela~\ref{regras}.
       Defesa circular        & Defende o gol á um raio fixo\\
       \hline
     \end{tabular}
-  \caption{Lista de regras comuns entre as equipes}
+    \caption{Lista de regras comuns entre as equipes \cite{vail2008crf}}
   \label{regras}
   \end{center}
 \end{table}
@@ -98,7 +95,8 @@ As características tomam a forma:
 f_i(t,Y,X)
 \end{gather}
 
-Os protótipos de características típicos do domínio do futebol de robôs são:
+Os protótipos de características típicos do domínio do futebol de robôs,
+conforme \cite{vail2008crf}, são:
 
 \begin{gather}
 f_i(t,Y,X)=I(y_t == regra)\\

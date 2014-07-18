@@ -11,9 +11,11 @@ de robôs confere um amadurecimento dos processos industrias, bem como indiretam
 permite que a sociedade concentre esforços em cargos intelectuais.
 
 Com efeito, o emprego desses sistemas robóticos deixou evidente a necessidade do
-desenvolvimento de teorias relacionadas as sistemas autônomos. Esses sistemas podem
-ser empregados para permitir que resgates sejam feitos de maneira eficiente. Isso
-evitaria que o pessoal altamente especializado empregado atualmente corra risco de vida.
+desenvolvimento de teorias relacionadas as sistemas autônomos cooperativos. 
+
+% Esses sistemas podem
+% ser empregados para permitir que resgates sejam feitos de maneira eficiente. Isso
+% evitaria que o pessoal altamente especializado empregado atualmente corra risco de vida.
 
 Entretanto, projetar robôs autônomos para trabalharem juntos não é uma tarefa trivial. Essa
 tarefa se complica quando um robô não tem um modelo bem definido dos outros robôs que atuarão em
@@ -86,31 +88,40 @@ mais econômica, quando comparado com o desempenho de um único robô.
 %  \includegraphics[width = \pagewidth]{}
 %\end{figure}
 
-Devido à grande complexidade do problema de interação com humanos, faz-se necessário
-que os robôs sejam dotados de uma capacidade de aprendizado para facilitar a interação
-desses com o mundo real. Isso é relevante tanto para aplicações industriais, quanto para
-aplicações em resgates e militares. Isso diminui a necessidade de modelagem
-exata dos ambientes em que os sistemas robóticos serão introduzidos e permite que
-a adaptação a ambientes complexos seja realizada através da exposição destes sistemas
-às possíveis situações de trabalho. Por meio da incorporação do sistema de
-aprendizagem, situações não consideradas podem ser incorporadas ao algoritmo de
-controle dos robôs dinamicamente. Isso permitiria que esses reagissem de maneira mais
-eficiente em futuras situações semelhantes.
+% Devido à grande complexidade do problema de interação com humanos, faz-se necessário
+% que os robôs sejam dotados de uma capacidade de aprendizado para facilitar a interação
+% desses com o mundo real. Isso é relevante tanto para aplicações industriais, quanto para
+% aplicações em resgates e militares. Isso diminui a necessidade de modelagem
+% exata dos ambientes em que os sistemas robóticos serão introduzidos e permite que
+% a adaptação a ambientes complexos seja realizada através da exposição destes sistemas
+% às possíveis situações de trabalho. Por meio da incorporação do sistema de
+% aprendizagem, situações não consideradas podem ser incorporadas ao algoritmo de
+% controle dos robôs dinamicamente. Isso permitiria que esses reagissem de maneira mais
+% eficiente em futuras situações semelhantes.
+
+Devido a alta complexidade de um jogo de futebol de robôs juntamente com a
+necessidade de se refazer constantemente o planejamento das ações a serem tomadas
+pelos robôs, é extremamente desejável evitar expandir nós da árvore de
+planejamento que não representem o modelo de reação do adversário. Isso
+aumentaria a eficiência no uso dos recursos de planejamento, permitindo
+antecipar mais jogadas em um menor intervalo de tempo. Logo, faz-se necessário
+pesquisar heurísticas que façam isso da maneira mais eficiente e controlada
+possível.
 
 \section{Objetivo}
 
 Este trabalho objetiva estudar os algoritmos da Otimização da Colõnia de Formigas (ACO),
 Recozimento Simulado (SA), Algoritmo Genético (GA), Rede Neural (ANN) assim como métodos
-da logica fuzzy. Este trabalho também se propõem analisar, se e como a inteligência
+da logica fuzzy. Isso objetiva analisar se e como a inteligência
 artificial de um time de futebol de robôs pode ser modelada utilizando esses
-algoritmos e métodos para as informações contidas nos $logs$ (definido a seguir)
+algoritmos e métodos com base nas informações contidas nos $logs$ (definido a seguir)
 de um jogo da SSL da RoboCup. Isso tem o objetivo de permitir que agentes controláveis
 possam reagir de maneira eficiente às ações dos agentes do time adversário, que
 não são controláveis. A pesquisa se propõe a realizar esse aprendizado dos
 agentes adversários baseado em gravações coletadas dos pacotes da
 \textit{SSL-Vision} e do \textit{Referee-Box} durante jogos, também conhecidas
 como \textit{logs}, para posteriormente serem incorporados ao sistema de inteligência da
-equipe de futebol de robôs do Laboratório de Robótica, denominada RoboIME. Apesar
+equipe de futebol de robôs do Laboratório de Robótica, denominada RoboIME\@. Apesar
 de existirem até a data deste trabalho vários artigos publicados relacionados a
 SSL, os autores sentiram a necessidade de modelarem de uma maneria mais rigorosa
 certos conceitos que surgiram ao longo da pesquisa. Isso com o objetivo de se
@@ -153,15 +164,10 @@ entre cada abordagem.
 
 \section{Estrutura do Trabalho}
 
-No capítulo~\ref{cap:def_problema}, o problema a ser resolvido é definido formalmente.
-
-%No capítulo~\ref{cap:rev_bibliografica}, a bibliografia é revisada.
-
+No capítulo~\ref{cap:def_problema}, o problema a ser resolvido é definido.
 No capítulo~\ref{cap:heuristicas}, são apresentadas as
 heurísticas comumente utilizadas em problemas de classificação.
-
 No capítulo~\ref{cap:anal_abordagens}, são descritas possíveis abordagens a serem
 seguidas para resolução do problema.
-
 No capítulo~\ref{cap:conclusao}, são apresentadas as principais conclusões
 atingidas neste trabalho.
