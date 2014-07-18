@@ -58,7 +58,7 @@
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{cmap}			% Mapear caracteres especiais no PDF
 \usepackage{lmodern}			% Usa a fonte Latin Modern
-%\usepackage{amsmath}			% Para usar fontes ams
+\usepackage{amsmath}			% Para usar blocos como "gather" de escrever matemática
 %\usepackage{amsfonts}			% Para usar fontes ams
 %\usepackage{times}			% Usa a fonte Times
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
@@ -119,7 +119,7 @@
 Victor Bramigk}
 \local{Rio de Janeiro}
 \data{Julho de 2014}
-\orientador{Paulo Fernando Ferreira Rosa}{Ph.D. do IME}
+\orientador{Paulo Fernando Ferreira Rosa}{Ph.D., do IME}
 %\coorientador{Equipe \abnTeX}
 \instituicao{%
   Instituto Militar de Engenharia
@@ -278,8 +278,8 @@ Engenharia.}
 %
 % \includepdf{folhadeaprovacao_final.pdf}
 %
-\convidadoum{Julio Cesar Duarte}{D.Sc. do IME}
-\convidadodois{Ricardo Choren Noya}{D.Sc. do IME}
+\convidadoum{Julio Cesar Duarte}{D.Sc., do IME}
+\convidadodois{Ricardo Choren Noya}{D.Sc., do IME}
 \imprimirfolhadeaprovacao{17 de julho de 2014}
 % ---
 
@@ -355,48 +355,18 @@ melhorar o desempenho da inteligência artificial do RoboIME.
 
 O objetivo deste trabalho é estudar maneiras para, a partir do \textit{log}
 de uma partida, prever o comportamento do time adversário. O estudo analisa o
-possível uso de redes neurais, lógica nebulosa, otimização da colônia de
-formigas, algoritmo genético e recozimento simulado, e também, propõe um modelo
-para abstrair o comportamento de um time desconhecido.
+possível uso dos seguintes algoritmos: redes neurais, lógica nebulosa,
+otimização da colônia de formigas, algoritmo genético e recozimento simulado, e
+também, propõe um modelo para abstrair o comportamento de um time desconhecido.
 % TODO[jansegre] inserir ponto sobre conclusão
 
-Este trabalho atingiu o objetivo proposto, concluindo que a lógica nebulosa não
-é adequada para abordar o problema devido à complexidade de incorporar o
-conceito de temporalidade. Além disso, a otimização de colônia de formigas, o
-algoritmo genético e o recozimento simulado servem primariamente para apoio de
-um algoritmo baseado em rede neural. É proposto que em um trabalho futuro seja
+A grande contribuição deste trabalho é concluir que a lógica nebulosa não é
+adequada para abordar o problema devido à complexidade de incorporar o conceito
+de temporalidade. Além disso, a otimização de colônia de formigas, o algoritmo
+genético e o recozimento simulado são mais apropriados para apoio de um
+algoritmo baseado em rede neural. É proposto que em um trabalho futuro seja
 implementado um algoritmo com rede neural e esse usado num algoritmo minimax
 para efetuar a movimentação do adversário.
-
-
-%Neste trabalho são abordadas maneiras de analisar \textit{logs} de
-%partidas de futebol de robôs da categoria SSL da competição RoboCup
-%com a finalidade de obter melhores resultados na Inteligência
-%Artificial do time RoboIME (do Laboratório de Robótica do IME) que
-%participa anualmente dessa competição.  O objetivo desejado é prever
-%como um time de futebol de robôs irá se comportar baseado somente nas
-%informações coletadas de partidas, chamados \textit{logs}.  Foi
-%elaborado uma modelagem de alto nível que permite utilizar rotinas já
-%existentes tanto para testes quanto predições.  Foram estudados os
-%métodos da ACO (\textit{Ant Colony Optimization}), SA
-%(\textit{Simulated Annealing}), AG (Algoritimo  Genético), lógica
-%nebulosa, redes neurais.
-%% TAG_CRF: e CRFs (\textit{Conditional Random Fields})
-%A partir do estudo detalhado foram definidos métodos de abordagem do
-%problema.
-%Verificou-se a necessidade de definir um modelo para as abordagens
-%envolvedo ACO e SA, deixando esses métodos para futuras pesquisas.
-%% TAG_CRF:
-%% Foi necessário especificar o modelo de time nas abordagens
-%% envolvendo ACO e SA, que tem como base os CRFs.
-%A abordagem envolvendo
-%lógica nebulosa se mostrou muito complexo para ser desenvolvido neste
-%trabalho.
-%Após um estudo mais aprofundado deseja-se futuramente
-%implementar um processo de otimização em ambos os algorítimos para que
-%o resultado seja refinado e para avaliar o desempenho dos métodos
-%propostos.  Para futuros trabalhos os métodos propostos são ideais
-%para simular o adversário num algoritmo \textit{MiniMax}.
 
 % Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
 % objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
@@ -422,19 +392,19 @@ RoboIME, is a regular contestant. Each year the matches get more and more
 complex and it is increasingly necessary to analyze them to improve the
 artificial intelligence used by RoboIME.
 
-The goal of this paper is to study ways to, given the log of a match, foresee
+The goal of this work is to study ways to, given the log of a match, foresee
 the behaviour of the opponent. This study analyzes the possible use of neural
 networks, fuzzy logic, ant colony optimization, genetic algorithm and simulated
 annealing, and also proposes a model to abstract the behaviour of an unknown
 team.
 
-This paper reaches its goal, concluding that fuzzy logic is not adequate to
-approach the problem given the complexity to incorporate time awareness into it,
-furthermore the ant colony optimization, genetic algorithm and simulated
-annealing only have use to support an algorithm, while the main algorithm is
-best implemented with a neural network. It is suggested that a future work
-implements a neural network algorithm to be used on a minimax to make the moves
-of the rival team.
+The major contribution of this work is concluding that fuzzy logic is not
+adequate to approach the problem given the complexity to incorporate time
+awareness into it, furthermore the ant colony optimization, genetic algorithm
+and simulated annealing only have use to support an algorithm, while the main
+algorithm is best implemented with a neural network. It is suggested that a
+future work implements a neural network algorithm to be used on a minimax to
+make the moves of the rival team.
 
 %This paper covers ways to analyze logs of robot soccer matches from
 %RoboCup's SSL category in order to obtain better results on the

@@ -94,21 +94,17 @@ para adicionar informação do domínio ao modelo.
 
 As características tomam a forma:
 
-\begin{centering}
-\begin{equation}
+\begin{gather}
 f_i(t,Y,X)
-\end{equation}
-\end{centering}
+\end{gather}
 
 Os protótipos de características típicos do domínio do futebol de robôs são:
 
-\begin{centering}
-\begin{eqnarray}
+\begin{gather}
 f_i(t,Y,X)=I(y_t == regra)\\
 f_i(t,Y,X)=I(y_{t-1} == regra_1)I(y_t == regra_2)\\
-f_i(t,Y,X)=I(y_t == regra).g(t,X)\\
-\end{eqnarray}
-\end{centering}
+f_i(t,Y,X)=I(y_t == regra).g(t,X)
+\end{gather}
 
 Onde a função $I$ só retorna um valor não nulo se seu argumento for verdadeiro e
 $g$ retorna um valor real.
@@ -131,7 +127,3 @@ A seleção de características reduz o tamanho do modelo, bem como o custo
 computacional da classificação. Isso permite que as regras sejam reconhecidas
 em tempo viável para serem utilizadas pelo módulo da inteligência durante o
 jogo.
-
-A seguir são apresentados os métodos inicialmente propostos
-no início da pesquisa. Após isso, são discutidas abordagens envolvendo
-esses métodos.

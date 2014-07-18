@@ -34,8 +34,8 @@ A iteração da heurística se da em 3 etapas:
   mutação: alguns indivíduos são selecionados e é aplicada a operação de
   mutação (\emph{mutation})
 \item
-  seleção: é usada a função de aptidão para descartar os indivíduos
-  menos aptos restando as soluções que de fato trouxeram alguma melhora.
+  seleção: é usada a função de aptidão, que define quão boa é a solução para o problema,
+  para descartar os indivíduos menos aptos restando as soluções que de fato trouxeram alguma melhora.
 \end{itemize}
 
 \begin{figure}[ht]
@@ -145,6 +145,8 @@ As limitações mais comuns no emprego de um algoritmo genético são:
 
 \subsection{Exemplo de Aplicação}
 
+Este exemplo demonstra a modelagem de uma otimização usando um algoritmo genético e foi baseado em \cite{vieira2002algogeneticos}.
+
 Suponha uma fábrica com duas máquinas, e chegam quatro pedidos, em ordem, para serem produzidos.
 Cada pedido consiste irá levar um tempo fixo para ser produzido.
 O problema a ser resolvido é determinar qual máquina processa cada pedido, de tal modo que
@@ -165,8 +167,6 @@ Por exemplo, o cruzamento de $1100$ e $0011$ pode trocar apenas o primeiro bit, 
 Por último uma regra de mutação, nesse caso é suficiente a inversão de um bit.
 
 Com esses quatro requisitos é possível aplicar a iteração genética sobre uma população inicial.
-
-Esse exemplo demonstra a modelagem de uma otimização usando um algoritmo genético e foi baseado em \cite{vieira2002algogeneticos}.
 
 % \subsection{Aplicação ao problema}
 

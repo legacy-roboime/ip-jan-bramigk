@@ -142,6 +142,7 @@
   \let\footnoterule\relax
   \let\footnote\thanks
   \noindent
+  \normalsize
   %XXX: what's the best way to parametrize this year?
   %     it may not always be desirable to use the current year
   %c\the\year{}
