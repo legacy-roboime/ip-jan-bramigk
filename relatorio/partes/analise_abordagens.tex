@@ -1,20 +1,103 @@
 \chapter{Análise das Possíveis Abordagens}\label{cap:anal_abordagens}
 
-% \section{CRF}
+Uma característica desejada no método a ser empregado para prever próximo
+movimento do adversário é não requerer um modelo de classificação. Isso para
+deixa a implementação muito complexa, o que dificulta a manutenibilidade do
+software final.
 
-% Como os métodos AG (Algoritmo Genético), SA e ACO são heurísticas de otimização,
-% é necessário que o problema da aproximação de uma função seja reduzido a um problema
-% de otimização. A abordagem que se escolheu foi utilizar os \textit{conditional random
-% fields} para modelar um classificador para identificar as regras, ou táticas na
-% abstração da STP\@. Os métodos de otimização estudados anteriormente podem ser
-% aplicados para encontra os pesos do CRF.
+Também é desejado que tenha uma estrutura de fácil análise. Essa característica
+tem o objetivo de incorporar informação heurística no modelo de modo a facilitar
+a modelagem. Apesar de ser desejáda, inicialmente essa característica é menos
+importante que a anterior. Entretanto, no longo prazo ela é mais relevante.
+Portanto, como o objetivo de se adquirir uma experiencia, essa característica é
+menos importante que a anterior.
+
+Um outro problema identificado na análise anterior é a degradação do modelo
+devido a discretização. Isso reduz a presição do modelo, então é importante que
+o modelo não seja degradado com a discretização.
+
+O pré-processamento é uma tarefa importate do processo de KDD. É desejável que
+essa etapa seja a mais fácil possível, para poder agilizar a automação dessa
+etapa. No caso dos algorítimos que necessitam de modelo de classificação, fica
+evidente que eles necessitam de de um pré-processamento maior, pois esses
+modelos necessítam de um conjunto de dados classificados para treinamento.
+Isso implica que mais informação que os \textit{logs} será nessária, tornado
+esses algorítmos menos adequandos que a ANN.
+
+A etapa de pós-processamento é o processamento que será necessário para que os
+dados do algorítmos determinem $x_{ob}^{i+1}$. Essa também é uma etapa na qual
+os algorítmos que necessitam de um modelo de classificação são inadequados, pois
+é necessario desenvolver outra camada de software para processar a classificação
+de cada robô de modo a determinar o próximo movinto dos robôs do time
+adversário.
+
+Também é desejável, mas não mandatório, que o modelo treinado possa ser
+modificado e reutilizado para modelar diferentes IAs. Isso visa
+agilizar a modelagem durante as partidas da SSL da Robocup, pois no intervalo
+de um jogo é permitido aos times modificar suas respectivas IAs.
+
+\subsection{Comparação dos Métodos}
+
+Os algorítimos abordados se enquadram em duas classes: algorítmos que são
+completos e que necessitam de uma estrutura de classificação que são o ACO, SA,
+AG e a algorítmos que são não necessitam, que é o caso da ANN\@. O caso da
+lógica fuzzy será discutido na próxima seção com mais detalhes. A
+tabela~\ref{table:metodos} apresenta as principais diferenças dos métodos
+apresentados anteriormente. Conforme pode ser visto nessa tabela, a rede neural
+é a que se mais adequa às caraterísticas desejádas.
+
+
+\input{partes/abordagem_rede_neural}
+
+ \begin{table}
+   \begin{center}
+     \begin{tabular}{|c|c|c|c|c|c|}
+       \hline
+                         &          &           &              &             &          \\
+       Critério          &  ACO     &    SA     & Lógica Fuzzy & Rede Neural & Desejado \\
+                         &          &           &              &             &          \\
+       \hline                                                                           
+                         &          &           &              &             &          \\
+       Requer modelo     &   Sim    &    Sim    &     Sim      &    Não      &   Não    \\
+       de classificação  &          &           &              &             &          \\
+                         &          &           &              &             &          \\
+       \hline                                                                           
+                         &          &           &              &             &          \\
+       Estrutura de      &   Sim    &    Sim    &     Sim      &    Não      &   Sim    \\
+       fácil análise     &          &           &              &             &          \\
+                         &          &           &              &             &          \\
+       \hline                                                                           
+                         &          &           &              &             &          \\
+       Degradação devido &   Sim    &    Não    &     Não      &    Não      &   Não    \\
+       a discretização   &          &           &              &             &          \\
+                         &          &           &              &             &          \\
+       \hline                                                                           
+                         &          &           &              &             &          \\
+       Fácil             &   Não    &    Não    &     Não      &    Sim      &   Sim    \\
+       pré-processamento &          &           &              &             &          \\
+                         &          &           &              &             &          \\
+       \hline                                                                           
+                         &          &           &              &             &          \\
+       Fácil             &   Não    &    Não    &     Não      &    Sim      &   Sim    \\
+       pós-processamento &          &           &              &             &          \\
+                         &          &           &              &             &          \\
+       \hline                                                                           
+                         &          &           &              &             &          \\
+       Característica    & Modelo   & Parte das & Parte das    & Somente     & Modelo   \\
+       reutilizável      & treinado & regras    & regras       & topologia   & treinado \\
+                         &          &           &              &             &          \\
+       \hline
+     \end{tabular}
+   \caption{Tabela comparativa dos métodos}
+   \label{table:metodos}
+   \end{center}
+ \end{table}
 
 \section{Lógica Fuzzy}
 
-%STP.
-
 O método da Lógica Fuzzy, conforme exposto anteriormente, necessita que um
-conjunto de regras seja definido. Essas regras poder ser geradas a partir de uma
+conjunto de regras seja definido. Um exemplo dessas regras foi apresentado na
+seção \ref{sec_regras}. Essas regras poder ser geradas a partir de uma
 análise mais detalhada do problema, mas também podem ser obtidas utilizando
 algum algorítimo de aprendizagem de regras. Para aplicar esse método ao problema
 analisado neste trabalho é necessário definir as regras e as distribuições das
@@ -32,57 +115,6 @@ características. É necessário que regras sejam especificadas estática ou
 dinamicamente. No caso estático, elas seriam incorporadas ao modelo através de
 especialistas. No caso dinâmico, uma solução é utilizar um classificador para
 deduzir as regras.
-
-\subsection{Comparação dos Métodos}
-
-A tabela~\ref{table:metodos} apresenta as principais diferenças dos métodos
-apresentados anteriormente.
-
-\input{partes/abordagem_rede_neural}
-
- \begin{table}
-   \begin{center}
-     \begin{tabular}{|c|c|c|c|c|c|}
-       \hline
-                         &          &           &              &            \\
-       Critério          &  ACO     &    SA     & Lógica Fuzzy & Rede Neural\\
-                         &          &           &              &            \\
-       \hline
-                         &          &           &              &            \\
-       Requer modelo     &   Sim    &    Sim    &     Sim      &    Não     \\
-       de classificação  &          &           &              &            \\
-                         &          &           &              &            \\
-       \hline
-                         &          &           &              &            \\
-       Estrutura de      &   Sim    &    Sim    &     Sim      &    Não     \\
-       fácil análise     &          &           &              &            \\
-                         &          &           &              &            \\
-       \hline
-                         &          &           &              &            \\
-       Degradação devido &   Sim    &    Não    &     Não      &    Não     \\
-       a discretização   &          &           &              &            \\
-                         &          &           &              &            \\
-       \hline
-                         &          &           &              &            \\
-       Fácil             &   Não    &    Não    &     Não      &    Sim     \\
-       pré-processamento &          &           &              &            \\
-                         &          &           &              &            \\
-       \hline
-                         &          &           &              &            \\
-       Fácil             &   Não    &    Não    &     Não      &    Sim     \\
-       pós-processamento &          &           &              &            \\
-                         &          &           &              &            \\
-       \hline
-                         &          &           &              &            \\
-       Característica    & Modelo   & Parte das & Parte das    & Somente    \\
-       reutilizável      & treinado & regras    & regras       & topologia  \\
-                         &          &           &              &            \\
-       \hline
-     \end{tabular}
-   \caption{Tabela comparativa dos métodos}
-   \label{table:metodos}
-   \end{center}
- \end{table}
 
 % XXX: Adicionar classificação temporal e viabilidade
 % \begin{table}
