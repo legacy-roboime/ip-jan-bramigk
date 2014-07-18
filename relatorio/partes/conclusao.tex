@@ -1,10 +1,13 @@
 \chapter{Conclusão}\label{cap:conclusao}
 
-Este trabalho visa modelar o time adversário do jogo de futebol de robôs
-da categoria SSL da competição RoboCup e introduz métodos que podem contribuir
-para a confecção da solução final.
+Este trabalho objetiva estudar os algoritmos da Otimização da Colõnia de
+Formigas (ACO), Recozimento Simulado (SA), Algoritmo Genético (GA), Rede Neural
+(ANN) assim como métodos da logica fuzzy a fim de analisar se e como a
+inteligência artificial de um time de futebol de robôs pode ser modelada a
+partir das informações contidas nos \textit{logs} (definido a seguir) de um jogo da SSL
+da RoboCup.
 
-No capítulo~\ref{cap:heuristicas}, foram estudados os algoritmos ACO, SA, GA,
+Foram estudados os algoritmos ACO, SA, GA,
 ANN assim como métodos da lógica fuzzy. Para cada um desses algorítimos, foi
 apresentado
 um exemplo de aplicação para se obter um melhor domínio do respectivo
@@ -20,7 +23,7 @@ completamente observável. Esse fato é de suma importância para o desenvolvime
 de estratégias chave para este jogo e, como consequência, para se modelar a
 inteligência inimiga partindo-se dos dados coletados durante o jogo.
 
-No capítulo~\ref{cap:anal_abordagens}, as heurísticas estudadas foram analisadas
+As heurísticas estudadas foram analisadas
 criticamente, com o objetivo de determinar se são adequadas para modelar a IA
 do time adversário com base nas informações contidas nos logs de um jogo da SSL
 da RoboCup. Conclui-se que o método da lógica fuzzy estudado não é adequado para
@@ -29,10 +32,8 @@ temporalidade.
 Verificou-se também que métodos ACO, SA, GA servem primariamente para apoio de
 um algoritmo baseado em ANN\@.
 
-Como a ANN se mostrou ser o método mais adequado dentre os métodos estudados,
-foi desenvolvido um teste de conceito na secção~\ref{cap:abordagem_rede_neural}.
-Concluiu-se que, apesar de ser necessário um pré-processamento, esse
-método é apto para resolver o problema utilizando os \textit{logs}.
+Concluiu-se que, apesar de ser necessário um pré-processamento, a ANN é o
+método é a mais adequado, dentre os estudados, para resolver o problema definido.
 
 Como trabalho futuro, é sugerido que seja implementado preditor baseado em
 um algoritmo com ANN para modelar o time adversário em uma IA durante a etapa de
